@@ -67,6 +67,10 @@ h1, h2, h3 { line-height: 1.35; letter-spacing: -.01em; margin: 0; }
 p { margin: 0 0 1em; }
 ul { margin: 0; padding: 0; list-style: none; }
 
+/* .app-card の display:flex などが UA スタイルの [hidden]{display:none} を
+   上書きしてしまうため、明示的に打ち消す */
+[hidden] { display: none !important; }
+
 .wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
 
 .skip {
