@@ -1,0 +1,526 @@
+{
+  "profile": {
+    "name": "Masamichi Nakada",
+    "handle": "gekisoba",
+    "title": "個人開発者 / iOS・macOS アプリ",
+    "lead": "Swift と SwiftUI で、放置ゲームから業務ツールまで幅広く個人開発しています。企画・実装・ストア運用まで一人で回すのが基本スタイルです。",
+    "github": "https://github.com/gekisoba",
+    "appstore": "https://apps.apple.com/jp/developer/id1616494891"
+  },
+  "apps": [
+    {
+      "id": 6799826150,
+      "name": "BUILD BALL",
+      "fullName": "BUILD BALL：組んで稼ぐピンボール",
+      "desc": "スコアで台そのものを組み替えていくピンボール。SpriteKit の物理演算と Game Center ランキングに対応。",
+      "tags": [
+        "SpriteKit",
+        "物理演算",
+        "Game Center"
+      ],
+      "icon": "assets/icons/pinball.jpg",
+      "url": "https://apps.apple.com/jp/app/id6799826150",
+      "repo": null,
+      "category": "ゲーム",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-08",
+      "updated": "2026-08-25",
+      "rating": 0,
+      "ratingCount": 0,
+      "repoPublic": false
+    },
+    {
+      "id": 6790421947,
+      "name": "陰謀論クリッカー",
+      "fullName": "陰謀論クリッカー - 匿名掲示板の育成ゲーム",
+      "desc": "匿名掲示板を舞台にした育成クリッカー。書き込みが世界を動かしていく短編構成の放置ゲーム。",
+      "tags": [
+        "SwiftUI",
+        "放置ゲーム",
+        "StoreKit"
+      ],
+      "icon": "assets/icons/ConspiracyClicker.jpg",
+      "url": "https://apps.apple.com/jp/app/id6790421947",
+      "repo": "https://github.com/gekisoba/ConspiracyClicker",
+      "category": "ゲーム",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-07",
+      "updated": "2026-08-10",
+      "rating": 3.8,
+      "ratingCount": 15,
+      "repoPublic": false
+    },
+    {
+      "id": 6794784495,
+      "name": "AIの中を見る",
+      "fullName": "AIの中を見る：画像認識AIのしくみ入門",
+      "desc": "画像認識 AI の内部を可視化する教育アプリ。手書き文字が層をどう通って推論されるかを一枚ずつ見せる。",
+      "tags": [
+        "Core ML",
+        "機械学習",
+        "可視化",
+        "教育"
+      ],
+      "icon": "assets/icons/AIScope.jpg",
+      "url": "https://apps.apple.com/jp/app/id6794784495",
+      "repo": "https://github.com/gekisoba/AIScope",
+      "category": "実験・学習",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-07",
+      "updated": "2026-07-31",
+      "rating": 5,
+      "ratingCount": 1,
+      "repoPublic": false
+    },
+    {
+      "id": 6766423932,
+      "name": "AppRank",
+      "fullName": "AppRank - ASO Tracker",
+      "desc": "App Store のキーワード順位・カテゴリ順位を追跡する macOS 製 ASO ツール。公開 API のみで構成。",
+      "tags": [
+        "macOS",
+        "SwiftUI",
+        "ASO",
+        "公開API"
+      ],
+      "icon": "assets/icons/AppRadar.png",
+      "url": "https://apps.apple.com/jp/app/id6766423932",
+      "repo": "https://github.com/gekisoba/AppRadar",
+      "category": "ツール",
+      "platforms": [
+        "macOS"
+      ],
+      "price": "¥1,000",
+      "released": "2026-05",
+      "updated": "2026-05-11",
+      "rating": 0,
+      "ratingCount": 0,
+      "repoPublic": false
+    },
+    {
+      "id": 6762073469,
+      "name": "UFOクリッカー",
+      "fullName": "UFOクリッカー - 宇宙人アブダクション放置ゲーム",
+      "desc": "宇宙人となって地球人をアブダクションする本格やり込み放置ゲーム。転生・時空研究など多層のプレステージ設計。",
+      "tags": [
+        "SwiftUI",
+        "ゲームバランス設計",
+        "放置ゲーム"
+      ],
+      "icon": "assets/icons/UFOClicker.jpg",
+      "url": "https://apps.apple.com/jp/app/id6762073469",
+      "repo": "https://github.com/gekisoba/UFOClicker",
+      "category": "ゲーム",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-04",
+      "updated": "2026-08-22",
+      "rating": 4.24,
+      "ratingCount": 70,
+      "repoPublic": false
+    },
+    {
+      "id": 6757972770,
+      "name": "無限コイン落とし",
+      "fullName": "無限コイン落とし - 爽快3D物理メダルゲーム",
+      "desc": "SceneKit の物理シミュレーションで作った 3D メダルゲーム。落下と押し出しの挙動を実機向けに調整。",
+      "tags": [
+        "SceneKit",
+        "3D物理",
+        "SwiftUI"
+      ],
+      "icon": "assets/icons/CoinPusher.jpg",
+      "url": "https://apps.apple.com/jp/app/id6757972770",
+      "repo": "https://github.com/gekisoba/CoinPusher",
+      "category": "ゲーム",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-02",
+      "updated": "2026-08-25",
+      "rating": 4.53,
+      "ratingCount": 76,
+      "repoPublic": false
+    },
+    {
+      "id": 6758904067,
+      "name": "AACamera",
+      "fullName": "AACamera: アスキーアート・カメラ & 動画",
+      "desc": "カメラ映像をリアルタイムでアスキーアートに変換するカメラアプリ。写真も動画も文字で記録できる。",
+      "tags": [
+        "AVFoundation",
+        "画像処理",
+        "リアルタイム変換"
+      ],
+      "icon": "assets/icons/AACamera.jpg",
+      "url": "https://apps.apple.com/jp/app/id6758904067",
+      "repo": "https://github.com/gekisoba/AACamera",
+      "category": "実験・学習",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-02",
+      "updated": "2026-02-18",
+      "rating": 5,
+      "ratingCount": 1,
+      "repoPublic": false
+    },
+    {
+      "id": 6757321721,
+      "name": "都市伝説クリッカー",
+      "fullName": "都市伝説クリッカー - 怪異を調査する放置ゲーム",
+      "desc": "都市伝説を調査して怪異を集める放置ゲーム。多重転生とアーカイブ収集、iCloud 同期に対応。",
+      "tags": [
+        "SwiftUI",
+        "放置ゲーム",
+        "iCloud",
+        "多倍長数値"
+      ],
+      "icon": "assets/icons/UrbanLegendClicker.jpg",
+      "url": "https://apps.apple.com/jp/app/id6757321721",
+      "repo": "https://github.com/gekisoba/UrbanLegendClicker",
+      "category": "ゲーム",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-01",
+      "updated": "2026-08-26",
+      "rating": 4.24,
+      "ratingCount": 127,
+      "repoPublic": false
+    },
+    {
+      "id": 6757092809,
+      "name": "図書貸出管理",
+      "fullName": "図書貸出管理 - バーコードで簡単蔵書スキャン",
+      "desc": "ISBN バーコードで蔵書を登録し、貸出・返却まで管理できる図書管理アプリ。",
+      "tags": [
+        "SwiftUI",
+        "バーコード読取",
+        "StoreKit"
+      ],
+      "icon": "assets/icons/Library-Management-App.jpg",
+      "url": "https://apps.apple.com/jp/app/id6757092809",
+      "repo": "https://github.com/gekisoba/Library-Management-App",
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-01",
+      "updated": "2026-04-23",
+      "rating": 3.8,
+      "ratingCount": 5,
+      "repoPublic": false
+    },
+    {
+      "id": 6755641312,
+      "name": "訪問ログ",
+      "fullName": "訪問ログ - 営業・顧客管理のシンプルな記録アプリ",
+      "desc": "顧客への訪問記録を管理する営業向けアプリ。SwiftData + CloudKit 同期、年間ヒートマップ、Obsidian 連携を実装。",
+      "tags": [
+        "SwiftData",
+        "CloudKit",
+        "Mac Catalyst"
+      ],
+      "icon": "assets/icons/homon_log.jpg",
+      "url": "https://apps.apple.com/jp/app/id6755641312",
+      "repo": "https://github.com/gekisoba/visit_log",
+      "category": "ツール",
+      "platforms": [
+        "iOS",
+        "Mac"
+      ],
+      "price": "無料",
+      "released": "2025-11",
+      "updated": "2026-08-28",
+      "rating": 3.88,
+      "ratingCount": 8,
+      "repoPublic": false
+    },
+    {
+      "id": 6755621157,
+      "name": "アレから",
+      "fullName": "アレから - 前回から何日？経過日数メモ",
+      "desc": "「前回からの経過日数」を記録するカウンターアプリ。美容院やフィルター交換などの周期管理向け。",
+      "tags": [
+        "SwiftUI",
+        "ウィジェット的用途"
+      ],
+      "icon": "assets/icons/days_since.jpg",
+      "url": "https://apps.apple.com/jp/app/id6755621157",
+      "repo": "https://github.com/gekisoba/days_since",
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2025-11",
+      "updated": "2026-03-31",
+      "rating": 4.07,
+      "ratingCount": 15,
+      "repoPublic": false
+    },
+    {
+      "id": 6755532776,
+      "name": "最安値メモ",
+      "fullName": "最安値メモ - 買い物上手な底値帳",
+      "desc": "商品の底値を記録する買い物メモ。バーコードスキャンで商品を素早く登録できる。",
+      "tags": [
+        "SwiftUI",
+        "バーコード読取"
+      ],
+      "icon": "assets/icons/saiyasune.jpg",
+      "url": "https://apps.apple.com/jp/app/id6755532776",
+      "repo": "https://github.com/gekisoba/saiyasune",
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2025-11",
+      "updated": "2025-11-27",
+      "rating": 4.38,
+      "ratingCount": 8,
+      "repoPublic": false
+    },
+    {
+      "id": 6744040862,
+      "name": "クリッカーカンパニー",
+      "fullName": "クリッカーカンパニー : 放置で会社経営！",
+      "desc": "会社を大きくしていく放置＆クリッカー経営シミュレーション。社員の採用・昇進・転生システムを実装。",
+      "tags": [
+        "SwiftUI",
+        "放置ゲーム",
+        "StoreKit",
+        "AdMob"
+      ],
+      "icon": "assets/icons/ClickerTest.jpg",
+      "url": "https://apps.apple.com/jp/app/id6744040862",
+      "repo": "https://github.com/gekisoba/ClickerTest",
+      "category": "ゲーム",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2025-05",
+      "updated": "2026-08-25",
+      "rating": 4.57,
+      "ratingCount": 359,
+      "repoPublic": false
+    },
+    {
+      "id": 6743646623,
+      "name": "MiniSheet",
+      "fullName": "MiniSheet - ミニ表計算アプリ",
+      "desc": "起動してすぐ使える軽量の表計算アプリ。数式入力と共有に絞ったミニマル構成。",
+      "tags": [
+        "SwiftUI",
+        "表計算"
+      ],
+      "icon": "assets/icons/MiniSheet.jpg",
+      "url": "https://apps.apple.com/jp/app/id6743646623",
+      "repo": "https://github.com/gekisoba/MiniSheet",
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2025-03",
+      "updated": "2025-12-24",
+      "rating": 3.75,
+      "ratingCount": 12,
+      "repoPublic": false
+    },
+    {
+      "id": 1616494889,
+      "name": "利益ちゃん – 利益計算・価格設定ツール",
+      "fullName": "利益ちゃん – 利益計算・価格設定ツール",
+      "desc": "原価から販売価格・利益率・利益額を相互に逆算できる物販向け計算ツール。最初に公開したアプリ。",
+      "tags": [
+        "SwiftUI",
+        "Core Data"
+      ],
+      "icon": "assets/icons/Rieki-chan.jpg",
+      "url": "https://apps.apple.com/jp/app/id1616494889",
+      "repo": "https://github.com/gekisoba/Rieki-chan",
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2022-04",
+      "updated": "2025-12-14",
+      "rating": 4,
+      "ratingCount": 4,
+      "repoPublic": false
+    }
+  ],
+  "others": [
+    {
+      "name": "Kiko",
+      "desc": "radiko のタイムフリー番組を GUI で高速ダウンロードする macOS アプリ。HLS セグメントを並列取得して録音時間を短縮。",
+      "tags": [
+        "Swift 6",
+        "macOS",
+        "HLS"
+      ],
+      "repo": "https://github.com/gekisoba/Kiko",
+      "public": true
+    },
+    {
+      "name": "あしあと (ashiato)",
+      "desc": "訪れた場所を自動で記録する位置情報ログアプリ。訪問履歴の集計と Obsidian / Webhook 連携を試作中。",
+      "tags": [
+        "SwiftUI",
+        "位置情報",
+        "Obsidian連携"
+      ],
+      "repo": null,
+      "public": false
+    },
+    {
+      "name": "リブシス (LibrarySystem)",
+      "desc": "サブスクリプション課金を組み込んだ蔵書管理アプリ。StoreKit 2 のトランザクション検証まわりを重点的に実装。",
+      "tags": [
+        "StoreKit 2",
+        "サブスク",
+        "QRコード"
+      ],
+      "repo": "https://github.com/gekisoba/LibrarySystem",
+      "public": false
+    },
+    {
+      "name": "codeTrace",
+      "desc": "商品バーコードのスキャン結果を共有・集計する実験アプリ。ランキングとキャッシュ層を持つ構成。",
+      "tags": [
+        "SwiftUI",
+        "バーコード",
+        "ランキング"
+      ],
+      "repo": "https://github.com/gekisoba/codeTrace",
+      "public": false
+    },
+    {
+      "name": "ABテスト計算機",
+      "desc": "2群の比率差を検定して p 値を可視化する統計ツール。ASO / 広告のクリエイティブ比較用に自作。",
+      "tags": [
+        "SwiftUI",
+        "統計",
+        "Charts"
+      ],
+      "repo": "https://github.com/gekisoba/ABTestApp",
+      "public": false
+    },
+    {
+      "name": "DailyGood",
+      "desc": "その日の小さな善行をミッション形式で記録するアプリ。天気・位置情報と実績システムを組み合わせた試作。",
+      "tags": [
+        "SwiftUI",
+        "WeatherKit",
+        "実績システム"
+      ],
+      "repo": "https://github.com/gekisoba/DailyGood",
+      "public": false
+    },
+    {
+      "name": "Morning Three",
+      "desc": "朝に3つだけタスクを決める習慣化アプリ。同意管理と広告まわりの実装練習も兼ねた作品。",
+      "tags": [
+        "SwiftUI",
+        "習慣化",
+        "UMP"
+      ],
+      "repo": "https://github.com/gekisoba/Morning-Three",
+      "public": false
+    },
+    {
+      "name": "FlickPractice",
+      "desc": "日本語フリック入力の練習アプリ。カスタムキーボード UI とレッスン進行を自作。",
+      "tags": [
+        "SwiftUI",
+        "カスタムUI",
+        "日本語入力"
+      ],
+      "repo": null,
+      "public": false
+    },
+    {
+      "name": "nurimichi",
+      "desc": "走った道を地図上に塗りつぶしていく位置情報アプリ。道路スナップ処理の実験。",
+      "tags": [
+        "MapKit",
+        "位置情報",
+        "道路スナップ"
+      ],
+      "repo": null,
+      "public": false
+    },
+    {
+      "name": "niramekko",
+      "desc": "ARKit のフェイストラッキングで表情を判定するにらめっこアプリ。",
+      "tags": [
+        "ARKit",
+        "フェイストラッキング"
+      ],
+      "repo": null,
+      "public": false
+    },
+    {
+      "name": "Breakout",
+      "desc": "SpriteKit の物理挙動を確かめるために作ったブロック崩し。",
+      "tags": [
+        "SpriteKit",
+        "ゲーム"
+      ],
+      "repo": "https://github.com/gekisoba/Breakout",
+      "public": false
+    },
+    {
+      "name": "ConnectAnalysis",
+      "desc": "App Store Connect のデータとカテゴリ順位を突き合わせて分析する macOS ツール。",
+      "tags": [
+        "macOS",
+        "iTunes API",
+        "分析"
+      ],
+      "repo": null,
+      "public": false
+    },
+    {
+      "name": "AppKitHelper",
+      "desc": "AdMob・StoreKit まわりの定型実装を切り出した自作 Swift Package。複数アプリで再利用中。",
+      "tags": [
+        "Swift Package",
+        "StoreKit",
+        "AdMob"
+      ],
+      "repo": null,
+      "public": false
+    },
+    {
+      "name": "tsundoku (積読くん)",
+      "desc": "ISBN スキャンで積読本を管理する読書アプリ。本棚ビューを自作。",
+      "tags": [
+        "SwiftUI",
+        "バーコード読取"
+      ],
+      "repo": "https://github.com/gekisoba/tsundoku",
+      "public": false
+    }
+  ]
+}
