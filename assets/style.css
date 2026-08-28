@@ -219,6 +219,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-radius: var(--radius); padding: 1.1rem 1.2rem;
 }
 .work-head { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
+.work-period { font-size: .76rem; color: var(--text-mute); font-variant-numeric: tabular-nums; }
 .work-name { font-size: .97rem; font-weight: 700; margin: 0; }
 .work-item p { color: var(--text-soft); font-size: .88rem; margin: .45rem 0 .7rem; }
 .work-repo { display: inline-block; margin-top: .8rem; font-size: .8rem; font-weight: 600; color: var(--accent); text-decoration: none; }

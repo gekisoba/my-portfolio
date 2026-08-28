@@ -13,8 +13,8 @@
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
-<link rel="preload" href="assets/data.json?v=3" as="fetch" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="preload" href="assets/data.json?v=4" as="fetch" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
@@ -24,6 +24,7 @@
     <a class="brand" href="#top">gekisoba<span class="dot">.</span></a>
     <nav class="nav">
       <a href="#apps">公開アプリ</a>
+      <a href="#retired">公開終了</a>
       <a href="#works">その他の制作物</a>
       <a href="#about">About</a>
     </nav>
@@ -68,7 +69,17 @@
     </div>
   </section>
 
-  <section class="section section-alt" id="works">
+  <section class="section section-alt" id="retired">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>過去に公開していたアプリ</h2>
+        <p class="section-note">App Store で配信していたアプリ。現在は配信を終了しています。</p>
+      </div>
+      <ul class="work-list" id="retired-list"></ul>
+    </div>
+  </section>
+
+  <section class="section" id="works">
     <div class="wrap">
       <div class="section-head">
         <h2>その他の制作物</h2>
@@ -78,7 +89,7 @@
     </div>
   </section>
 
-  <section class="section" id="about">
+  <section class="section section-alt" id="about">
     <div class="wrap about-grid">
       <div>
         <h2>About</h2>
@@ -105,6 +116,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=3"></script>
+<script src="assets/main.js?v=4"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- render ---------- */
-  fetch('assets/data.json?v=3')
+  fetch('assets/data.json?v=4')
     .then(r => r.json())
     .then(render)
     .catch(() => {
@@ -35,10 +35,11 @@
 
   function render(data) {
     renderProfile(data.profile);
-    renderStats(data.apps);
+    renderStats(data.apps, data.retired || []);
     renderApps(data.apps);
+    renderRetired(data.retired || []);
     renderOthers(data.others);
-    renderSkills(data.apps, data.others);
+    renderSkills(data.apps, data.others, data.retired || []);
   }
 
   function renderProfile(p) {
@@ -53,15 +54,14 @@
     });
   }
 
-  function renderStats(apps) {
+  function renderStats(apps, retired) {
     const ratings = apps.reduce((s, a) => s + a.ratingCount, 0);
     const weighted = apps.reduce((s, a) => s + a.rating * a.ratingCount, 0);
-    const years = new Date().getFullYear() - 2022 + 1;
     const stats = [
       ['App Store 公開アプリ', apps.length, '本'],
       ['累計レビュー数', ratings.toLocaleString('ja-JP'), '件'],
       ['平均評価', ratings ? (weighted / ratings).toFixed(2) : '—', '/ 5'],
-      ['アプリ公開歴', years, '年目'],
+      ['通算リリース', apps.length + retired.length, '本'],
     ];
     const wrap = document.getElementById('stats');
     stats.forEach(([label, value, unit]) => {
@@ -166,6 +166,21 @@
     return a;
   }
 
+  function renderRetired(items) {
+    const list = document.getElementById('retired-list');
+    items.forEach(w => {
+      const li = el('li', 'work-item');
+      const head = el('div', 'work-head');
+      head.append(el('h3', 'work-name', w.name));
+      if (w.period) head.append(el('span', 'work-period', w.period));
+      li.append(head, el('p', null, w.desc));
+      const tags = el('div', 'tags');
+      w.tags.forEach(t => tags.append(el('span', 'tag', t)));
+      li.append(tags);
+      list.append(li);
+    });
+  }
+
   function renderOthers(others) {
     const list = document.getElementById('work-list');
     others.forEach(w => {
@@ -187,9 +202,9 @@
     });
   }
 
-  function renderSkills(apps, others) {
+  function renderSkills(apps, others, retired) {
     const seen = new Map();
-    [...apps, ...others].forEach(w => w.tags.forEach(t => seen.set(t, (seen.get(t) || 0) + 1)));
+    [...apps, ...others, ...retired].forEach(w => w.tags.forEach(t => seen.set(t, (seen.get(t) || 0) + 1)));
     const chips = document.getElementById('skill-chips');
     [...seen.entries()]
       .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))

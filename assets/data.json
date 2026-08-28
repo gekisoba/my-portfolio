@@ -409,39 +409,6 @@
       "public": false
     },
     {
-      "name": "リブシス (LibrarySystem)",
-      "desc": "サブスクリプション課金を組み込んだ蔵書管理アプリ。StoreKit 2 のトランザクション検証まわりを重点的に実装。",
-      "tags": [
-        "StoreKit 2",
-        "サブスク",
-        "QRコード"
-      ],
-      "repo": "https://github.com/gekisoba/LibrarySystem",
-      "public": false
-    },
-    {
-      "name": "codeTrace",
-      "desc": "商品バーコードのスキャン結果を共有・集計する実験アプリ。ランキングとキャッシュ層を持つ構成。",
-      "tags": [
-        "SwiftUI",
-        "バーコード",
-        "ランキング"
-      ],
-      "repo": "https://github.com/gekisoba/codeTrace",
-      "public": false
-    },
-    {
-      "name": "ABテスト計算機",
-      "desc": "2群の比率差を検定して p 値を可視化する統計ツール。ASO / 広告のクリエイティブ比較用に自作。",
-      "tags": [
-        "SwiftUI",
-        "統計",
-        "Charts"
-      ],
-      "repo": "https://github.com/gekisoba/ABTestApp",
-      "public": false
-    },
-    {
       "name": "DailyGood",
       "desc": "その日の小さな善行をミッション形式で記録するアプリ。天気・位置情報と実績システムを組み合わせた試作。",
       "tags": [
@@ -450,17 +417,6 @@
         "実績システム"
       ],
       "repo": "https://github.com/gekisoba/DailyGood",
-      "public": false
-    },
-    {
-      "name": "Morning Three",
-      "desc": "朝に3つだけタスクを決める習慣化アプリ。同意管理と広告まわりの実装練習も兼ねた作品。",
-      "tags": [
-        "SwiftUI",
-        "習慣化",
-        "UMP"
-      ],
-      "repo": "https://github.com/gekisoba/Morning-Three",
       "public": false
     },
     {
@@ -528,14 +484,104 @@
       "public": false
     },
     {
-      "name": "tsundoku (積読くん)",
-      "desc": "ISBN スキャンで積読本を管理する読書アプリ。本棚ビューを自作。",
+      "name": "connect_analysis",
+      "desc": "Streamlit 製の App Store Connect 分析ツール。JWT で Connect API を叩き、売上と順位を突き合わせてグラフ化する。運用で必要になって自作し、のちに macOS アプリ版へ発展させた。",
+      "tags": [
+        "Python",
+        "Streamlit",
+        "App Store Connect API",
+        "JWT"
+      ],
+      "repo": null,
+      "public": false
+    },
+    {
+      "name": "Mirofish_like_ai",
+      "desc": "役割を与えた複数の LLM エージェントに議題を議論させるシミュレーションエンジン。Gemini とローカル LLM（LM Studio）の両方を切り替えられる。",
+      "tags": [
+        "Python",
+        "LLM",
+        "マルチエージェント",
+        "Gemini"
+      ],
+      "repo": null,
+      "public": false
+    },
+    {
+      "name": "rakuten_margin_bot",
+      "desc": "Flask 製の自動売買ボット。RSI・ゴールデンクロス・ハイブリッドの戦略を切り替えられ、バックテストによるパラメータ最適化と、発注しない DRY_RUN モードを備える。",
+      "tags": [
+        "Python",
+        "Flask",
+        "テクニカル分析",
+        "バックテスト"
+      ],
+      "repo": null,
+      "public": false
+    }
+  ],
+  "retired": [
+    {
+      "id": 6739450267,
+      "name": "ABテスト計算機",
+      "fullName": "ABテスト計算機 - 統計的有意差判定ツール",
+      "desc": "2群の比率差を検定して p 値を可視化する統計ツール。ASO や広告クリエイティブの比較を自分で回すために作った。",
       "tags": [
         "SwiftUI",
-        "バーコード読取"
+        "統計",
+        "Swift Charts"
       ],
-      "repo": "https://github.com/gekisoba/tsundoku",
-      "public": false
+      "period": "2024/12 〜 2025/12"
+    },
+    {
+      "id": 6752511814,
+      "name": "今日の３つ",
+      "fullName": "今日の３つ",
+      "desc": "朝に3つだけタスクを決める習慣化アプリ。広告の同意管理（UMP）やレビュー誘導など、運用まわりの実装も一通り組み込んだ。",
+      "tags": [
+        "SwiftUI",
+        "習慣化",
+        "UMP",
+        "AdMob"
+      ],
+      "period": "2025/09"
+    },
+    {
+      "id": 6747932630,
+      "name": "リブシス",
+      "fullName": "リブシス",
+      "desc": "サブスクリプション課金を組み込んだ蔵書管理アプリ。StoreKit 2 のトランザクション検証とプラン変更の扱いを重点的に実装した、当時いちばん規模の大きい個人開発。",
+      "tags": [
+        "StoreKit 2",
+        "サブスク課金",
+        "QRコード",
+        "SwiftUI"
+      ],
+      "period": "2025/06 〜 2025/09"
+    },
+    {
+      "id": 6748681782,
+      "name": "積読くん",
+      "fullName": "積読くん",
+      "desc": "ISBN バーコードのスキャンで積読本を登録・管理する読書アプリ。本棚を模した一覧ビューを自作した。",
+      "tags": [
+        "SwiftUI",
+        "バーコード読取",
+        "StoreKit"
+      ],
+      "period": "2025/07 〜 2025/08"
+    },
+    {
+      "id": 6746352236,
+      "name": "codeTrace",
+      "fullName": "codeTrace",
+      "desc": "商品バーコードのスキャン結果を共有・集計するアプリ。ランキング表示と取得結果のキャッシュ層を持つ構成。",
+      "tags": [
+        "SwiftUI",
+        "バーコード読取",
+        "ランキング"
+      ],
+      "period": "2025/05 〜 2025/06"
     }
   ]
 }

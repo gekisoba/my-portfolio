@@ -139,9 +139,24 @@ def main():
             "ratingCount": count,
         })
 
-    # App Store から消えたアプリはリンクが 404 になるため除外する
+    # App Store から消えたアプリは「過去に公開していたアプリ」へ移す。
+    # リンクは 404 になるので消すが、説明文とタグは残して実績として掲載し続ける。
     live_ids = {a["trackId"] for a in apps}
-    removed = [e["name"] for e in data["apps"] if e["id"] not in live_ids]
+    data.setdefault("retired", [])
+    already_retired = {r.get("id") for r in data["retired"]}
+    removed = []
+    for entry in data["apps"]:
+        if entry["id"] in live_ids or entry["id"] in already_retired:
+            continue
+        removed.append(entry["name"])
+        data["retired"].insert(0, {
+            "id": entry["id"],
+            "name": entry["name"],
+            "fullName": entry["fullName"],
+            "desc": entry["desc"],
+            "tags": entry["tags"],
+            "period": entry["released"].replace("-", "/") + " 〜 公開終了",
+        })
 
     updated.sort(key=lambda a: a["released"], reverse=True)
     data["apps"] = updated
@@ -154,10 +169,11 @@ def main():
         print("数値の変化:")
         print("\n".join(changes) + "\n")
     if removed:
-        print("!! App Store で見つからなくなったため削除しました:")
+        print("!! App Store で見つからなくなりました。")
+        print("   「過去に公開していたアプリ」へ移動します:")
         for n in removed:
             print(f"  - {n}")
-        print("   （復元したい場合は git diff を確認してください）\n")
+        print("   period（公開期間）の表記を必要に応じて直してください。\n")
     if new_apps:
         print("!! 新しいアプリを追加しました。説明文とタグが空です:")
         for n in new_apps:
