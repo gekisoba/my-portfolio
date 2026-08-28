@@ -52,7 +52,17 @@
         <h2>公開アプリ</h2>
         <p class="section-note">App Store で配信中のアプリ。すべて企画から実装・ストア運用まで個人で担当しています。</p>
       </div>
-      <div class="filters" id="filters" role="group" aria-label="カテゴリで絞り込み"></div>
+      <div class="toolbar">
+        <div class="filters" id="filters" role="group" aria-label="カテゴリで絞り込み"></div>
+        <div class="sort">
+          <label for="sort-select">並び順</label>
+          <select id="sort-select">
+            <option value="popular">人気順（レビュー数）</option>
+            <option value="newest">新着順</option>
+            <option value="rating">評価順</option>
+          </select>
+        </div>
+      </div>
       <ul class="app-grid" id="app-grid"></ul>
     </div>
   </section>

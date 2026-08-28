@@ -74,12 +74,30 @@
     });
   }
 
+  const SORTS = {
+    // 新しいアプリほど trackId が大きいので、同着時のタイブレークに使う
+    popular: (a, b) => b.ratingCount - a.ratingCount || b.id - a.id,
+    newest: (a, b) => b.released.localeCompare(a.released) || b.id - a.id,
+    rating: (a, b) => b.rating - a.rating || b.ratingCount - a.ratingCount,
+  };
+
   function renderApps(apps) {
     const grid = document.getElementById('app-grid');
     const filters = document.getElementById('filters');
-    const cats = [...new Set(apps.map(a => a.category))];
+    const select = document.getElementById('sort-select');
+    const cards = new Map(apps.map(a => [a.id, appCard(a)]));
+    let category = 'all';
+    let sort = select.value in SORTS ? select.value : 'popular';
+    select.value = sort;
 
-    apps.forEach(a => grid.append(appCard(a)));
+    // 並び順は既存ノードを append し直して入れ替える（再生成しない）
+    const apply = () => {
+      [...apps].sort(SORTS[sort]).forEach(a => {
+        const card = cards.get(a.id);
+        card.hidden = category !== 'all' && a.category !== category;
+        grid.append(card);
+      });
+    };
 
     const makeFilter = (label, cat, count) => {
       const b = el('button', 'filter');
@@ -88,14 +106,20 @@
       b.append(document.createTextNode(label), el('span', 'count', String(count)));
       b.addEventListener('click', () => {
         filters.querySelectorAll('.filter').forEach(f => f.setAttribute('aria-pressed', String(f === b)));
-        grid.querySelectorAll('.app-card').forEach(c => {
-          c.hidden = cat !== 'all' && c.dataset.category !== cat;
-        });
+        category = cat;
+        apply();
       });
       return b;
     };
     filters.append(makeFilter('すべて', 'all', apps.length));
-    cats.forEach(c => filters.append(makeFilter(c, c, apps.filter(a => a.category === c).length)));
+    [...new Set(apps.map(a => a.category))].forEach(c =>
+      filters.append(makeFilter(c, c, apps.filter(a => a.category === c).length)));
+
+    select.addEventListener('change', () => {
+      if (select.value in SORTS) { sort = select.value; apply(); }
+    });
+
+    apply();
   }
 
   function appCard(a) {
