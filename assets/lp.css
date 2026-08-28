@@ -33,9 +33,11 @@
 /* ---------- スクリーンショット ---------- */
 .shots { display: flex; gap: 1rem; overflow-x: auto; padding-bottom: .75rem; scroll-snap-type: x mandatory; }
 .shots img {
-  width: min(260px, 62vw); flex: none; border-radius: 18px;
+  width: min(280px, 66vw); height: auto; flex: none; border-radius: 18px;
   border: 1px solid var(--border); box-shadow: var(--shadow); scroll-snap-align: start;
 }
+/* Mac / iPad の横長スクリーンショットは、縦長と同じ幅だと文字が読めないため広く取る */
+.shots.is-wide img { width: min(720px, 88vw); border-radius: 12px; }
 
 /* ---------- 機能 ---------- */
 .features { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 1.1rem; }
