@@ -1,0 +1,102 @@
+/* アプリ紹介ページ用。style.css のトークンとベースの上に重ねて使う */
+
+.lp-header { border-bottom: 1px solid var(--border); background: var(--bg); }
+.lp-header .wrap { display: flex; align-items: center; gap: 1rem; height: 56px; }
+.back-link { font-size: .88rem; color: var(--text-soft); text-decoration: none; }
+.back-link:hover { color: var(--text); }
+.lp-header .spacer { margin-left: auto; }
+
+/* ---------- ヒーロー ---------- */
+.lp-hero {
+  padding: clamp(2.5rem, 7vw, 4.5rem) 0 clamp(2rem, 5vw, 3rem);
+  background: radial-gradient(70ch 40ch at 15% -20%, var(--accent-soft), transparent 65%), var(--bg);
+}
+.lp-hero-inner { display: flex; gap: clamp(1.25rem, 4vw, 2.25rem); align-items: flex-start; flex-wrap: wrap; }
+.lp-icon {
+  width: 104px; height: 104px; border-radius: 23px; flex: none;
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.lp-hero-text { flex: 1 1 min(420px, 100%); }
+.lp-title { font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: -.02em; margin: 0 0 .35rem; }
+.lp-tagline { color: var(--text-soft); font-size: clamp(1rem, 2.2vw, 1.1rem); margin: 0 0 1.1rem; max-width: 54ch; }
+.lp-meta { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.4rem; font-size: .8rem; color: var(--text-mute); align-items: center; }
+.lp-actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+
+/* ---------- 課題 ---------- */
+.pains { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: .9rem; }
+.pain {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.1rem 1.25rem; color: var(--text-soft); font-size: .95rem;
+}
+.pain strong { display: block; color: var(--text); font-size: 1rem; margin-bottom: .3rem; }
+
+/* ---------- スクリーンショット ---------- */
+.shots { display: flex; gap: 1rem; overflow-x: auto; padding-bottom: .75rem; scroll-snap-type: x mandatory; }
+.shots img {
+  width: min(260px, 62vw); flex: none; border-radius: 18px;
+  border: 1px solid var(--border); box-shadow: var(--shadow); scroll-snap-align: start;
+}
+
+/* ---------- 機能 ---------- */
+.features { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 1.1rem; }
+.feature {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.3rem; box-shadow: var(--shadow);
+}
+.feature h3 { font-size: 1rem; margin: 0 0 .45rem; }
+.feature p { color: var(--text-soft); font-size: .92rem; margin: 0; }
+
+/* ---------- 対象 ---------- */
+.audience { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: .55rem 1.5rem; }
+.audience li { color: var(--text-soft); font-size: .95rem; padding-left: 1.4rem; position: relative; }
+.audience li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+/* ---------- 料金 ---------- */
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 1.1rem; }
+.plan {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.4rem;
+}
+.plan.is-pro { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.plan h3 { font-size: 1.05rem; margin: 0 0 .2rem; }
+.plan .price { font-size: 1.7rem; font-weight: 700; letter-spacing: -.02em; margin: 0 0 .8rem; }
+.plan .price small { font-size: .85rem; font-weight: 500; color: var(--text-mute); margin-left: .2rem; }
+.plan ul li { color: var(--text-soft); font-size: .92rem; padding-left: 1.3rem; position: relative; margin-bottom: .3rem; }
+.plan ul li::before { content: "・"; position: absolute; left: .1rem; color: var(--text-mute); }
+
+/* ---------- FAQ ---------- */
+.faq details {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface); margin-bottom: .7rem; overflow: hidden;
+}
+.faq summary {
+  cursor: pointer; padding: 1rem 1.25rem; font-weight: 600; font-size: .95rem;
+  list-style: none; display: flex; justify-content: space-between; gap: 1rem; align-items: center;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--text-mute); font-weight: 400; font-size: 1.2rem; }
+.faq details[open] summary::after { content: "−"; }
+.faq details > p { padding: 0 1.25rem 1.1rem; margin: 0; color: var(--text-soft); font-size: .93rem; }
+
+/* ---------- サポート ---------- */
+.support-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: clamp(1.4rem, 4vw, 2rem);
+}
+.support-box p { color: var(--text-soft); }
+.support-box p:last-child { margin-bottom: 0; }
+
+/* ---------- 本文（プライバシーポリシー） ---------- */
+.doc { max-width: 72ch; }
+.doc h2 { font-size: 1.15rem; margin: 2.2rem 0 .7rem; }
+.doc h2:first-of-type { margin-top: 0; }
+.doc p, .doc li { color: var(--text-soft); font-size: .95rem; }
+.doc ul { margin: 0 0 1em; }
+.doc ul li { padding-left: 1.2rem; position: relative; margin-bottom: .35rem; }
+.doc ul li::before { content: "・"; position: absolute; left: 0; color: var(--text-mute); }
+.doc .updated { font-size: .85rem; color: var(--text-mute); }
+.doc table { width: 100%; border-collapse: collapse; margin-bottom: 1.2rem; font-size: .92rem; }
+.doc th, .doc td { border: 1px solid var(--border); padding: .55rem .8rem; text-align: left; vertical-align: top; }
+.doc th { background: var(--surface-2); font-weight: 600; color: var(--text); white-space: nowrap; }
+.doc td { color: var(--text-soft); }
+.table-scroll { overflow-x: auto; }

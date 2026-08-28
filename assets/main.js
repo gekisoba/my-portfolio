@@ -24,7 +24,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- render ---------- */
-  fetch('assets/data.json?v=4')
+  fetch('assets/data.json?v=5')
     .then(r => r.json())
     .then(render)
     .catch(() => {
@@ -151,6 +151,11 @@
     a.tags.forEach(t => tags.append(el('span', 'tag', t)));
 
     const links = el('div', 'app-links');
+    if (a.lp) {
+      const l = el('a', 'is-lp', '詳しく見る');
+      l.href = a.lp;
+      links.append(l);
+    }
     links.append(link('App Store で見る', a.url));
     if (a.repo && a.repoPublic) links.append(link('GitHub', a.repo));
 

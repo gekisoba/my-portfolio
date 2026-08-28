@@ -23,6 +23,7 @@
       "url": "https://apps.apple.com/jp/app/id6799826150",
       "repo": null,
       "repoPublic": false,
+      "lp": null,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -48,6 +49,7 @@
       "url": "https://apps.apple.com/jp/app/id6790421947",
       "repo": "https://github.com/gekisoba/ConspiracyClicker",
       "repoPublic": false,
+      "lp": null,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -74,6 +76,7 @@
       "url": "https://apps.apple.com/jp/app/id6794784495",
       "repo": "https://github.com/gekisoba/AIScope",
       "repoPublic": false,
+      "lp": null,
       "category": "実験・学習",
       "platforms": [
         "iOS"
@@ -100,6 +103,7 @@
       "url": "https://apps.apple.com/jp/app/id6766423932",
       "repo": "https://github.com/gekisoba/AppRadar",
       "repoPublic": false,
+      "lp": "apps/apprank/",
       "category": "ツール",
       "platforms": [
         "macOS"
@@ -125,6 +129,7 @@
       "url": "https://apps.apple.com/jp/app/id6762073469",
       "repo": "https://github.com/gekisoba/UFOClicker",
       "repoPublic": false,
+      "lp": null,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -150,6 +155,7 @@
       "url": "https://apps.apple.com/jp/app/id6757972770",
       "repo": "https://github.com/gekisoba/CoinPusher",
       "repoPublic": false,
+      "lp": null,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -175,6 +181,7 @@
       "url": "https://apps.apple.com/jp/app/id6758904067",
       "repo": "https://github.com/gekisoba/AACamera",
       "repoPublic": false,
+      "lp": null,
       "category": "実験・学習",
       "platforms": [
         "iOS"
@@ -201,6 +208,7 @@
       "url": "https://apps.apple.com/jp/app/id6757321721",
       "repo": "https://github.com/gekisoba/UrbanLegendClicker",
       "repoPublic": false,
+      "lp": null,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -226,6 +234,7 @@
       "url": "https://apps.apple.com/jp/app/id6757092809",
       "repo": "https://github.com/gekisoba/Library-Management-App",
       "repoPublic": false,
+      "lp": "apps/library/",
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -251,6 +260,7 @@
       "url": "https://apps.apple.com/jp/app/id6755641312",
       "repo": "https://github.com/gekisoba/visit_log",
       "repoPublic": false,
+      "lp": "apps/homon-log/",
       "category": "ツール",
       "platforms": [
         "iOS",
@@ -276,6 +286,7 @@
       "url": "https://apps.apple.com/jp/app/id6755621157",
       "repo": "https://github.com/gekisoba/days_since",
       "repoPublic": false,
+      "lp": null,
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -300,6 +311,7 @@
       "url": "https://apps.apple.com/jp/app/id6755532776",
       "repo": "https://github.com/gekisoba/saiyasune",
       "repoPublic": false,
+      "lp": null,
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -326,6 +338,7 @@
       "url": "https://apps.apple.com/jp/app/id6744040862",
       "repo": "https://github.com/gekisoba/ClickerTest",
       "repoPublic": false,
+      "lp": null,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -350,6 +363,7 @@
       "url": "https://apps.apple.com/jp/app/id6743646623",
       "repo": "https://github.com/gekisoba/MiniSheet",
       "repoPublic": false,
+      "lp": null,
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -374,6 +388,7 @@
       "url": "https://apps.apple.com/jp/app/id1616494889",
       "repo": "https://github.com/gekisoba/Rieki-chan",
       "repoPublic": false,
+      "lp": null,
       "category": "ツール",
       "platforms": [
         "iOS"

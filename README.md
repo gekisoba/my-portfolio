@@ -26,6 +26,30 @@ python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
+## アプリ紹介ページ（LP）
+
+ビジネス系アプリには個別の紹介ページとプライバシーポリシーを用意しています。
+
+| アプリ | 紹介ページ | プライバシーポリシー |
+|---|---|---|
+| 訪問ログ | `/apps/homon-log/` | `/apps/homon-log/privacy.html` |
+| 図書貸出管理 | `/apps/library/` | `/apps/library/privacy.html` |
+| AppRank | `/apps/apprank/` | `/apps/apprank/privacy.html` |
+
+各ページは素の HTML で、`assets/style.css`（配色・ベース）と `assets/lp.css`
+（LP 専用）を読み込んでいます。スクリーンショットは App Store のものを
+`assets/screenshots/<slug>/` に保存しています。
+
+### 新しい LP を追加する
+
+1. `apps/<slug>/` を既存のフォルダからコピーして中身を書き換える
+2. スクリーンショットを `assets/screenshots/<slug>/` に置く
+3. `assets/data.json` の該当アプリに `"lp": "apps/<slug>/"` を設定する
+   （カードに「詳しく見る」ボタンが出ます。`update-data.py` はこの値を保持します）
+
+**プライバシーポリシーは実装を確認してから書くこと。** 広告 SDK の有無、
+外部 API への送信内容、カメラや位置情報の用途はアプリごとに違います。
+
 ## 内容の更新
 
 掲載作品はすべて `assets/data.json` に入っています。

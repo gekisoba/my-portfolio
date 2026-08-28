@@ -16,6 +16,12 @@
 /assets/data.json
   Cache-Control: no-cache
 
-# アイコンは同名で内容が変わらないため長期キャッシュしてよい
+# アイコンとスクリーンショットは同名で内容が変わらないため長期キャッシュしてよい
 /assets/icons/*
   Cache-Control: public, max-age=31536000, immutable
+
+/assets/screenshots/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/lp.css
+  Cache-Control: no-cache

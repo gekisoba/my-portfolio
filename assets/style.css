@@ -211,6 +211,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: background .15s, border-color .15s;
 }
 .app-links a:hover { background: var(--accent-soft); border-color: var(--accent); }
+.app-links a.is-lp { background: var(--accent); border-color: var(--accent); color: #fff; }
+.app-links a.is-lp:hover { background: var(--accent); filter: brightness(1.08); }
 
 /* ---------- other works ---------- */
 .work-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 1rem; }

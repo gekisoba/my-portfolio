@@ -130,6 +130,8 @@ def main():
             "url": f"https://apps.apple.com/jp/app/id{app['trackId']}",
             "repo": entry.get("repo") if entry else None,
             "repoPublic": entry.get("repoPublic", False) if entry else False,
+            # 紹介ページ（LP）へのパス。手で紐付けたものなので引き継ぐ
+            "lp": entry.get("lp") if entry else None,
             "category": CATEGORY.get(app.get("primaryGenreName"), "ツール"),
             "platforms": platforms_of(app),
             "price": app.get("formattedPrice"),
