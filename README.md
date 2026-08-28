@@ -32,9 +32,9 @@ python3 -m http.server 8000
 
 | アプリ | 紹介ページ | プライバシーポリシー |
 |---|---|---|
-| 訪問ログ | `/apps/homon-log/` | `/apps/homon-log/privacy.html` |
-| 図書貸出管理 | `/apps/library/` | `/apps/library/privacy.html` |
-| AppRank | `/apps/apprank/` | `/apps/apprank/privacy.html` |
+| 訪問ログ | `/apps/homon-log/` | `/apps/homon-log/privacy/` |
+| 図書貸出管理 | `/apps/library/` | `/apps/library/privacy/` |
+| AppRank | `/apps/apprank/` | `/apps/apprank/privacy/` |
 
 各ページは素の HTML で、`assets/style.css`（配色・ベース）と `assets/lp.css`
 （LP 専用）を読み込んでいます。スクリーンショットは App Store のものを
