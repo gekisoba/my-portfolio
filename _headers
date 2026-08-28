@@ -25,3 +25,8 @@
 
 /assets/lp.css
   Cache-Control: no-cache
+
+# app-ads.txt は Google のクローラーが読む。内容変更を素早く反映させたいので短めに
+/app-ads.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
