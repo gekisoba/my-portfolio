@@ -1,6 +1,8 @@
 # my-portfolio
 
-個人開発ポートフォリオサイト。素の HTML / CSS / JavaScript のみで構成し、Cloudflare Pages で公開しています。
+個人開発ポートフォリオサイト。素の HTML / CSS / JavaScript のみで構成し、Cloudflare Workers で公開しています。
+
+https://my-portfolio.gekisoba.workers.dev/
 
 ## 構成
 
@@ -12,7 +14,7 @@
 │   ├── main.js         # data.json を読み込んで描画・絞り込み
 │   ├── data.json       # 掲載する作品データ（ここだけ直せば内容が変わる）
 │   └── icons/          # App Store のアプリアイコン
-├── _headers            # Cloudflare Pages のレスポンスヘッダ設定
+├── _headers            # Cloudflare のレスポンスヘッダ設定
 └── robots.txt
 ```
 
@@ -32,18 +34,22 @@ python3 -m http.server 8000
 - `others` … ストア未公開の制作物。`public: true` のものだけ GitHub リンクを表示します。
 - `profile` … 名前・肩書き・リード文・各種リンク。
 
-編集して `git push` すれば、Cloudflare Pages が自動でデプロイします。
+編集して `git push` すれば、Cloudflare が自動でデプロイします。
 
-## デプロイ（Cloudflare Pages）
+## デプロイ
 
-GitHub 連携で自動デプロイしています。初回設定は次の通りです。
+Cloudflare Workers（静的アセット）で公開しています。
 
-1. Cloudflare ダッシュボード → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-2. `gekisoba/my-portfolio` を選択
-3. ビルド設定
-   - Framework preset: **None**
-   - Build command: **（空欄）**
-   - Build output directory: **`/`**
-4. **Save and Deploy**
+- 公開 URL: https://my-portfolio.gekisoba.workers.dev/
+- GitHub 連携済みで、`main` へ push すると自動でデプロイされます
 
-以降は `main` へ push するたびに自動でデプロイされます。
+## キャッシュ設定について
+
+`_headers` でパスごとに `Cache-Control` を指定しています。
+
+アイコンは内容が変わらないので1年キャッシュ、CSS / JS / データは1時間にしています。
+注意点として、`/assets/*` のようなワイルドカードは `/assets/icons/*` にも
+重複してマッチし、両方のルールの値が**連結された**ヘッダになってしまいます
+（`max-age=3600, must-revalidate, max-age=31536000, immutable` のような形）。
+そのため、アイコン以外は個別のパスで指定しています。ファイルを追加したときは
+`_headers` にも追記してください。

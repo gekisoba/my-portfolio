@@ -4,8 +4,16 @@
   X-Frame-Options: DENY
   Permissions-Policy: geolocation=(), camera=(), microphone=()
 
+# /assets/* だと icons/ にも重複マッチして Cache-Control が連結されるため、
+# アイコン以外は個別に指定する
+/assets/style.css
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/main.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/data.json
+  Cache-Control: public, max-age=3600, must-revalidate
+
 /assets/icons/*
   Cache-Control: public, max-age=31536000, immutable
-
-/assets/*
-  Cache-Control: public, max-age=3600, must-revalidate
