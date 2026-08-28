@@ -2,7 +2,7 @@
 
 個人開発ポートフォリオサイト。素の HTML / CSS / JavaScript のみで構成し、Cloudflare Workers で公開しています。
 
-https://my-portfolio.gekisoba.workers.dev/
+https://gekisoba.com/
 
 ## 構成
 
@@ -105,7 +105,7 @@ App Store から消えたアプリは、`retired`（過去に公開していた�
 
 Cloudflare Workers（静的アセット）で公開しています。
 
-- 公開 URL: https://my-portfolio.gekisoba.workers.dev/
+- 公開 URL: https://gekisoba.com/
 - GitHub 連携済みで、`main` へ push すると自動でデプロイされます
 
 ## キャッシュ設定について（重要）
