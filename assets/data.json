@@ -10,6 +10,7 @@
   "apps": [
     {
       "id": 6799826150,
+      "bundleId": "com.blogspot.gekisoba.pinball",
       "name": "BUILD BALL",
       "fullName": "BUILD BALL：組んで稼ぐピンボール",
       "desc": "スコアで台そのものを組み替えていくピンボール。SpriteKit の物理演算と Game Center ランキングに対応。",
@@ -21,6 +22,7 @@
       "icon": "assets/icons/pinball.jpg",
       "url": "https://apps.apple.com/jp/app/id6799826150",
       "repo": null,
+      "repoPublic": false,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -29,11 +31,11 @@
       "released": "2026-08",
       "updated": "2026-08-25",
       "rating": 0,
-      "ratingCount": 0,
-      "repoPublic": false
+      "ratingCount": 0
     },
     {
       "id": 6790421947,
+      "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
       "name": "陰謀論クリッカー",
       "fullName": "陰謀論クリッカー - 匿名掲示板の育成ゲーム",
       "desc": "匿名掲示板を舞台にした育成クリッカー。書き込みが世界を動かしていく短編構成の放置ゲーム。",
@@ -45,6 +47,7 @@
       "icon": "assets/icons/ConspiracyClicker.jpg",
       "url": "https://apps.apple.com/jp/app/id6790421947",
       "repo": "https://github.com/gekisoba/ConspiracyClicker",
+      "repoPublic": false,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -53,11 +56,11 @@
       "released": "2026-07",
       "updated": "2026-08-10",
       "rating": 3.8,
-      "ratingCount": 15,
-      "repoPublic": false
+      "ratingCount": 15
     },
     {
       "id": 6794784495,
+      "bundleId": "com.blogspot.gekisoba.AIScope",
       "name": "AIの中を見る",
       "fullName": "AIの中を見る：画像認識AIのしくみ入門",
       "desc": "画像認識 AI の内部を可視化する教育アプリ。手書き文字が層をどう通って推論されるかを一枚ずつ見せる。",
@@ -70,6 +73,7 @@
       "icon": "assets/icons/AIScope.jpg",
       "url": "https://apps.apple.com/jp/app/id6794784495",
       "repo": "https://github.com/gekisoba/AIScope",
+      "repoPublic": false,
       "category": "実験・学習",
       "platforms": [
         "iOS"
@@ -78,11 +82,11 @@
       "released": "2026-07",
       "updated": "2026-07-31",
       "rating": 5,
-      "ratingCount": 1,
-      "repoPublic": false
+      "ratingCount": 1
     },
     {
       "id": 6766423932,
+      "bundleId": "com.blogspot.gekisoba.AppRadar",
       "name": "AppRank",
       "fullName": "AppRank - ASO Tracker",
       "desc": "App Store のキーワード順位・カテゴリ順位を追跡する macOS 製 ASO ツール。公開 API のみで構成。",
@@ -95,6 +99,7 @@
       "icon": "assets/icons/AppRadar.png",
       "url": "https://apps.apple.com/jp/app/id6766423932",
       "repo": "https://github.com/gekisoba/AppRadar",
+      "repoPublic": false,
       "category": "ツール",
       "platforms": [
         "macOS"
@@ -103,11 +108,11 @@
       "released": "2026-05",
       "updated": "2026-05-11",
       "rating": 0,
-      "ratingCount": 0,
-      "repoPublic": false
+      "ratingCount": 0
     },
     {
       "id": 6762073469,
+      "bundleId": "com.blogspot.gekisoba.UFOClicker",
       "name": "UFOクリッカー",
       "fullName": "UFOクリッカー - 宇宙人アブダクション放置ゲーム",
       "desc": "宇宙人となって地球人をアブダクションする本格やり込み放置ゲーム。転生・時空研究など多層のプレステージ設計。",
@@ -119,6 +124,7 @@
       "icon": "assets/icons/UFOClicker.jpg",
       "url": "https://apps.apple.com/jp/app/id6762073469",
       "repo": "https://github.com/gekisoba/UFOClicker",
+      "repoPublic": false,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -127,11 +133,11 @@
       "released": "2026-04",
       "updated": "2026-08-22",
       "rating": 4.24,
-      "ratingCount": 70,
-      "repoPublic": false
+      "ratingCount": 70
     },
     {
       "id": 6757972770,
+      "bundleId": "com.blogspot.gekisoba.CoinPusher",
       "name": "無限コイン落とし",
       "fullName": "無限コイン落とし - 爽快3D物理メダルゲーム",
       "desc": "SceneKit の物理シミュレーションで作った 3D メダルゲーム。落下と押し出しの挙動を実機向けに調整。",
@@ -143,6 +149,7 @@
       "icon": "assets/icons/CoinPusher.jpg",
       "url": "https://apps.apple.com/jp/app/id6757972770",
       "repo": "https://github.com/gekisoba/CoinPusher",
+      "repoPublic": false,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -151,11 +158,11 @@
       "released": "2026-02",
       "updated": "2026-08-25",
       "rating": 4.53,
-      "ratingCount": 76,
-      "repoPublic": false
+      "ratingCount": 76
     },
     {
       "id": 6758904067,
+      "bundleId": "com.blogspot.gekisoba.AACamera",
       "name": "AACamera",
       "fullName": "AACamera: アスキーアート・カメラ & 動画",
       "desc": "カメラ映像をリアルタイムでアスキーアートに変換するカメラアプリ。写真も動画も文字で記録できる。",
@@ -167,6 +174,7 @@
       "icon": "assets/icons/AACamera.jpg",
       "url": "https://apps.apple.com/jp/app/id6758904067",
       "repo": "https://github.com/gekisoba/AACamera",
+      "repoPublic": false,
       "category": "実験・学習",
       "platforms": [
         "iOS"
@@ -175,11 +183,11 @@
       "released": "2026-02",
       "updated": "2026-02-18",
       "rating": 5,
-      "ratingCount": 1,
-      "repoPublic": false
+      "ratingCount": 1
     },
     {
       "id": 6757321721,
+      "bundleId": "com.blogspot.gekisoba.UrbanLegendClicker",
       "name": "都市伝説クリッカー",
       "fullName": "都市伝説クリッカー - 怪異を調査する放置ゲーム",
       "desc": "都市伝説を調査して怪異を集める放置ゲーム。多重転生とアーカイブ収集、iCloud 同期に対応。",
@@ -192,6 +200,7 @@
       "icon": "assets/icons/UrbanLegendClicker.jpg",
       "url": "https://apps.apple.com/jp/app/id6757321721",
       "repo": "https://github.com/gekisoba/UrbanLegendClicker",
+      "repoPublic": false,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -200,11 +209,11 @@
       "released": "2026-01",
       "updated": "2026-08-26",
       "rating": 4.24,
-      "ratingCount": 127,
-      "repoPublic": false
+      "ratingCount": 127
     },
     {
       "id": 6757092809,
+      "bundleId": "com.blogspot.gekisoba.Library-Management-App",
       "name": "図書貸出管理",
       "fullName": "図書貸出管理 - バーコードで簡単蔵書スキャン",
       "desc": "ISBN バーコードで蔵書を登録し、貸出・返却まで管理できる図書管理アプリ。",
@@ -216,6 +225,7 @@
       "icon": "assets/icons/Library-Management-App.jpg",
       "url": "https://apps.apple.com/jp/app/id6757092809",
       "repo": "https://github.com/gekisoba/Library-Management-App",
+      "repoPublic": false,
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -224,11 +234,11 @@
       "released": "2026-01",
       "updated": "2026-04-23",
       "rating": 3.8,
-      "ratingCount": 5,
-      "repoPublic": false
+      "ratingCount": 5
     },
     {
       "id": 6755641312,
+      "bundleId": "com.blogspot.gekisoba.homon-log",
       "name": "訪問ログ",
       "fullName": "訪問ログ - 営業・顧客管理のシンプルな記録アプリ",
       "desc": "顧客への訪問記録を管理する営業向けアプリ。SwiftData + CloudKit 同期、年間ヒートマップ、Obsidian 連携を実装。",
@@ -240,6 +250,7 @@
       "icon": "assets/icons/homon_log.jpg",
       "url": "https://apps.apple.com/jp/app/id6755641312",
       "repo": "https://github.com/gekisoba/visit_log",
+      "repoPublic": false,
       "category": "ツール",
       "platforms": [
         "iOS",
@@ -249,11 +260,11 @@
       "released": "2025-11",
       "updated": "2026-08-28",
       "rating": 3.88,
-      "ratingCount": 8,
-      "repoPublic": false
+      "ratingCount": 8
     },
     {
       "id": 6755621157,
+      "bundleId": "com.blogspot.gekisoba.days-since",
       "name": "アレから",
       "fullName": "アレから - 前回から何日？経過日数メモ",
       "desc": "「前回からの経過日数」を記録するカウンターアプリ。美容院やフィルター交換などの周期管理向け。",
@@ -264,6 +275,7 @@
       "icon": "assets/icons/days_since.jpg",
       "url": "https://apps.apple.com/jp/app/id6755621157",
       "repo": "https://github.com/gekisoba/days_since",
+      "repoPublic": false,
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -272,11 +284,11 @@
       "released": "2025-11",
       "updated": "2026-03-31",
       "rating": 4.07,
-      "ratingCount": 15,
-      "repoPublic": false
+      "ratingCount": 15
     },
     {
       "id": 6755532776,
+      "bundleId": "com.blogspot.gekisoba.saiyasune",
       "name": "最安値メモ",
       "fullName": "最安値メモ - 買い物上手な底値帳",
       "desc": "商品の底値を記録する買い物メモ。バーコードスキャンで商品を素早く登録できる。",
@@ -287,6 +299,7 @@
       "icon": "assets/icons/saiyasune.jpg",
       "url": "https://apps.apple.com/jp/app/id6755532776",
       "repo": "https://github.com/gekisoba/saiyasune",
+      "repoPublic": false,
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -295,11 +308,11 @@
       "released": "2025-11",
       "updated": "2025-11-27",
       "rating": 4.38,
-      "ratingCount": 8,
-      "repoPublic": false
+      "ratingCount": 8
     },
     {
       "id": 6744040862,
+      "bundleId": "com.blogspot.gekisoba.ClickerTest",
       "name": "クリッカーカンパニー",
       "fullName": "クリッカーカンパニー : 放置で会社経営！",
       "desc": "会社を大きくしていく放置＆クリッカー経営シミュレーション。社員の採用・昇進・転生システムを実装。",
@@ -312,6 +325,7 @@
       "icon": "assets/icons/ClickerTest.jpg",
       "url": "https://apps.apple.com/jp/app/id6744040862",
       "repo": "https://github.com/gekisoba/ClickerTest",
+      "repoPublic": false,
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -320,11 +334,11 @@
       "released": "2025-05",
       "updated": "2026-08-25",
       "rating": 4.57,
-      "ratingCount": 359,
-      "repoPublic": false
+      "ratingCount": 359
     },
     {
       "id": 6743646623,
+      "bundleId": "com.blogspot.gekisoba.MiniSheet",
       "name": "MiniSheet",
       "fullName": "MiniSheet - ミニ表計算アプリ",
       "desc": "起動してすぐ使える軽量の表計算アプリ。数式入力と共有に絞ったミニマル構成。",
@@ -335,6 +349,7 @@
       "icon": "assets/icons/MiniSheet.jpg",
       "url": "https://apps.apple.com/jp/app/id6743646623",
       "repo": "https://github.com/gekisoba/MiniSheet",
+      "repoPublic": false,
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -343,11 +358,11 @@
       "released": "2025-03",
       "updated": "2025-12-24",
       "rating": 3.75,
-      "ratingCount": 12,
-      "repoPublic": false
+      "ratingCount": 12
     },
     {
       "id": 1616494889,
+      "bundleId": "com.MasamichiNakada.Rieki-chan",
       "name": "利益ちゃん – 利益計算・価格設定ツール",
       "fullName": "利益ちゃん – 利益計算・価格設定ツール",
       "desc": "原価から販売価格・利益率・利益額を相互に逆算できる物販向け計算ツール。最初に公開したアプリ。",
@@ -358,6 +373,7 @@
       "icon": "assets/icons/Rieki-chan.jpg",
       "url": "https://apps.apple.com/jp/app/id1616494889",
       "repo": "https://github.com/gekisoba/Rieki-chan",
+      "repoPublic": false,
       "category": "ツール",
       "platforms": [
         "iOS"
@@ -366,8 +382,7 @@
       "released": "2022-04",
       "updated": "2025-12-14",
       "rating": 4,
-      "ratingCount": 4,
-      "repoPublic": false
+      "ratingCount": 4
     }
   ],
   "others": [

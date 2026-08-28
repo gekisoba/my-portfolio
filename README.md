@@ -30,11 +30,33 @@ python3 -m http.server 8000
 
 掲載作品はすべて `assets/data.json` に入っています。
 
-- `apps` … App Store で公開中のアプリ。`rating` や `ratingCount` は公開時点の値。
-- `others` … ストア未公開の制作物。`public: true` のものだけ GitHub リンクを表示します。
-- `profile` … 名前・肩書き・リード文・各種リンク。
+- `apps` … App Store で公開中のアプリ
+- `others` … ストア未公開の制作物。`public: true` のものだけ GitHub リンクを表示します
+- `profile` … 名前・肩書き・リード文・各種リンク
 
 編集して `git push` すれば、Cloudflare が自動でデプロイします。
+
+### App Store の情報は自動更新されます
+
+評価・レビュー数・新しく公開したアプリは、GitHub Actions が**毎週月曜 9:00（JST）**に
+取得して、変化があれば自動でコミットします（`.github/workflows/update-app-data.yml`）。
+変化がなければ何もしません。
+
+すぐ反映したいときは手動でも実行できます。
+
+```sh
+python3 tools/update-data.py
+git add -A && git commit -m "アプリデータを更新" && git push
+```
+
+GitHub の Actions タブから手動実行することもできます。
+
+**説明文（`desc`）とタグ（`tags`）は手書きなので、更新スクリプトは上書きしません。**
+新しいアプリが見つかった場合はこの2つが空のまま追加され、実行時に警告が出ます。
+`assets/data.json` を開いて埋めてください。
+
+App Store から消えたアプリは、リンクが 404 になるため自動で削除されます。
+消えた内容は `git diff` から復元できます。
 
 ## デプロイ
 
