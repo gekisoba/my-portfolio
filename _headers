@@ -4,16 +4,18 @@
   X-Frame-Options: DENY
   Permissions-Policy: geolocation=(), camera=(), microphone=()
 
-# /assets/* だと icons/ にも重複マッチして Cache-Control が連結されるため、
-# アイコン以外は個別に指定する
+# HTML は常に最新が配信されるため、HTML から読み込む CSS / JS / データを
+# キャッシュすると「新しい HTML × 古い JS」の食い違いが起きる。
+# no-cache = 保存はするが毎回サーバーに確認する（変更なしなら 304 で数百バイト）。
 /assets/style.css
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: no-cache
 
 /assets/main.js
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: no-cache
 
 /assets/data.json
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: no-cache
 
+# アイコンは同名で内容が変わらないため長期キャッシュしてよい
 /assets/icons/*
   Cache-Control: public, max-age=31536000, immutable

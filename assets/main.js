@@ -24,7 +24,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- render ---------- */
-  fetch('assets/data.json')
+  fetch('assets/data.json?v=2')
     .then(r => r.json())
     .then(render)
     .catch(() => {
