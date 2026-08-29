@@ -178,11 +178,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* JS で中身を描画するまでの場所取り。描画されると :empty が外れて解除される。
    min-height を常時かけると、絞り込みで件数が減ったときに空白が残るため :empty 限定。 */
 #stats:empty { min-height: 200px; }
+#filters:empty { min-height: 35px; }
+#skill-chips:empty { min-height: 260px; }
 #app-grid:empty { min-height: 4400px; }
 #retired-list:empty { min-height: 900px; }
 #work-list:empty { min-height: 1900px; }
 @media (min-width: 620px) {
   #stats:empty { min-height: 108px; }
+  #skill-chips:empty { min-height: 180px; }
   #app-grid:empty { min-height: 2400px; }
   #retired-list:empty { min-height: 560px; }
   #work-list:empty { min-height: 1300px; }
@@ -190,7 +193,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (min-width: 940px) {
   #app-grid:empty { min-height: 1520px; }
   #retired-list:empty { min-height: 400px; }
-  #work-list:empty { min-height: 930px; }
+  #work-list:empty { min-height: 990px; }
 }
 
 /* ---------- app cards ---------- */
