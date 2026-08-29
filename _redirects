@@ -1,0 +1,19 @@
+# アプリへの短縮リンク。gekisoba.com/<slug> で App Store に飛ぶ。
+# 302（一時）にしてあるので、行き先を変えてもブラウザにキャッシュされ続けない。
+# アプリを追加したら、ここにも1行足すこと。
+
+/aacamera  https://apps.apple.com/jp/app/id6758904067  302
+/aiscope  https://apps.apple.com/jp/app/id6794784495  302
+/apprank  https://apps.apple.com/jp/app/id6766423932  302
+/buildball  https://apps.apple.com/jp/app/id6799826150  302
+/minisheet  https://apps.apple.com/jp/app/id6743646623  302
+/ufo  https://apps.apple.com/jp/app/id6762073469  302
+/arekara  https://apps.apple.com/jp/app/id6755621157  302
+/clicker  https://apps.apple.com/jp/app/id6744040862  302
+/rieki  https://apps.apple.com/jp/app/id1616494889  302
+/toshokan  https://apps.apple.com/jp/app/id6757092809  302
+/saiyasune  https://apps.apple.com/jp/app/id6755532776  302
+/coin  https://apps.apple.com/jp/app/id6757972770  302
+/homon  https://apps.apple.com/jp/app/id6755641312  302
+/toshi  https://apps.apple.com/jp/app/id6757321721  302
+/inbou  https://apps.apple.com/jp/app/id6790421947  302
