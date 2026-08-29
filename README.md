@@ -36,6 +36,7 @@ python3 -m http.server 8000
 | 図書貸出管理 | `/apps/library/` | `/apps/library/privacy/` |
 | AppRank | `/apps/apprank/` | `/apps/apprank/privacy/` |
 | 上記以外の12本 | （なし） | `/privacy/`（共通・アプリ別の対応表つき） |
+| あしあと（申請中） | （なし） | `/apps/ashiato/privacy/` |
 
 各ページは素の HTML で、`assets/style.css`（配色・ベース）と `assets/lp.css`
 （LP 専用）を読み込んでいます。スクリーンショットは App Store のものを

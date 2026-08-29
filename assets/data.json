@@ -414,11 +414,13 @@
     },
     {
       "name": "あしあと (ashiato)",
-      "desc": "訪れた場所を自動で記録する位置情報ログアプリ。訪問履歴の集計と Obsidian / Webhook 連携を試作中。",
+      "desc": "訪れた場所を記録する位置情報ログアプリ。記録は端末内にのみ保存し、Obsidian への書き出しと Webhook 連携で自分の環境へ持ち出せる。App Store 申請中。",
       "tags": [
         "SwiftUI",
+        "SwiftData",
         "位置情報",
-        "Obsidian連携"
+        "Obsidian連携",
+        "Webhook"
       ],
       "repo": null,
       "public": false
