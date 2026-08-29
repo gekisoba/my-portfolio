@@ -30,3 +30,9 @@
 /app-ads.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
+
+# アプリが読む設定ファイル。すぐ反映させたいのでキャッシュしない
+/config/*
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache
+  Access-Control-Allow-Origin: *
