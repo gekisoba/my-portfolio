@@ -1,9 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-08-29",
-  "promo": {
-    "title": "新作リリース！",
-    "characterImage": "inoue_shop",
+  "featured": {
+    "bundleId": "com.blogspot.gekisoba.pinball",
+    "title": "BUILD BALL",
+    "iconUrl": "https://gekisoba.com/assets/icons/pinball.jpg",
+    "bundledImage": "BuildBall",
+    "url": "https://gekisoba.com/buildball",
+    "subtitle": "ビルドボール - 育成ピンボール",
+    "headline": "新作リリース！",
     "dialogues": [
       "お待たせしました。新作、ついにリリースです。",
       "今度の新作は、ピンボールですよ。",
@@ -13,43 +18,50 @@
       "残り1球からが本番、なんて言いますよね。",
       "バンパーを並べて、自分だけの台を作るんです。",
       "スコアアタック、自信はありますか？"
-    ],
-    "cards": [
-      {
-        "bundleId": "com.blogspot.gekisoba.pinball",
-        "title": "BUILD BALL",
-        "iconUrl": "https://gekisoba.com/assets/icons/pinball.jpg",
-        "bundledImage": "buildball",
-        "url": "https://gekisoba.com/buildball"
-      },
-      {
-        "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
-        "title": "陰謀論クリッカー",
-        "iconUrl": "https://gekisoba.com/assets/icons/ConspiracyClicker.jpg",
-        "bundledImage": "inbou",
-        "url": "https://gekisoba.com/inbou"
-      },
-      {
-        "bundleId": "com.blogspot.gekisoba.UFOClicker",
-        "title": "UFOクリッカー",
-        "iconUrl": "https://gekisoba.com/assets/icons/UFOClicker.jpg",
-        "bundledImage": "ufo",
-        "url": "https://gekisoba.com/ufo"
-      },
-      {
-        "bundleId": "com.blogspot.gekisoba.UrbanLegendClicker",
-        "title": "都市伝説クリッカー",
-        "iconUrl": "https://gekisoba.com/assets/icons/UrbanLegendClicker.jpg",
-        "bundledImage": "toshidensetsu",
-        "url": "https://gekisoba.com/toshi"
-      },
-      {
-        "bundleId": "com.blogspot.gekisoba.CoinPusher",
-        "title": "無限コイン落とし",
-        "iconUrl": "https://gekisoba.com/assets/icons/CoinPusher.jpg",
-        "bundledImage": "coinpusher",
-        "url": "https://gekisoba.com/coin"
-      }
     ]
-  }
+  },
+  "apps": [
+    {
+      "bundleId": "com.blogspot.gekisoba.pinball",
+      "title": "BUILD BALL",
+      "iconUrl": "https://gekisoba.com/assets/icons/pinball.jpg",
+      "bundledImage": "buildball",
+      "url": "https://gekisoba.com/buildball"
+    },
+    {
+      "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
+      "title": "陰謀論クリッカー",
+      "iconUrl": "https://gekisoba.com/assets/icons/ConspiracyClicker.jpg",
+      "bundledImage": "inbou",
+      "url": "https://gekisoba.com/inbou"
+    },
+    {
+      "bundleId": "com.blogspot.gekisoba.UFOClicker",
+      "title": "UFOクリッカー",
+      "iconUrl": "https://gekisoba.com/assets/icons/UFOClicker.jpg",
+      "bundledImage": "ufo",
+      "url": "https://gekisoba.com/ufo"
+    },
+    {
+      "bundleId": "com.blogspot.gekisoba.UrbanLegendClicker",
+      "title": "都市伝説クリッカー",
+      "iconUrl": "https://gekisoba.com/assets/icons/UrbanLegendClicker.jpg",
+      "bundledImage": "toshidensetsu",
+      "url": "https://gekisoba.com/toshi"
+    },
+    {
+      "bundleId": "com.blogspot.gekisoba.CoinPusher",
+      "title": "無限コイン落とし",
+      "iconUrl": "https://gekisoba.com/assets/icons/CoinPusher.jpg",
+      "bundledImage": "coinpusher",
+      "url": "https://gekisoba.com/coin"
+    },
+    {
+      "bundleId": "com.blogspot.gekisoba.ClickerTest",
+      "title": "クリッカーカンパニー",
+      "iconUrl": "https://gekisoba.com/assets/icons/ClickerTest.jpg",
+      "bundledImage": "clickercompany",
+      "url": "https://gekisoba.com/clicker"
+    }
+  ]
 }
