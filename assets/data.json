@@ -9,6 +9,34 @@
   },
   "apps": [
     {
+      "id": 6806528986,
+      "bundleId": "com.blogspot.gekisoba.ashiato",
+      "name": "あしあとログ",
+      "fullName": "あしあとログ - 位置情報つきライフログ",
+      "desc": "その場でワンタップ、一言と現在地だけを残すライフログ。Obsidian のデイリーノートに1行だけ追記する方式なので、同じノートを開いていても壊れない。",
+      "tags": [
+        "SwiftUI",
+        "SwiftData",
+        "位置情報",
+        "Obsidian連携",
+        "Webhook"
+      ],
+      "icon": "assets/icons/ashiato.jpg",
+      "url": "https://apps.apple.com/jp/app/id6806528986",
+      "repo": null,
+      "repoPublic": false,
+      "lp": null,
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-09",
+      "updated": "2026-09-02",
+      "rating": 0,
+      "ratingCount": 0
+    },
+    {
       "id": 6799826150,
       "bundleId": "com.blogspot.gekisoba.pinball",
       "name": "BUILD BALL",
@@ -30,7 +58,7 @@
       ],
       "price": "無料",
       "released": "2026-08",
-      "updated": "2026-08-25",
+      "updated": "2026-09-02",
       "rating": 5,
       "ratingCount": 2
     },
@@ -164,7 +192,7 @@
       "released": "2026-02",
       "updated": "2026-08-25",
       "rating": 4.53,
-      "ratingCount": 76
+      "ratingCount": 77
     },
     {
       "id": 6758904067,
@@ -246,31 +274,6 @@
       "ratingCount": 5
     },
     {
-      "id": 6755621157,
-      "bundleId": "com.blogspot.gekisoba.days-since",
-      "name": "アレから",
-      "fullName": "アレから - 前回から何日？経過日数メモ",
-      "desc": "「前回からの経過日数」を記録するカウンターアプリ。美容院やフィルター交換などの周期管理向け。",
-      "tags": [
-        "SwiftUI",
-        "ウィジェット的用途"
-      ],
-      "icon": "assets/icons/days_since.jpg",
-      "url": "https://apps.apple.com/jp/app/id6755621157",
-      "repo": "https://github.com/gekisoba/days_since",
-      "repoPublic": false,
-      "lp": null,
-      "category": "ツール",
-      "platforms": [
-        "iOS"
-      ],
-      "price": "無料",
-      "released": "2025-11",
-      "updated": "2026-03-31",
-      "rating": 4.07,
-      "ratingCount": 15
-    },
-    {
       "id": 6755641312,
       "bundleId": "com.blogspot.gekisoba.homon-log",
       "name": "訪問ログ",
@@ -296,6 +299,31 @@
       "updated": "2026-08-28",
       "rating": 3.88,
       "ratingCount": 8
+    },
+    {
+      "id": 6755621157,
+      "bundleId": "com.blogspot.gekisoba.days-since",
+      "name": "アレから",
+      "fullName": "アレから - 前回から何日？経過日数メモ",
+      "desc": "「前回からの経過日数」を記録するカウンターアプリ。美容院やフィルター交換などの周期管理向け。",
+      "tags": [
+        "SwiftUI",
+        "ウィジェット的用途"
+      ],
+      "icon": "assets/icons/days_since.jpg",
+      "url": "https://apps.apple.com/jp/app/id6755621157",
+      "repo": "https://github.com/gekisoba/days_since",
+      "repoPublic": false,
+      "lp": null,
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2025-11",
+      "updated": "2026-03-31",
+      "rating": 4.07,
+      "ratingCount": 15
     },
     {
       "id": 6755532776,
@@ -411,19 +439,6 @@
       ],
       "repo": "https://github.com/gekisoba/Kiko",
       "public": true
-    },
-    {
-      "name": "あしあと (ashiato)",
-      "desc": "訪れた場所を記録する位置情報ログアプリ。記録は端末内にのみ保存し、Obsidian への書き出しと Webhook 連携で自分の環境へ持ち出せる。App Store 申請中。",
-      "tags": [
-        "SwiftUI",
-        "SwiftData",
-        "位置情報",
-        "Obsidian連携",
-        "Webhook"
-      ],
-      "repo": null,
-      "public": false
     },
     {
       "name": "DailyGood",
