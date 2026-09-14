@@ -58,9 +58,9 @@
       ],
       "price": "無料",
       "released": "2026-08",
-      "updated": "2026-09-02",
-      "rating": 5,
-      "ratingCount": 2
+      "updated": "2026-09-13",
+      "rating": 4.33,
+      "ratingCount": 3
     },
     {
       "id": 6790421947,
@@ -165,8 +165,8 @@
       "price": "無料",
       "released": "2026-04",
       "updated": "2026-08-28",
-      "rating": 4.24,
-      "ratingCount": 70
+      "rating": 4.25,
+      "ratingCount": 71
     },
     {
       "id": 6757972770,
@@ -244,8 +244,8 @@
       "price": "無料",
       "released": "2026-01",
       "updated": "2026-08-26",
-      "rating": 4.24,
-      "ratingCount": 128
+      "rating": 4.23,
+      "ratingCount": 129
     },
     {
       "id": 6757092809,
@@ -274,33 +274,6 @@
       "ratingCount": 5
     },
     {
-      "id": 6755641312,
-      "bundleId": "com.blogspot.gekisoba.homon-log",
-      "name": "訪問ログ",
-      "fullName": "訪問ログ - 営業・顧客管理のシンプルな記録アプリ",
-      "desc": "顧客への訪問記録を管理する営業向けアプリ。SwiftData + CloudKit 同期、年間ヒートマップ、Obsidian 連携を実装。",
-      "tags": [
-        "SwiftData",
-        "CloudKit",
-        "Mac Catalyst"
-      ],
-      "icon": "assets/icons/homon_log.jpg",
-      "url": "https://apps.apple.com/jp/app/id6755641312",
-      "repo": "https://github.com/gekisoba/visit_log",
-      "repoPublic": false,
-      "lp": "apps/homon-log/",
-      "category": "ツール",
-      "platforms": [
-        "iOS",
-        "Mac"
-      ],
-      "price": "無料",
-      "released": "2025-11",
-      "updated": "2026-08-28",
-      "rating": 3.88,
-      "ratingCount": 8
-    },
-    {
       "id": 6755621157,
       "bundleId": "com.blogspot.gekisoba.days-since",
       "name": "アレから",
@@ -326,6 +299,33 @@
       "ratingCount": 15
     },
     {
+      "id": 6755641312,
+      "bundleId": "com.blogspot.gekisoba.homon-log",
+      "name": "訪問ログ",
+      "fullName": "訪問ログ - 営業・顧客管理のシンプルな記録アプリ",
+      "desc": "顧客への訪問記録を管理する営業向けアプリ。SwiftData + CloudKit 同期、年間ヒートマップ、Obsidian 連携を実装。",
+      "tags": [
+        "SwiftData",
+        "CloudKit",
+        "Mac Catalyst"
+      ],
+      "icon": "assets/icons/homon_log.jpg",
+      "url": "https://apps.apple.com/jp/app/id6755641312",
+      "repo": "https://github.com/gekisoba/visit_log",
+      "repoPublic": false,
+      "lp": "apps/homon-log/",
+      "category": "ツール",
+      "platforms": [
+        "iOS",
+        "Mac"
+      ],
+      "price": "無料",
+      "released": "2025-11",
+      "updated": "2026-09-11",
+      "rating": 3.88,
+      "ratingCount": 8
+    },
+    {
       "id": 6755532776,
       "bundleId": "com.blogspot.gekisoba.saiyasune",
       "name": "最安値メモ",
@@ -347,8 +347,8 @@
       "price": "無料",
       "released": "2025-11",
       "updated": "2025-11-27",
-      "rating": 4.38,
-      "ratingCount": 8
+      "rating": 4.44,
+      "ratingCount": 9
     },
     {
       "id": 6744040862,
@@ -374,8 +374,8 @@
       "price": "無料",
       "released": "2025-05",
       "updated": "2026-08-28",
-      "rating": 4.56,
-      "ratingCount": 365
+      "rating": 4.55,
+      "ratingCount": 371
     },
     {
       "id": 6743646623,
@@ -399,8 +399,8 @@
       "price": "無料",
       "released": "2025-03",
       "updated": "2025-12-24",
-      "rating": 3.75,
-      "ratingCount": 12
+      "rating": 3.85,
+      "ratingCount": 13
     },
     {
       "id": 1616494889,
