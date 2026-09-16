@@ -177,23 +177,36 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* JS で中身を描画するまでの場所取り。描画されると :empty が外れて解除される。
    min-height を常時かけると、絞り込みで件数が減ったときに空白が残るため :empty 限定。 */
-#stats:empty { min-height: 200px; }
-#filters:empty { min-height: 35px; }
-#skill-chips:empty { min-height: 260px; }
-#app-grid:empty { min-height: 4400px; }
-#retired-list:empty { min-height: 900px; }
-#work-list:empty { min-height: 1900px; }
-@media (min-width: 620px) {
+/* 幅の境目は .app-grid の実際のカラム数の変わり目に合わせてある（実測）。
+   minmax(310px, 1fr) + gap なので 1→2 カラムは 678px、2→3 カラムは 1006px（1px刻みで実測）。
+   620/940 のようにカラムの変わり目とズレた幅で切り替えると、その間の帯で
+   「2カラム用の低い値 × 実際は1カラム」になり、かえって大きくずれる。 */
+#stats:empty { min-height: 214px; }
+#filters:empty { min-height: 77px; }
+#skill-chips:empty { min-height: 220px; }
+#app-grid:empty { min-height: 4900px; }
+#retired-list:empty { min-height: 950px; }
+#work-list:empty { min-height: 2470px; }
+/* .app-grid は minmax(310px)、.work-list（= #retired-list / #work-list）は
+   minmax(320px) なので、カラムが増える幅が 696px / 1032px と 18〜26px うしろにずれる。
+   まとめて1つの幅で切り替えると、その差の帯でどちらかが必ず大きく外れる。 */
+@media (min-width: 678px) {
   #stats:empty { min-height: 108px; }
-  #skill-chips:empty { min-height: 180px; }
-  #app-grid:empty { min-height: 2400px; }
-  #retired-list:empty { min-height: 560px; }
-  #work-list:empty { min-height: 1300px; }
+  #filters:empty { min-height: 35px; }
+  #skill-chips:empty { min-height: 230px; }
+  #app-grid:empty { min-height: 2600px; }
 }
-@media (min-width: 940px) {
-  #app-grid:empty { min-height: 1520px; }
-  #retired-list:empty { min-height: 400px; }
-  #work-list:empty { min-height: 990px; }
+@media (min-width: 696px) {
+  #retired-list:empty { min-height: 560px; }
+  #work-list:empty { min-height: 1370px; }
+}
+@media (min-width: 1006px) {
+  #skill-chips:empty { min-height: 190px; }
+  #app-grid:empty { min-height: 1920px; }
+}
+@media (min-width: 1032px) {
+  #retired-list:empty { min-height: 450px; }
+  #work-list:empty { min-height: 1050px; }
 }
 
 /* ---------- app cards ---------- */

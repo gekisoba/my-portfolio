@@ -1,26 +1,33 @@
 {
-  "version": 2,
-  "updatedAt": "2026-08-29",
+  "version": 3,
+  "updatedAt": "2026-09-13",
   "featured": {
-    "bundleId": "com.blogspot.gekisoba.pinball",
-    "title": "BUILD BALL",
-    "iconUrl": "https://gekisoba.com/assets/icons/pinball.jpg",
-    "bundledImage": "BuildBall",
-    "url": "https://gekisoba.com/buildball",
-    "subtitle": "ビルドボール - 育成ピンボール",
+    "bundleId": "com.blogspot.gekisoba.subarashii-ana",
+    "title": "素晴らしい穴",
+    "iconUrl": "https://gekisoba.com/assets/icons/subarashii-ana.jpg",
+    "bundledImage": "ana",
+    "url": "https://gekisoba.com/ana",
+    "subtitle": "山の底まで掘って、鉱石と遺跡と埋蔵金を探す",
     "headline": "新作リリース！",
     "dialogues": [
       "お待たせしました。新作、ついにリリースです。",
-      "今度の新作は、ピンボールですよ。",
-      "台を育てて、スコアを伸ばすんです。楽しいですよ。",
-      "玉を落とさないように...ふふ、腕の見せどころですね。",
-      "稼いだコインは使うか、残すか。悩ましいところです。",
-      "残り1球からが本番、なんて言いますよね。",
-      "バンパーを並べて、自分だけの台を作るんです。",
-      "スコアアタック、自信はありますか？"
+      "今度の新作は、穴掘りですよ。",
+      "山にひとつだけ、埋蔵金が埋まっているんです。",
+      "押したところへ歩いて、掘る。指はそれだけ使います。",
+      "ヘッドライトの届くところしか見えません。ふふ、暗いですよ。",
+      "袋がいっぱいになったら、帰りどきです。",
+      "売ったお金で、ツルハシを鍛えるんです。",
+      "前に誰かが掘った跡が、あちこちに残っているそうですよ。"
     ]
   },
   "apps": [
+    {
+      "bundleId": "com.blogspot.gekisoba.subarashii-ana",
+      "title": "素晴らしい穴",
+      "iconUrl": "https://gekisoba.com/assets/icons/subarashii-ana.jpg",
+      "bundledImage": "ana",
+      "url": "https://gekisoba.com/ana"
+    },
     {
       "bundleId": "com.blogspot.gekisoba.pinball",
       "title": "BUILD BALL",
