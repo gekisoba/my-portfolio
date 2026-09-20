@@ -19,3 +19,8 @@
 /inbou  https://apps.apple.com/jp/app/id6790421947  302
 /ashiato  https://apps.apple.com/jp/app/id6806528986  302
 /ana  https://apps.apple.com/jp/app/id6811329701  302
+
+# クリッカーカンパニーの銘柄コード。/kabu/<コード> を1枚のページで受ける。
+# 200 は中身の差し替え（URL はそのまま）なので、ページ側でコードを読み取れる。
+# アプリを入れている端末では、この道に来る前に Universal Link でアプリが開く。
+/kabu/*  /kabu/index.html  200

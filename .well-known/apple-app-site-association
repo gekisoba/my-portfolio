@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["PU96FA4AYM.com.blogspot.gekisoba.ClickerTest"],
+        "components": [
+          {
+            "/": "/kabu/*",
+            "comment": "クリッカーカンパニーの銘柄コード。インストール済みならアプリが開く"
+          }
+        ]
+      }
+    ]
+  }
+}

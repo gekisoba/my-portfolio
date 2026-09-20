@@ -36,3 +36,9 @@
   Content-Type: application/json; charset=utf-8
   Cache-Control: no-cache
   Access-Control-Allow-Origin: *
+
+# Universal Link の紐付けファイル。Apple は application/json で、かつ
+# リダイレクトなしで返ってくることを求める。拡張子が無いので明示する
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
