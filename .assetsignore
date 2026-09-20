@@ -1,0 +1,14 @@
+# 配信しないもの。書式は .gitignore と同じ。
+#
+# **.git を外すのが主目的。** 付けないと .git/config や .git/HEAD が
+# そのまま公開され、サイトからリポジトリの中身をたどれてしまう。
+.git
+.github
+
+# 配信の設定そのもの
+.assetsignore
+wrangler.jsonc
+
+# 開発用。サイトの一部ではない
+tools
+README.md

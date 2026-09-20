@@ -1,0 +1,13 @@
+{
+  // gekisoba.com の配信設定。
+  //
+  // これが無いと Workers Builds の deploy コマンド（npx wrangler deploy）が
+  // 「設定が見つからない」で失敗する。リポジトリに置いておかないと、
+  // GitHub に push しても本番に反映されない。
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-portfolio",
+  "compatibility_date": "2026-09-18",
+  // サイトはリポジトリの直下に置いてある（index.html が root）
+  "assets": { "directory": "." },
+  "observability": { "enabled": true }
+}
