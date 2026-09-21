@@ -9,6 +9,32 @@
   },
   "apps": [
     {
+      "id": 6811329701,
+      "bundleId": "com.blogspot.gekisoba.subarashii-ana",
+      "name": "素晴らしい穴",
+      "fullName": "素晴らしい穴 - 穴掘り＆埋蔵金さがし",
+      "desc": "山をひとつ、底まで掘り下げて鉱石と遺跡と埋蔵金を探す採掘ゲーム。絵は画像を使わずコードで描き、効果音も波形から合成している。",
+      "tags": [
+        "SwiftUI",
+        "SpriteKit",
+        "手続き生成"
+      ],
+      "icon": "assets/icons/subarashii-ana.jpg",
+      "url": "https://apps.apple.com/jp/app/id6811329701",
+      "repo": null,
+      "repoPublic": false,
+      "lp": null,
+      "category": "ゲーム",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-09",
+      "updated": "2026-09-18",
+      "rating": 5,
+      "ratingCount": 2
+    },
+    {
       "id": 6806528986,
       "bundleId": "com.blogspot.gekisoba.ashiato",
       "name": "あしあとログ",
@@ -33,32 +59,6 @@
       "price": "無料",
       "released": "2026-09",
       "updated": "2026-09-02",
-      "rating": 0,
-      "ratingCount": 0
-    },
-    {
-      "id": 6811329701,
-      "bundleId": "com.blogspot.gekisoba.subarashii-ana",
-      "name": "素晴らしい穴",
-      "fullName": "素晴らしい穴 - 穴掘り＆埋蔵金さがし",
-      "desc": "山をひとつ、底まで掘り下げて鉱石と遺跡と埋蔵金を探す採掘ゲーム。絵は画像を使わずコードで描き、効果音も波形から合成している。",
-      "tags": [
-        "SwiftUI",
-        "SpriteKit",
-        "手続き生成"
-      ],
-      "icon": "assets/icons/subarashii-ana.jpg",
-      "url": "https://apps.apple.com/jp/app/id6811329701",
-      "repo": null,
-      "repoPublic": false,
-      "lp": null,
-      "category": "ゲーム",
-      "platforms": [
-        "iOS"
-      ],
-      "price": "無料",
-      "released": "2026-09",
-      "updated": "2026-09-16",
       "rating": 0,
       "ratingCount": 0
     },
@@ -348,8 +348,8 @@
       "price": "無料",
       "released": "2025-11",
       "updated": "2026-09-11",
-      "rating": 3.88,
-      "ratingCount": 8
+      "rating": 4,
+      "ratingCount": 9
     },
     {
       "id": 6755532776,
@@ -401,7 +401,7 @@
       "released": "2025-05",
       "updated": "2026-09-16",
       "rating": 4.55,
-      "ratingCount": 375
+      "ratingCount": 376
     },
     {
       "id": 6743646623,
