@@ -24,7 +24,9 @@
   main, .lp-tagline, .lp-lead { line-break: strict; }
 
   /* 節の前置き。lp.css には見出しと箱しか無いので、ここだけ足す */
-  .lp-lead { max-width: 46rem; line-height: 1.9; opacity: .9; margin: 0 0 1.4rem; }
+  /* **幅を絞らない。** カードは段いっぱいなので、説明文だけ狭いと
+     右端が揃わず、文の途中で勝手に切れているように見える */
+  .lp-lead { line-height: 1.9; opacity: .9; margin: 0 0 1.4rem; }
   .lp-lead + .features, .lp-lead + .audience { margin-top: 0; }
   .audience + .lp-lead, .features + .lp-lead { margin: 1.6rem 0 0; }
   .faq code {
