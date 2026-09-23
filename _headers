@@ -16,6 +16,11 @@
 /assets/data.json
   Cache-Control: no-cache
 
+# サントラの音源。内容が変わらないので長期キャッシュ。
+# **1 曲 2〜3MB あるので、ここをキャッシュしないと聴き直すたびに取り直しになる**
+/apps/subarashii-ana/audio/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # アイコンとスクリーンショットは同名で内容が変わらないため長期キャッシュしてよい
 /assets/icons/*
   Cache-Control: public, max-age=31536000, immutable

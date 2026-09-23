@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>素晴らしい穴 — 山をひとつ底まで掘る採掘ゲーム（サウンドトラック試聴つき）</title>
+<meta name="description" content="2,000×4,000 マスの山を底まで掘り下げる iPhone 向け採掘ゲーム。絵は画像を使わずコードで描き、効果音は波形から合成しています。ゲーム内で流れるサイバー演歌 21 曲をこのページで試聴できます。">
+<link rel="canonical" href="https://gekisoba.com/apps/subarashii-ana/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gekisoba.com/apps/subarashii-ana/">
+<meta property="og:title" content="素晴らしい穴 — 山をひとつ底まで掘る採掘ゲーム">
+<meta property="og:description" content="掘って、売って、また潜る。ゲーム内で流れるサイバー演歌 21 曲を試聴できます。">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛏️</text></svg>">
+<link rel="stylesheet" href="../../assets/style.css?v=7">
+<link rel="stylesheet" href="../../assets/lp.css?v=7">
+<style>
+  /* このページだけで使う、試聴プレイヤーの見た目 */
+  .ost-player {
+    position: sticky; top: 0; z-index: 2;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+    padding: .85rem 0 .9rem; margin-bottom: 1.2rem;
+  }
+  .ost-now { font-size: .92rem; color: var(--text-soft); margin: 0 0 .5rem; }
+  .ost-now strong { color: var(--text); }
+  .ost-player audio { width: 100%; }
+  .ost-list { list-style: none; margin: 0; padding: 0; }
+  .ost-list li { border-bottom: 1px solid var(--border); }
+  .ost-list button {
+    display: flex; align-items: center; gap: .8rem; width: 100%;
+    padding: .7rem .4rem; background: none; border: 0; cursor: pointer;
+    font: inherit; color: var(--text); text-align: left;
+  }
+  .ost-list button:hover { background: rgba(128, 128, 128, .08); }
+  .ost-num { width: 2.2em; color: var(--text-mute); font-size: .85rem; font-variant-numeric: tabular-nums; }
+  .ost-name { flex: 1 1 auto; }
+  .ost-role { color: var(--text-mute); font-size: .75rem; margin-left: .6rem; }
+  .ost-time { color: var(--text-mute); font-size: .85rem; font-variant-numeric: tabular-nums; }
+  .ost-list li.is-playing button { color: var(--accent); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header class="lp-header">
+  <div class="wrap">
+    <a class="back-link" href="../../">← ポートフォリオ</a>
+    <span class="spacer"></span>
+    <a class="back-link" href="../../privacy/">プライバシーポリシー</a>
+  </div>
+</header>
+
+<main>
+  <section class="lp-hero">
+    <div class="wrap lp-hero-inner">
+      <img class="lp-icon" src="../../assets/icons/subarashii-ana.jpg" alt="素晴らしい穴のアプリアイコン" width="104" height="104">
+      <div class="lp-hero-text">
+        <h1 class="lp-title">素晴らしい穴</h1>
+        <p class="lp-tagline">山をひとつ、底まで掘り下げる。鉱石を売って道具を買い、また潜る。深さ 3,959m のどこかに埋蔵金が眠っています。</p>
+        <div class="lp-meta">
+          <span class="badge">iPhone</span>
+          <span>無料（広告あり・買い切りあり）</span>
+        </div>
+        <div class="lp-actions">
+          <a class="btn btn-primary" href="https://apps.apple.com/jp/app/id6811329701" target="_blank" rel="noopener">App Store で入手</a>
+          <a class="btn" href="#ost">サントラを聴く</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>どんなゲームか</h2></div>
+      <div class="features">
+        <div class="feature"><h3>掘る。それだけ</h3><p>画面を押したところまで掘り進みます。土の硬さは深さで変わり、深いほど時間がかかる。地層の境目は壁になっていて、道具を鍛えないと先へ進めません。</p></div>
+        <div class="feature"><h3>持ち帰って、売る</h3><p>鉱石も拾いものも袋に入れて持ち帰り、山頂の家で売ります。袋は小さいので、いっぱいになったら帰りどき。やられると袋の中身はその場にばらまかれます。</p></div>
+        <div class="feature"><h3>水と溶岩</h3><p>掘り当てた泉から水が湧き、溶岩に触れれば固まって黒曜石になります。灼熱の部屋も、上から水を引けば通れます。</p></div>
+        <div class="feature"><h3>遺跡とアーティファクト</h3><p>7 つの遺跡に、その遺跡の罠を無効にする道具が 1 つずつ。落石の遺跡には強化ヘルメット、という具合に、攻略した順だけ山が楽になります。</p></div>
+        <div class="feature"><h3>穴は残る</h3><p>タイトル画面の背景は、あなたが掘った穴そのものです。掘るほど山の断面に線が増えていきます。</p></div>
+        <div class="feature"><h3>掘り当てたあと</h3><p>埋蔵金の箱には、前に掘り当てた人が入っています。続きは遊んでのお楽しみ。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head"><h2>画面</h2></div>
+      <div class="shots">
+        <img src="../../assets/screenshots/subarashii-ana/1.jpg" alt="素晴らしい穴のタイトル画面。夜空の下に山の断面図と山小屋" width="614" height="1335" loading="lazy">
+        <img src="../../assets/screenshots/subarashii-ana/2.jpg" alt="地下 128m を掘り進んでいるところ。通路に松明が灯っている" width="614" height="1335" loading="lazy">
+        <img src="../../assets/screenshots/subarashii-ana/3.jpg" alt="山頂の家の道具屋。ツルハシや地下足袋を買う画面" width="614" height="1335" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ost">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>サウンドトラック</h2>
+        <p class="section-note">ゲーム内で流れるサイバー演歌 21 曲（合計およそ 1 時間）。ラジオをつけると、掘っているあいだシャッフルで流れます。曲名を押すと試聴できます。</p>
+      </div>
+
+      <div class="ost-player">
+        <p class="ost-now" id="ost-now">曲を選んでください</p>
+        <audio id="ost-audio" controls preload="none"></audio>
+      </div>
+
+      <ol class="ost-list" id="ost-list"></ol>
+
+      <p class="section-note" style="margin-top:1rem">
+        曲は Suno で作っています。ゲームの中ではラジオ越しの音に加工していて、深いところほど電波が濁ります。ここで聴けるのは加工前の音源です。
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head"><h2>作りの話</h2></div>
+      <div class="features">
+        <div class="feature"><h3>画像を 1 枚も使っていない</h3><p>山も家も道具も、すべてコードで描いた矩形の集まりです。アプリに入っている画像はアイコンだけ。</p></div>
+        <div class="feature"><h3>効果音は波形から合成</h3><p>掘る音も水の音も、起動時に計算して作っています。音源ファイルを持たないので 0 バイト。</p></div>
+        <div class="feature"><h3>世界は保存していない</h3><p>2,000×4,000 マスのうち、空洞・鉱石・水・拾いものの位置は毎回シードから計算し直します。保存するのは「あなたが変えたもの」だけです。</p></div>
+        <div class="feature"><h3>SwiftUI と SpriteKit</h3><p>画面まわりは SwiftUI、穴の描画は SpriteKit。外部ライブラリは広告の SDK だけです。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><h2>サポート</h2></div>
+      <div class="support-box">
+        <p>不具合の報告やご要望は、お問い合わせフォームからお寄せください。個人で作っているので、すべてに返信できるとは限りませんが、いただいた内容はすべて読んでいます。</p>
+        <p><a class="btn btn-primary" href="https://forms.gle/qzzMUPS7rRm1x7H39" target="_blank" rel="noopener">お問い合わせフォーム</a> <a class="btn" href="mailto:support@gekisoba.com">メールで問い合わせる</a></p>
+        <p>データの取り扱いについては<a href="../../privacy/">プライバシーポリシー</a>をご覧ください。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p><a href="../../">ポートフォリオに戻る</a></p>
+    <p class="footer-note">素晴らしい穴 — 個人開発ゲーム</p>
+  </div>
+</footer>
+
+<script>
+// 曲順は**あいうえお順**（読みで並べてある）。役目のある 2 曲だけ前後に固定。
+// ゲーム本体はシャッフルなので「正しい順」は無い。**ここを並べ替えれば順番が変わる。**
+const TRACKS = [
+  { f: 'title_昼の曲.m4a',            t: '昼の曲',           s: 213, role: 'タイトル' },
+  { f: 'bgm_01_あと少し.m4a',         t: 'あと少し',         s: 154 },
+  { f: 'bgm_17_おかえり.m4a',         t: 'おかえり',         s: 228 },
+  { f: 'bgm_14_買い取ります.m4a',     t: '買い取ります',     s: 99 },
+  { f: 'bgm_18_濃くなる.m4a',         t: '濃くなる',         s: 184 },
+  { f: 'bgm_03_この土のした.m4a',     t: 'この土のした',     s: 179 },
+  { f: 'bgm_02_ゴールドラッシュ.m4a', t: 'ゴールドラッシュ', s: 178 },
+  { f: 'bgm_19_さあどうぞ.m4a',       t: 'さあどうぞ',       s: 117 },
+  { f: 'bgm_10_人生十万円.m4a',       t: '人生十万円',       s: 179 },
+  { f: 'bgm_11_千年.m4a',             t: '千年',             s: 164 },
+  { f: 'bgm_13_土のむこうに.m4a',     t: '土のむこうに',     s: 230 },
+  { f: 'bgm_16_止まらねぇ.m4a',       t: '止まらねぇ',       s: 167 },
+  { f: 'bgm_12_走れ掘れ.m4a',         t: '走れ掘れ',         s: 207 },
+  { f: 'bgm_15_ふかい.m4a',           t: 'ふかい',           s: 139 },
+  { f: 'bgm_09_深く落ちて.m4a',       t: '深く落ちて',       s: 179 },
+  { f: 'bgm_07_掘りの祭り.m4a',       t: '掘りの祭り',       s: 207 },
+  { f: 'bgm_08_掘るぜ掘れ.m4a',       t: '掘るぜ掘れ',       s: 201 },
+  { f: 'bgm_04_ほれた.m4a',           t: 'ほれた',           s: 234 },
+  { f: 'bgm_06_街の隅で待つわ.m4a',   t: '街の隅で待つわ',   s: 230 },
+  { f: 'bgm_05_ゆめのした.m4a',       t: 'ゆめのした',       s: 190 },
+  { f: 'night_夜の曲.m4a',            t: '夜の曲',           s: 218, role: '夜' },
+];
+
+const list = document.getElementById('ost-list');
+const audio = document.getElementById('ost-audio');
+const now = document.getElementById('ost-now');
+let current = -1;
+
+const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+
+TRACKS.forEach((track, i) => {
+  const li = document.createElement('li');
+  const btn = document.createElement('button');
+  btn.type = 'button';
+
+  const num = document.createElement('span');
+  num.className = 'ost-num';
+  num.textContent = i + 1;
+
+  const name = document.createElement('span');
+  name.className = 'ost-name';
+  name.textContent = track.t;
+  if (track.role) {
+    const role = document.createElement('span');
+    role.className = 'ost-role';
+    role.textContent = `（${track.role}）`;
+    name.append(role);
+  }
+
+  const time = document.createElement('span');
+  time.className = 'ost-time';
+  time.textContent = mmss(track.s);
+
+  btn.append(num, name, time);
+  btn.addEventListener('click', () => play(i));
+  li.append(btn);
+  list.append(li);
+});
+
+function play(i) {
+  const track = TRACKS[i];
+  if (!track) return;
+  if (i !== current) {
+    // **ファイル名は日本語のまま**（ゲーム側と同じ名前にしてある）ので、URL に入れる前に包む
+    audio.src = 'audio/' + encodeURIComponent(track.f);
+    current = i;
+  }
+  audio.play();
+
+  now.textContent = '再生中： ';
+  const strong = document.createElement('strong');
+  strong.textContent = track.t;
+  now.append(strong);
+
+  [...list.children].forEach((li, n) => li.classList.toggle('is-playing', n === i));
+}
+
+// 終わったら次の曲へ（最後まで行ったら止まる）
+audio.addEventListener('ended', () => {
+  if (current + 1 < TRACKS.length) play(current + 1);
+});
+</script>
+
+</body>
+</html>
