@@ -26,7 +26,9 @@
   /* 節の前置き。lp.css には見出しと箱しか無いので、ここだけ足す */
   /* **幅を絞らない。** カードは段いっぱいなので、説明文だけ狭いと
      右端が揃わず、文の途中で勝手に切れているように見える */
-  .lp-lead { line-height: 1.9; opacity: .9; margin: 0 0 1.4rem; }
+  /* **一文ごとに行を変える**（本文中の <br>）。目で追う切れ目が
+     文の切れ目と一致する。折り返しで切れるより読みやすい */
+  .lp-lead { line-height: 2.0; opacity: .9; margin: 0 0 1.4rem; }
   .lp-lead + .features, .lp-lead + .audience { margin-top: 0; }
   .audience + .lp-lead, .features + .lp-lead { margin: 1.6rem 0 0; }
   .faq code {
@@ -67,7 +69,7 @@
   <section class="section">
     <div class="wrap">
       <div class="section-head"><h2>どんなゲームか</h2></div>
-      <p class="lp-lead">最初は押すだけです。増えたお金で人と設備を増やすと、押さなくても回り始めます。伸びが限界まで来たら、畳んでやり直します。</p>
+      <p class="lp-lead">最初は押すだけです。<br>増えたお金で人と設備を増やすと、押さなくても回り始めます。<br>伸びが限界まで来たら、畳んでやり直します。</p>
       <div class="features">
         <div class="feature"><h3>押すと増える</h3><p>画面の真ん中を押すと、お金が増えます。押した回数がそのまま資産になります。最初はそれだけのゲームです。</p></div>
         <div class="feature"><h3>社員を雇う</h3><p>増えたお金でアルバイトを雇い、施設を建てます。人も設備も増えると、押さなくてもお金が入ります。</p></div>
@@ -91,13 +93,13 @@
   <section class="section">
     <div class="wrap">
       <div class="section-head"><h2>株式システム</h2></div>
-      <p class="lp-lead">2026年9月に足した、いちばん新しい遊びです。<strong>自分の数字を伸ばすだけで終わらず、友達の会社に出資できます。</strong>使わなくても本編は最後まで遊べます。</p>
+      <p class="lp-lead">2026年9月に足した、いちばん新しい遊びです。<br><strong>自分の数字を伸ばすだけで終わらず、友達の会社に出資できます。</strong><br>使わなくても本編は最後まで遊べます。</p>
       <div class="features">
         <div class="feature"><h3>1. 会社を上場する</h3><p>会社名を選ぶと、4文字の銘柄コードが付きます。名前は用意した言葉を組み合わせて作ります。</p></div>
         <div class="feature"><h3>2. コードを交換する</h3><p>見せるか、口で伝えるか、QRを読んでもらいます。相手のコードを入れると、その会社が一覧に並びます。</p></div>
         <div class="feature"><h3>3. おたがいの株を買う</h3><p>払ったお金の一部は、資本金として相手の会社に入ります。相手はそれで設備を買い、売上が増えます。</p></div>
       </div>
-      <p class="lp-lead">増えた売上のはんぶんは、毎週月曜に株主へ配られます。買う側は、伸びそうな会社を見つけて出資します。配当が入り、株価が上がれば売って増やせます。</p>
+      <p class="lp-lead">増えた売上のはんぶんは、毎週月曜に株主へ配られます。<br>買う側は、伸びそうな会社を見つけて出資します。<br>配当が入り、株価が上がれば売って増やせます。</p>
     </div>
   </section>
 
