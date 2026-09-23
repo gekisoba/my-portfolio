@@ -3,26 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>クリッカーカンパニー — 会社を上場して、友達と株を売り買いする放置クリッカー</title>
-<meta name="description" content="連打して会社を大きくする放置クリッカー。会社を上場すると4文字の銘柄コードが付き、コードを交換した友達がおたがいの株を買えるようになります。売上のはんぶんは毎週月曜に株主へ。無料・iOS。">
+<title>クリッカーカンパニー — 社員を雇い、施設を建て、会社を大きくする放置クリッカー</title>
+<meta name="description" content="押すとお金が増える。増えたお金で社員を雇い、施設を建てて、会社を大きくしていく放置クリッカー。伸び切ったらタイムリープして、次はもっと速く。会社を上場して、友達と株を売り買いすることもできます。無料・iOS。">
 <link rel="canonical" href="https://gekisoba.com/apps/clicker/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gekisoba.com/apps/clicker/">
-<meta property="og:title" content="クリッカーカンパニー — 友達の会社に出資する放置クリッカー">
-<meta property="og:description" content="会社を上場すると銘柄コードが付きます。コードを交換して、おたがいの株を買う。買われたお金は相手の資本金になり、増えた売上のはんぶんが毎週あなたに配当として戻ります。">
+<meta property="og:title" content="クリッカーカンパニー — 社員を雇って会社を大きくする放置クリッカー">
+<meta property="og:description" content="押すとお金が増える。社員を雇い、施設を建て、伸び切ったらタイムリープしてやり直す。会社を上場すれば、友達と株を売り買いすることもできます。">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
 <link rel="stylesheet" href="../../assets/style.css?v=7">
 <link rel="stylesheet" href="../../assets/lp.css?v=7">
 <style>
+  /* **日本語の改行。** 指定が無いと「銘柄コード」が行末で割れ、
+     「クリッカー」の長音が次の行の頭に落ちる。
+     auto-phrase は文節で折り、strict は長音や小書き仮名を行頭に置かせない */
+  main, .lp-tagline, .lp-lead { word-break: auto-phrase; line-break: strict; }
+
   /* 節の前置き。lp.css には見出しと箱しか無いので、ここだけ足す */
   .lp-lead { max-width: 46rem; line-height: 1.9; opacity: .9; margin: 0 0 1.4rem; }
   .lp-lead + .features, .lp-lead + .audience { margin-top: 0; }
-  .audience + .lp-lead { margin: 1.4rem 0 0; }
-  .kabu-example code {
+  .audience + .lp-lead, .features + .lp-lead { margin: 1.6rem 0 0; }
+  .faq code {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 1.05rem; word-break: break-all;
+    font-size: .95em; word-break: break-all;
   }
 </style>
 </head>
@@ -42,14 +47,14 @@
       <img class="lp-icon" src="../../assets/icons/ClickerTest.jpg" alt="クリッカーカンパニーのアプリアイコン" width="104" height="104">
       <div class="lp-hero-text">
         <h1 class="lp-title">クリッカーカンパニー</h1>
-        <p class="lp-tagline">連打して会社を大きくする放置クリッカー。会社を上場すると4文字の銘柄コードが付き、コードを交換した友達が、おたがいの株を買えるようになります。</p>
+        <p class="lp-tagline">押すとお金が増える。増えたお金で社員を雇い、施設を建てて、会社を大きくしていく放置クリッカーです。伸び切ったらタイムリープして、次はもっと速く。</p>
         <div class="lp-meta">
           <span class="badge">iOS</span>
           <span>無料 / 日本語・English・한국어</span>
         </div>
         <div class="lp-actions">
           <a class="btn btn-primary" href="https://apps.apple.com/jp/app/id6744040862" target="_blank" rel="noopener">App Store で入手</a>
-          <a class="btn" href="#kabu">株式システムを見る</a>
+          <a class="btn" href="#kabu">株式システム</a>
         </div>
       </div>
     </div>
@@ -59,36 +64,34 @@
     <div class="wrap">
       <div class="section-head"><h2>どんなゲームか</h2></div>
       <div class="features">
-        <div class="feature"><h3>押すと増える</h3><p>画面の真ん中を押すとお金が増えます。増えたお金で設備を買い、社員を雇うと、押さなくても増えるようになります。放置クリッカーの基本形です。</p></div>
-        <div class="feature"><h3>数字が桁違いに伸びる</h3><p>万、億、兆を越えて、聞いたことのない単位まで伸びていきます。伸び切ったらタイムリープして、より速く伸ばし直します。</p></div>
-        <div class="feature"><h3>会社ごっこ</h3><p>社員には名前と顔があり、社員名簿に並びます。支給品が届き、肩書きが付き、社歌まであります。</p></div>
+        <div class="feature"><h3>押すと増える</h3><p>画面の真ん中を押すと、お金が増えます。押した回数がそのまま資産になります。最初はそれだけのゲームです。</p></div>
+        <div class="feature"><h3>社員を雇う</h3><p>増えたお金でアルバイトを雇い、施設を建てます。人も設備も増えると、押さなくてもお金が入ります。</p></div>
+        <div class="feature"><h3>タイムリープする</h3><p>伸びが鈍ってきたら、すべてを畳んでやり直します。持ち越した力のぶんだけ、次は速く伸びます。</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt" id="kabu">
+  <section class="section section-alt">
     <div class="wrap">
-      <div class="section-head"><h2>株式システム</h2></div>
-      <p class="lp-lead">ここが、他の放置クリッカーと違うところです。<strong>自分の数字を伸ばすだけで終わらず、友達の会社に出資できます。</strong></p>
+      <div class="section-head"><h2>会社が大きくなると</h2></div>
       <div class="features">
-        <div class="feature"><h3>1. 会社を上場する</h3><p>会社名を選ぶと、4文字の銘柄コードが付きます。名前は用意した言葉を組み合わせて作ります。</p></div>
-        <div class="feature"><h3>2. コードを友達と交換する</h3><p>見せるか、口で伝えるか、QRを読んでもらいます。相手のコードを入れると、その会社が一覧に並びます。</p></div>
-        <div class="feature"><h3>3. おたがいの株を買う</h3><p>買うと値段が上がり、売ると下がります。誰がどれだけ持っているかは、会社の画面に名前で並びます。</p></div>
+        <div class="feature"><h3>社員に名前と顔がある</h3><p>雇った人はひとりずつ名簿に並びます。顔写真が付き、昇進し、肩書きが変わります。数字だけでなく、会社に人が増えます。</p></div>
+        <div class="feature"><h3>桁が変わっていく</h3><p>万、億、兆を越えて、聞いたことのない単位まで伸びます。どこまで行ったのかが分かるよう、単位の一覧も用意してあります。</p></div>
+        <div class="feature"><h3>季節と音楽が移る</h3><p>背景は月ごとに変わり、社内には十数曲が流れています。書き下ろしの曲と、社歌も入っています。</p></div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head"><h2>お金の流れ</h2></div>
-      <ul class="audience">
-        <li>買うと、その会社の株価は上がります。だからまとめて買うほど、1株あたりは高くつきます。</li>
-        <li>払ったお金の一部は、資本金として相手の会社に入ります。</li>
-        <li>相手はそれで設備を買い、売上が増えます。</li>
-        <li>売上のはんぶんは、毎週月曜に株主へ配られます。</li>
-        <li>3日あけると売上が止まります。開けばまた進みます。</li>
-      </ul>
-      <p class="lp-lead">株を買う側は、伸びそうな会社を見つけて出資します。配当が入り、株価が上がれば売って増やせます。</p>
+      <div class="section-head"><h2>株式システム</h2></div>
+      <p class="lp-lead">2026年9月に足した、いちばん新しい遊びです。<strong>自分の数字を伸ばすだけで終わらず、友達の会社に出資できます。</strong>使わなくても本編は最後まで遊べます。</p>
+      <div class="features">
+        <div class="feature"><h3>1. 会社を上場する</h3><p>会社名を選ぶと、4文字の銘柄コードが付きます。名前は用意した言葉を組み合わせて作ります。</p></div>
+        <div class="feature"><h3>2. コードを交換する</h3><p>見せるか、口で伝えるか、QRを読んでもらいます。相手のコードを入れると、その会社が一覧に並びます。</p></div>
+        <div class="feature"><h3>3. おたがいの株を買う</h3><p>払ったお金の一部は、資本金として相手の会社に入ります。相手はそれで設備を買い、売上が増えます。</p></div>
+      </div>
+      <p class="lp-lead">増えた売上のはんぶんは、毎週月曜に株主へ配られます。買う側は、伸びそうな会社を見つけて出資します。配当が入り、株価が上がれば売って増やせます。</p>
     </div>
   </section>
 
@@ -106,21 +109,11 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head"><h2>コードを交換する</h2></div>
-      <div class="support-box">
-        <p>株式システムは、相手の銘柄コードを知らないと始まりません。<strong>一覧も検索もランキングもありません。</strong>利回りの高い順に買えてしまうと、「誰がやり込んでいるか」を外で知る意味が無くなるからです。</p>
-        <p>コードは秘密ではないので、公開しても困りません。買われると資本金が入るぶん、むしろ得をします。リンクの形にすると、押すだけで相手のアプリに追加されます。</p>
-        <p class="kabu-example"><code>https://gekisoba.com/kabu/K7Q2</code></p>
-        <p>インストール済みの端末ならアプリが開き、まだの端末なら App Store に案内されます。</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="wrap">
       <div class="section-head"><h2>よくある質問</h2></div>
       <div class="faq">
-        <details><summary>ひとりでも遊べますか？</summary><p>遊べます。クリッカーの部分はひとりで完結しますし、会社を上場すれば、自分の進み具合に応じて売上が入ります。株を買う相手がいない人のために「指数」という銘柄もあり、こちらはコードを知らなくても買えます。</p></details>
+        <details><summary>コードはどうやって交換しますか？</summary><p>見せるか、口で伝えるか、QRを読んでもらいます。<code>https://gekisoba.com/kabu/K7Q2</code> のようなリンクの形にすると、押すだけで相手のアプリに追加されます（インストール済みなら直接アプリが開き、まだなら App Store に案内されます）。コードは秘密ではないので、公開しても困りません。買われると資本金が入るぶん、むしろ得をします。</p></details>
+        <details><summary>会社の一覧や検索はありますか？</summary><p>ありません。利回りの高い順に買えてしまうと、「誰がやり込んでいるか」を外で知る意味が無くなるからです。相手のコードを知ることから始まります。コードを1つも持っていない人のために「指数」という銘柄があり、こちらはコードを知らなくても買えます。</p></details>
+        <details><summary>ひとりでも遊べますか？</summary><p>遊べます。株式システムは後から足したもので、使わなくても本編は最後まで遊べます。上場した場合も、自分の進み具合に応じて売上が入ります。</p></details>
         <details><summary>課金はありますか？</summary><p>アプリは無料で、広告が入ります。ゲーム内の通貨や、株式システムの通貨（TP）を現金で買うことはできません。</p></details>
         <details><summary>本物の株式と同じ仕組みですか？</summary><p>違います。本物の市場は売りたい人と買いたい人を突き合わせて値段を決めますが、ここでは売りたい人がいなくても売り買いできます。遊びのための市場です。現実のお金、暗号資産、景品とは一切交換できません。</p></details>
         <details><summary>しばらく遊ばないとどうなりますか？</summary><p>3日あけると会社の売上が止まります（開けばまた進みます）。180日あけたままだと会社は上場廃止になり、株主には持ち株のぶんが払い戻されます。上場し直せますが、銘柄コードも設備も最初からです。廃止の前に、アプリからお知らせが届きます。</p></details>
@@ -130,7 +123,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-alt">
     <div class="wrap">
       <div class="section-head"><h2>サポート</h2></div>
       <div class="support-box">
