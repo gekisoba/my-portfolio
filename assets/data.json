@@ -146,11 +146,14 @@
       "bundleId": "com.blogspot.gekisoba.AppRadar",
       "name": "AppRank",
       "fullName": "AppRank - ASO Tracker",
-      "desc": "App Store のキーワード順位・カテゴリ順位を追跡する macOS 製 ASO ツール。公開 API のみで構成。",
+      "desc": "App Store のキーワード順位を追跡する ASO ツール。iPhone と Mac に対応し、人気度・難易度スコアでの狙い目判定、競合との順位比較、レビュー取得までを一本で扱える。データは Apple の公開 API のみで取得している。",
       "tags": [
+        "iOS",
         "macOS",
         "SwiftUI",
         "ASO",
+        "StoreKit 2",
+        "iCloud",
         "公開API"
       ],
       "icon": "assets/icons/AppRadar.png",
@@ -160,11 +163,12 @@
       "lp": "apps/apprank/",
       "category": "ツール",
       "platforms": [
+        "iOS",
         "macOS"
       ],
-      "price": "¥1,000",
+      "price": "無料（App内課金あり）",
       "released": "2026-05",
-      "updated": "2026-05-11",
+      "updated": "2026-09",
       "rating": 0,
       "ratingCount": 0
     },
@@ -345,7 +349,7 @@
       "category": "ツール",
       "platforms": [
         "iOS",
-        "Mac"
+        "macOS"
       ],
       "price": "無料",
       "released": "2025-11",
