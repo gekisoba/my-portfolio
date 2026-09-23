@@ -9,6 +9,32 @@
   },
   "apps": [
     {
+      "id": 6811329701,
+      "bundleId": "com.blogspot.gekisoba.subarashii-ana",
+      "name": "素晴らしい穴",
+      "fullName": "素晴らしい穴 - 穴掘り＆埋蔵金さがし",
+      "desc": "山をひとつ、底まで掘り下げて鉱石と遺跡と埋蔵金を探す採掘ゲーム。絵は画像を使わずコードで描き、効果音も波形から合成している。",
+      "tags": [
+        "SwiftUI",
+        "SpriteKit",
+        "手続き生成"
+      ],
+      "icon": "assets/icons/subarashii-ana.jpg",
+      "url": "https://apps.apple.com/jp/app/id6811329701",
+      "repo": null,
+      "repoPublic": false,
+      "lp": "/apps/subarashii-ana/",
+      "category": "ゲーム",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-09",
+      "updated": "2026-09-18",
+      "rating": 4.5,
+      "ratingCount": 6
+    },
+    {
       "id": 6806528986,
       "bundleId": "com.blogspot.gekisoba.ashiato",
       "name": "あしあとログ",
@@ -33,32 +59,6 @@
       "price": "無料",
       "released": "2026-09",
       "updated": "2026-09-02",
-      "rating": 0,
-      "ratingCount": 0
-    },
-    {
-      "id": 6811329701,
-      "bundleId": "com.blogspot.gekisoba.subarashii-ana",
-      "name": "素晴らしい穴",
-      "fullName": "素晴らしい穴 - 穴掘り＆埋蔵金さがし",
-      "desc": "山をひとつ、底まで掘り下げて鉱石と遺跡と埋蔵金を探す採掘ゲーム。絵は画像を使わずコードで描き、効果音も波形から合成している。",
-      "tags": [
-        "SwiftUI",
-        "SpriteKit",
-        "手続き生成"
-      ],
-      "icon": "assets/icons/subarashii-ana.jpg",
-      "url": "https://apps.apple.com/jp/app/id6811329701",
-      "repo": null,
-      "repoPublic": false,
-      "lp": null,
-      "category": "ゲーム",
-      "platforms": [
-        "iOS"
-      ],
-      "price": "無料",
-      "released": "2026-09",
-      "updated": "2026-09-16",
       "rating": 0,
       "ratingCount": 0
     },
@@ -217,8 +217,8 @@
       "price": "無料",
       "released": "2026-02",
       "updated": "2026-08-25",
-      "rating": 4.55,
-      "ratingCount": 80
+      "rating": 4.53,
+      "ratingCount": 81
     },
     {
       "id": 6758904067,
@@ -329,10 +329,12 @@
       "bundleId": "com.blogspot.gekisoba.homon-log",
       "name": "訪問ログ",
       "fullName": "訪問ログ - 営業・顧客管理のシンプルな記録アプリ",
-      "desc": "顧客への訪問記録を管理する営業向けアプリ。SwiftData + CloudKit 同期、年間ヒートマップ、Obsidian 連携を実装。",
+      "desc": "顧客への訪問記録を管理する営業向けアプリ。訪問先の場所を1タップで「大体この辺」として記録してマップで見渡せる。SwiftData + CloudKit 同期、年間ヒートマップ、Obsidian 連携、担当交代のためのデータ受け渡しを実装。",
       "tags": [
+        "SwiftUI",
         "SwiftData",
         "CloudKit",
+        "MapKit",
         "Mac Catalyst"
       ],
       "icon": "assets/icons/homon_log.jpg",
@@ -347,9 +349,9 @@
       ],
       "price": "無料",
       "released": "2025-11",
-      "updated": "2026-09-11",
-      "rating": 3.88,
-      "ratingCount": 8
+      "updated": "2026-09-21",
+      "rating": 4,
+      "ratingCount": 9
     },
     {
       "id": 6755532776,
@@ -381,18 +383,20 @@
       "bundleId": "com.blogspot.gekisoba.ClickerTest",
       "name": "クリッカーカンパニー",
       "fullName": "クリッカーカンパニー : 放置で会社経営！",
-      "desc": "会社を大きくしていく放置＆クリッカー経営シミュレーション。社員の採用・昇進・転生システムを実装。",
+      "desc": "会社を大きくしていく放置クリッカー。会社を上場すると銘柄コードが付き、コードを交換した友達とおたがいの株を売り買いできる。",
       "tags": [
         "SwiftUI",
         "放置ゲーム",
         "StoreKit",
-        "AdMob"
+        "AdMob",
+        "Cloudflare Workers",
+        "D1"
       ],
       "icon": "assets/icons/ClickerTest.jpg",
       "url": "https://apps.apple.com/jp/app/id6744040862",
       "repo": "https://github.com/gekisoba/ClickerTest",
       "repoPublic": false,
-      "lp": null,
+      "lp": "apps/clicker/",
       "category": "ゲーム",
       "platforms": [
         "iOS"
@@ -401,7 +405,7 @@
       "released": "2025-05",
       "updated": "2026-09-16",
       "rating": 4.55,
-      "ratingCount": 375
+      "ratingCount": 377
     },
     {
       "id": 6743646623,
