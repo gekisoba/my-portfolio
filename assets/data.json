@@ -337,7 +337,7 @@
         "MapKit",
         "Mac Catalyst"
       ],
-      "icon": "assets/icons/homon_log.jpg",
+      "icon": "assets/icons/homon_log.jpg?v=2",
       "url": "https://apps.apple.com/jp/app/id6755641312",
       "repo": "https://github.com/gekisoba/visit_log",
       "repoPublic": false,

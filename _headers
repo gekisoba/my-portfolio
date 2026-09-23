@@ -21,12 +21,15 @@
 /apps/subarashii-ana/audio/*
   Cache-Control: public, max-age=31536000, immutable
 
-# アイコンとスクリーンショットは同名で内容が変わらないため長期キャッシュしてよい
+# アイコンとスクリーンショットは同名のまま差し替わる(アプリの更新でアイコンや
+# スクショが変わる)。immutable にしていたため、差し替えても手元のブラウザが
+# 1年間取り直さず、古い絵が出たままになった。
+# 1日で再検証し、その後1週間は古いものを表示しつつ裏で取り直す
 /assets/icons/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /assets/screenshots/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /assets/lp.css
   Cache-Control: no-cache
