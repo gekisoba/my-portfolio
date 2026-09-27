@@ -35,6 +35,8 @@ python3 -m http.server 8000
 | 訪問ログ | `/apps/homon-log/` | `/apps/homon-log/privacy/` |
 | 図書貸出管理 | `/apps/library/` | `/apps/library/privacy/` |
 | AppRank | `/apps/apprank/` | `/apps/apprank/privacy/` |
+| クリッカーカンパニー | `/apps/clicker/` | `/privacy/`（共通） |
+| 陰謀論クリッカー | `/apps/conspiracy/` | `/privacy/`（共通） |
 | 上記以外の12本 | （なし） | `/privacy/`（共通・アプリ別の対応表つき） |
 | あしあとログ | （なし） | `/apps/ashiato/privacy/` |
 

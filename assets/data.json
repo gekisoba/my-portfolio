@@ -103,7 +103,7 @@
       "url": "https://apps.apple.com/jp/app/id6790421947",
       "repo": "https://github.com/gekisoba/ConspiracyClicker",
       "repoPublic": false,
-      "lp": null,
+      "lp": "apps/conspiracy/",
       "category": "ゲーム",
       "platforms": [
         "iOS"
