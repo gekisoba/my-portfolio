@@ -1,26 +1,33 @@
 {
-  "version": 3,
-  "updatedAt": "2026-09-13",
+  "version": 4,
+  "updatedAt": "2026-09-28",
   "featured": {
-    "bundleId": "com.blogspot.gekisoba.subarashii-ana",
-    "title": "素晴らしい穴",
-    "iconUrl": "https://gekisoba.com/assets/icons/subarashii-ana.jpg",
-    "bundledImage": "ana",
-    "url": "https://gekisoba.com/ana",
-    "subtitle": "山の底まで掘って、鉱石と遺跡と埋蔵金を探す",
-    "headline": "新作リリース！",
+    "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
+    "title": "陰謀論クリッカー",
+    "iconUrl": "https://gekisoba.com/assets/icons/ConspiracyClicker.jpg",
+    "bundledImage": "inbou",
+    "url": "https://gekisoba.com/inbou",
+    "subtitle": "掲示板で陰謀論を広めて、世界の黒幕を目指す",
+    "headline": "大型アップデート！",
     "dialogues": [
-      "お待たせしました。新作、ついにリリースです。",
-      "今度の新作は、穴掘りですよ。",
-      "山にひとつだけ、埋蔵金が埋まっているんです。",
-      "押したところへ歩いて、掘る。指はそれだけ使います。",
-      "ヘッドライトの届くところしか見えません。ふふ、暗いですよ。",
-      "袋がいっぱいになったら、帰りどきです。",
-      "売ったお金で、ツルハシを鍛えるんです。",
-      "前に誰かが掘った跡が、あちこちに残っているそうですよ。"
+      "陰謀論クリッカーに、大きなアップデートが来ましたよ。",
+      "掲示板から顔を上げると、自分の部屋があるんです。",
+      "家具を集めて、模様替えもできます。",
+      "監視カメラで、ほかの人の部屋を覗けるんですって。",
+      "覗くと、相手の窓の外に自分の名前が立つそうです。",
+      "……覗かれた人は、窓を叩き返してくるとか。",
+      "うちの会社の窓の外、さっきから誰か立ってませんか？",
+      "ふふ、冗談ですよ。たぶん。"
     ]
   },
   "apps": [
+    {
+      "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
+      "title": "陰謀論クリッカー",
+      "iconUrl": "https://gekisoba.com/assets/icons/ConspiracyClicker.jpg",
+      "bundledImage": "inbou",
+      "url": "https://gekisoba.com/inbou"
+    },
     {
       "bundleId": "com.blogspot.gekisoba.subarashii-ana",
       "title": "素晴らしい穴",
@@ -34,13 +41,6 @@
       "iconUrl": "https://gekisoba.com/assets/icons/pinball.jpg",
       "bundledImage": "buildball",
       "url": "https://gekisoba.com/buildball"
-    },
-    {
-      "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
-      "title": "陰謀論クリッカー",
-      "iconUrl": "https://gekisoba.com/assets/icons/ConspiracyClicker.jpg",
-      "bundledImage": "inbou",
-      "url": "https://gekisoba.com/inbou"
     },
     {
       "bundleId": "com.blogspot.gekisoba.UFOClicker",
