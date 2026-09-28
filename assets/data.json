@@ -30,9 +30,9 @@
       ],
       "price": "無料",
       "released": "2026-09",
-      "updated": "2026-09-18",
-      "rating": 4.5,
-      "ratingCount": 6
+      "updated": "2026-09-23",
+      "rating": 4.38,
+      "ratingCount": 8
     },
     {
       "id": 6806528986,
@@ -92,7 +92,7 @@
       "id": 6790421947,
       "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
       "name": "陰謀論クリッカー",
-      "fullName": "陰謀論クリッカー - 匿名掲示板の育成ゲーム",
+      "fullName": "陰謀論クリッカー - 放置ゲーム×匿名掲示板",
       "desc": "匿名掲示板を舞台にした育成クリッカー。書き込みが世界を動かしていく短編構成の放置ゲーム。",
       "tags": [
         "SwiftUI",
@@ -110,7 +110,7 @@
       ],
       "price": "無料",
       "released": "2026-07",
-      "updated": "2026-08-29",
+      "updated": "2026-09-27",
       "rating": 3.8,
       "ratingCount": 15
     },
@@ -162,7 +162,7 @@
       "platforms": [
         "macOS"
       ],
-      "price": "¥1,000",
+      "price": "無料",
       "released": "2026-05",
       "updated": "2026-05-11",
       "rating": 0,
@@ -190,7 +190,7 @@
       ],
       "price": "無料",
       "released": "2026-04",
-      "updated": "2026-09-15",
+      "updated": "2026-09-27",
       "rating": 4.25,
       "ratingCount": 71
     },
@@ -217,8 +217,8 @@
       "price": "無料",
       "released": "2026-02",
       "updated": "2026-08-25",
-      "rating": 4.53,
-      "ratingCount": 81
+      "rating": 4.5,
+      "ratingCount": 84
     },
     {
       "id": 6758904067,
@@ -270,8 +270,8 @@
       "price": "無料",
       "released": "2026-01",
       "updated": "2026-08-26",
-      "rating": 4.23,
-      "ratingCount": 129
+      "rating": 4.24,
+      "ratingCount": 130
     },
     {
       "id": 6757092809,
@@ -403,9 +403,9 @@
       ],
       "price": "無料",
       "released": "2025-05",
-      "updated": "2026-09-16",
-      "rating": 4.55,
-      "ratingCount": 377
+      "updated": "2026-09-27",
+      "rating": 4.56,
+      "ratingCount": 383
     },
     {
       "id": 6743646623,
