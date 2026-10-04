@@ -82,7 +82,17 @@ def platforms_of(app):
     if app.get("kind") == "mac-software":
         return ["macOS"]
     devices = app.get("supportedDevices") or []
-    return ["iOS", "Mac"] if any("Mac" in d for d in devices) else ["iOS"]
+    # サイトの表記は「macOS」でそろえている（手で直したものが毎週戻らないように）
+    return ["iOS", "macOS"] if any("Mac" in d for d in devices) else ["iOS"]
+
+
+def price_of(entry, app):
+    """App Store の価格表記。手で補足した表記（「無料（App内課金あり）」など）は、
+    頭が App Store の値と同じなら残す。有料化・値下げなどで変わったときだけ上書きする。"""
+    api = app.get("formattedPrice")
+    if entry and api and str(entry.get("price", "")).startswith(api):
+        return entry["price"]
+    return api
 
 
 def main():
@@ -134,7 +144,7 @@ def main():
             "lp": entry.get("lp") if entry else None,
             "category": CATEGORY.get(app.get("primaryGenreName"), "ツール"),
             "platforms": platforms_of(app),
-            "price": app.get("formattedPrice"),
+            "price": price_of(entry, app),
             "released": app["releaseDate"][:7],
             "updated": (app.get("currentVersionReleaseDate") or "")[:10],
             "rating": rating,
