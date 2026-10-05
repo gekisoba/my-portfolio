@@ -31,8 +31,8 @@
       "price": "無料",
       "released": "2026-09",
       "updated": "2026-09-23",
-      "rating": 4.38,
-      "ratingCount": 8
+      "rating": 4.65,
+      "ratingCount": 17
     },
     {
       "id": 6806528986,
@@ -110,9 +110,9 @@
       ],
       "price": "無料",
       "released": "2026-07",
-      "updated": "2026-09-27",
-      "rating": 3.8,
-      "ratingCount": 15
+      "updated": "2026-09-28",
+      "rating": 3.94,
+      "ratingCount": 18
     },
     {
       "id": 6794784495,
@@ -145,7 +145,7 @@
       "id": 6766423932,
       "bundleId": "com.blogspot.gekisoba.AppRadar",
       "name": "AppRank",
-      "fullName": "AppRank - ASO Tracker",
+      "fullName": "AppRank - ASOツール 順位追跡",
       "desc": "App Store のキーワード順位を追跡する ASO ツール。iPhone と Mac に対応し、人気度・難易度スコアでの狙い目判定、競合との順位比較、レビュー取得までを一本で扱える。データは Apple の公開 API のみで取得している。",
       "tags": [
         "iOS",
@@ -168,9 +168,9 @@
       ],
       "price": "無料（App内課金あり）",
       "released": "2026-05",
-      "updated": "2026-09",
-      "rating": 0,
-      "ratingCount": 0
+      "updated": "2026-10-03",
+      "rating": 5,
+      "ratingCount": 1
     },
     {
       "id": 6762073469,
@@ -221,8 +221,8 @@
       "price": "無料",
       "released": "2026-02",
       "updated": "2026-08-25",
-      "rating": 4.5,
-      "ratingCount": 84
+      "rating": 4.51,
+      "ratingCount": 86
     },
     {
       "id": 6758904067,
@@ -300,8 +300,8 @@
       "price": "無料",
       "released": "2026-01",
       "updated": "2026-04-23",
-      "rating": 3.8,
-      "ratingCount": 5
+      "rating": 3.83,
+      "ratingCount": 6
     },
     {
       "id": 6755621157,
@@ -325,8 +325,8 @@
       "price": "無料",
       "released": "2025-11",
       "updated": "2026-03-31",
-      "rating": 4.07,
-      "ratingCount": 15
+      "rating": 4.06,
+      "ratingCount": 16
     },
     {
       "id": 6755641312,
@@ -407,9 +407,9 @@
       ],
       "price": "無料",
       "released": "2025-05",
-      "updated": "2026-09-27",
-      "rating": 4.56,
-      "ratingCount": 383
+      "updated": "2026-09-28",
+      "rating": 4.57,
+      "ratingCount": 387
     },
     {
       "id": 6743646623,
