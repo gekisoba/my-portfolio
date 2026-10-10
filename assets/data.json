@@ -187,7 +187,7 @@
       "url": "https://apps.apple.com/jp/app/id6762073469",
       "repo": "https://github.com/gekisoba/UFOClicker",
       "repoPublic": false,
-      "lp": null,
+      "lp": "apps/ufo/",
       "category": "ゲーム",
       "platforms": [
         "iOS"

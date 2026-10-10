@@ -37,7 +37,8 @@ python3 -m http.server 8000
 | AppRank | `/apps/apprank/` | `/apps/apprank/privacy/` |
 | クリッカーカンパニー | `/apps/clicker/` | `/privacy/`（共通） |
 | 陰謀論クリッカー | `/apps/conspiracy/` | `/privacy/`（共通） |
-| 上記以外の12本 | （なし） | `/privacy/`（共通・アプリ別の対応表つき） |
+| UFOクリッカー | `/apps/ufo/` | `/privacy/`（共通） |
+| 上記以外の11本 | （なし） | `/privacy/`（共通・アプリ別の対応表つき） |
 | あしあとログ | （なし） | `/apps/ashiato/privacy/` |
 
 各ページは素の HTML で、`assets/style.css`（配色・ベース）と `assets/lp.css`
