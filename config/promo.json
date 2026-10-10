@@ -1,26 +1,33 @@
 {
-  "version": 4,
-  "updatedAt": "2026-09-28",
+  "version": 5,
+  "updatedAt": "2026-10-11",
   "featured": {
-    "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
-    "title": "陰謀論クリッカー",
-    "iconUrl": "https://gekisoba.com/assets/icons/ConspiracyClicker.jpg",
-    "bundledImage": "inbou",
-    "url": "https://gekisoba.com/inbou",
-    "subtitle": "掲示板で陰謀論を広めて、世界の黒幕を目指す",
+    "bundleId": "com.blogspot.gekisoba.UFOClicker",
+    "title": "UFOクリッカー",
+    "iconUrl": "https://gekisoba.com/assets/icons/UFOClicker.jpg",
+    "bundledImage": "ufo",
+    "url": "https://gekisoba.com/ufo",
+    "subtitle": "宇宙人になって、人類を誘拐しつくす放置ゲーム",
     "headline": "大型アップデート！",
     "dialogues": [
-      "陰謀論クリッカーに、大きなアップデートが来ましたよ。",
-      "掲示板から顔を上げると、自分の部屋があるんです。",
-      "家具を集めて、模様替えもできます。",
-      "監視カメラで、ほかの人の部屋を覗けるんですって。",
-      "覗くと、相手の窓の外に自分の名前が立つそうです。",
-      "……覗かれた人は、窓を叩き返してくるとか。",
-      "うちの会社の窓の外、さっきから誰か立ってませんか？",
-      "ふふ、冗談ですよ。たぶん。"
+      "UFOクリッカーに、大きなアップデートが来ましたよ。",
+      "覚醒してから先の進み方が、ずっと速くなったそうです。",
+      "時空研究のツリーは、保存して呼び出せるようになりました。",
+      "覚醒チャレンジも、本来の手応えに直したんですって。",
+      "宇宙人になって、人類をひとりずつ連れ去るゲームです。",
+      "牛も、ついでに。",
+      "……最近、夜になると窓の外が明るくないですか？",
+      "ふふ、ただの街灯ですよ。きっと。"
     ]
   },
   "apps": [
+    {
+      "bundleId": "com.blogspot.gekisoba.UFOClicker",
+      "title": "UFOクリッカー",
+      "iconUrl": "https://gekisoba.com/assets/icons/UFOClicker.jpg",
+      "bundledImage": "ufo",
+      "url": "https://gekisoba.com/ufo"
+    },
     {
       "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
       "title": "陰謀論クリッカー",
@@ -41,13 +48,6 @@
       "iconUrl": "https://gekisoba.com/assets/icons/pinball.jpg",
       "bundledImage": "buildball",
       "url": "https://gekisoba.com/buildball"
-    },
-    {
-      "bundleId": "com.blogspot.gekisoba.UFOClicker",
-      "title": "UFOクリッカー",
-      "iconUrl": "https://gekisoba.com/assets/icons/UFOClicker.jpg",
-      "bundledImage": "ufo",
-      "url": "https://gekisoba.com/ufo"
     },
     {
       "bundleId": "com.blogspot.gekisoba.UrbanLegendClicker",
