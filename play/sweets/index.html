@@ -1408,7 +1408,7 @@ class SweetRenderer {
   // ---------- sound (synth) ----------
   let ac = null;
   try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) { /* older iOS */ }
-  const audio = () => { if (!ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { ac = null; } } if (ac && ac.state === 'suspended') ac.resume(); return ac; };
+  const audio = () => { if (!ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { ac = null; } } if (ac && ac.state === 'suspended' && !document.hidden && !window.__devPreviewOpen) ac.resume(); return ac; };
   function tone(freq, dur, type = 'sine', vol = 0.12, slide = 0, when = 0) {
     if (prefs.mute || !ac) return;
     const t0 = ac.currentTime + when, o = ac.createOscillator(), g = ac.createGain();
@@ -1809,6 +1809,14 @@ class SweetRenderer {
   // Try to start the music as soon as the page opens. Browsers usually hold sound until the first touch or key,
   // so if the context starts suspended, the first interaction anywhere resumes it.
   window.addEventListener('load', () => { audio(); bgmStart(); });
+  // Stop all sound while the page is in the background (another tab, app switched, screen off),
+  // and while the device preview is open (the preview frame plays its own copy).
+  let devPreview = false;
+  const syncBg = () => { if (!ac) return; const off = document.hidden || devPreview; (off ? ac.suspend() : ac.resume()).then(() => { document.documentElement.dataset.audio = ac.state; }); };
+  document.addEventListener('visibilitychange', syncBg);
+  window.addEventListener('pagehide', () => { if (ac) ac.suspend(); });
+  window.addEventListener('pageshow', syncBg);
+  window.addEventListener('devpreview', (e) => { devPreview = !!e.detail; syncBg(); });
   {
     const kick = () => { audio(); bgmStart(); if (ac && ac.state === 'running') for (const ev of ['pointerdown', 'keydown', 'touchend']) window.removeEventListener(ev, kick, true); };
     for (const ev of ['pointerdown', 'keydown', 'touchend']) window.addEventListener(ev, kick, true); }
@@ -1873,6 +1881,7 @@ class SweetRenderer {
 
   function open(dev) {
     cur = dev; close(true);
+    window.__devPreviewOpen = true; window.dispatchEvent(new CustomEvent('devpreview', { detail: true }));
     const W = portrait ? dev.h : dev.w, H = portrait ? dev.w : dev.h, inset = portrait ? dev.port : dev.land, bez = 14;
     const st = document.createElement('div'); st.id = 'devStage';
     st.innerHTML = `<div id="devBar">${DEVICES.map(d => `<button data-dev="${d.id}" aria-pressed="${d === dev}">${d.name}</button>`).join('')}
@@ -1919,7 +1928,7 @@ class SweetRenderer {
   function close(keep) {
     clearInterval(timer);
     const st = document.getElementById('devStage'); if (st) { window.removeEventListener('resize', st._fit); st.remove(); }
-    if (!keep) cur = null;
+    if (!keep) { cur = null; window.__devPreviewOpen = false; window.dispatchEvent(new CustomEvent('devpreview', { detail: false })); }
   }
   const btn = document.getElementById('btnDevice');
   if (btn) btn.addEventListener('click', () => { if (window.__SRC) open(DEVICES[1]); });
