@@ -13,8 +13,8 @@
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
-<link rel="preload" href="assets/data.json?v=8" as="fetch" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=8">
+<link rel="preload" href="assets/data.json?v=9" as="fetch" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=9">
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
@@ -24,6 +24,7 @@
     <a class="brand" href="#top">gekisoba<span class="dot">.</span></a>
     <nav class="nav">
       <a href="#apps">公開アプリ</a>
+      <a href="#play">ブラウザで遊ぶ</a>
       <a href="#retired">公開終了</a>
       <a href="#works">その他の制作物</a>
       <a href="#about">About</a>
@@ -69,7 +70,17 @@
     </div>
   </section>
 
-  <section class="section section-alt" id="retired">
+  <section class="section section-alt" id="play">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>ブラウザで遊べる</h2>
+        <p class="section-note">インストール不要で、いますぐ遊べる試作・体験版。</p>
+      </div>
+      <ul class="play-list" id="play-list"></ul>
+    </div>
+  </section>
+
+  <section class="section" id="retired">
     <div class="wrap">
       <div class="section-head">
         <h2>過去に公開していたアプリ</h2>
@@ -79,7 +90,7 @@
     </div>
   </section>
 
-  <section class="section" id="works">
+  <section class="section section-alt" id="works">
     <div class="wrap">
       <div class="section-head">
         <h2>その他の制作物</h2>
@@ -89,7 +100,7 @@
     </div>
   </section>
 
-  <section class="section section-alt" id="about">
+  <section class="section" id="about">
     <div class="wrap about-grid">
       <div>
         <h2>About</h2>
@@ -116,6 +127,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=8"></script>
+<script src="assets/main.js?v=9"></script>
 </body>
 </html>

@@ -37,9 +37,10 @@
     renderProfile(data.profile);
     renderStats(data.apps, data.retired || []);
     renderApps(data.apps);
+    renderWeb(data.web || []);
     renderRetired(data.retired || []);
     renderOthers(data.others);
-    renderSkills(data.apps, data.others, data.retired || []);
+    renderSkills(data.apps, [...data.others, ...(data.web || [])], data.retired || []);
   }
 
   function renderProfile(p) {
@@ -182,6 +183,32 @@
       const tags = el('div', 'tags');
       w.tags.forEach(t => tags.append(el('span', 'tag', t)));
       li.append(tags);
+      list.append(li);
+    });
+  }
+
+  function renderWeb(games) {
+    const list = document.getElementById('play-list');
+    if (!list) return;
+    if (!games.length) { document.getElementById('play').hidden = true; return; }
+    games.forEach(g => {
+      const li = el('li', 'play-item');
+      const a = el('a', 'play-thumb');
+      a.href = g.url;
+      const img = el('img');
+      img.src = g.thumb; img.alt = g.name + ' のタイトル画面'; img.width = 600; img.height = 315; img.loading = 'lazy';
+      a.append(img);
+      const body = el('div', 'play-body');
+      const head = el('div', 'work-head');
+      head.append(el('h3', 'work-name', g.name));
+      if (g.status) head.append(el('span', 'play-status', g.status));
+      body.append(head, el('p', null, g.desc));
+      const tags = el('div', 'tags');
+      g.tags.forEach(t => tags.append(el('span', 'tag', t)));
+      const btn = el('a', 'btn btn-primary play-btn', '遊ぶ ▶');
+      btn.href = g.url;
+      body.append(tags, btn);
+      li.append(a, body);
       list.append(li);
     });
   }

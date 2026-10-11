@@ -248,6 +248,21 @@ ul { margin: 0; padding: 0; list-style: none; }
 .app-links a.is-lp { background: var(--accent); border-color: var(--accent); color: #fff; }
 .app-links a.is-lp:hover { background: var(--accent); filter: brightness(1.08); }
 
+/* ---------- playable in the browser ---------- */
+.play-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 1rem; max-width: 920px; }
+.play-item {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 1.1rem; align-items: center;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem;
+}
+.play-thumb { display: block; border-radius: calc(var(--radius) - 4px); overflow: hidden; border: 1px solid var(--border); }
+.play-thumb img { display: block; width: 100%; height: auto; transition: transform .25s; }
+.play-thumb:hover img { transform: scale(1.03); }
+.play-body { min-width: 0; }
+.play-body p { color: var(--text-soft); font-size: .88rem; margin: .45rem 0 .7rem; }
+.play-status { font-size: .72rem; font-weight: 700; padding: .1rem .5rem; border-radius: 999px; background: var(--accent); color: #fff; }
+.play-btn { margin-top: .9rem; }
+@media (max-width: 560px) { .play-item { grid-template-columns: 1fr; } }
+
 /* ---------- other works ---------- */
 .work-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 1rem; }
 .work-item {

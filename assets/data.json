@@ -462,6 +462,20 @@
       "ratingCount": 4
     }
   ],
+  "web": [
+    {
+      "name": "ぽちっとスイーツ工場 demo",
+      "desc": "スイッチを切り替えて材料を仕分け、機械とタンクでお菓子を仕上げてトラックに積むパズル。1996年の Mac シェアウェアに触発されて作った新作で、STAGE 1〜5 をブラウザで遊べる体験版。",
+      "tags": [
+        "JavaScript",
+        "Canvas",
+        "Web Audio"
+      ],
+      "url": "/play/sweets/",
+      "thumb": "play/sweets/thumb.jpg",
+      "status": "体験版"
+    }
+  ],
   "others": [
     {
       "name": "Kiko",
