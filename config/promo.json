@@ -70,5 +70,25 @@
       "bundledImage": "clickercompany",
       "url": "https://gekisoba.com/clicker"
     }
+  ],
+  "notices": [
+    {
+      "id": "clicker-2026-10-two-sessions",
+      "title": {
+        "ja": "株の約定が1日2回になりました",
+        "en": "Stocks now settle twice a day",
+        "ko": "주식 체결이 하루 2번이 되었습니다"
+      },
+      "message": {
+        "ja": "朝4時に加えて、夕方16時にも約定するようになりました。朝〜昼に出した注文は、その日の夕方に成立します。",
+        "en": "Besides 4 a.m., orders now also settle at 4 p.m. Orders placed in the morning settle that afternoon.",
+        "ko": "아침 4시에 더해 오후 4시에도 체결됩니다. 아침~낮에 낸 주문은 그날 오후에 체결됩니다."
+      },
+      "bundleIds": [
+        "com.blogspot.gekisoba.ClickerTest"
+      ],
+      "from": "2026-10-13",
+      "until": "2026-10-19"
+    }
   ]
 }
