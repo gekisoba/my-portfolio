@@ -7,9 +7,16 @@
 <meta name="description" content="クリッカーカンパニーの銘柄コードです。アプリを入れて、このコードを入力すると、その会社の株を買えるようになります。">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
-<meta property="og:title" content="クリッカーカンパニー — 銘柄コード">
-<meta property="og:description" content="アプリを入れて、このコードを入力してください。">
+<meta property="og:title" content="クリッカーカンパニー — 株主募集中">
+<meta property="og:description" content="会社を育てて上場し、みんなで株を売り買いする放置クリッカー。アプリを入れて、この銘柄コードを入力すると、その会社の株を買えます。無料・iOS。">
 <meta property="og:locale" content="ja_JP">
+<!-- **X のカードに画像を出す。** 無いと、投稿されたリンクが文字だけの小さな枠になる。
+     ページはコードごとに作らない（/kabu/* を1枚で受ける）ので、画像も全コード共通 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://gekisoba.com/assets/og/clicker.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="クリッカーカンパニーのメイン画面と、会社の株価を見る画面">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
 <link rel="stylesheet" href="/assets/style.css?v=7">
 <link rel="stylesheet" href="/assets/lp.css?v=7">
@@ -30,7 +37,7 @@
 
 <header class="lp-header">
   <div class="wrap">
-    <a class="back-link" href="/">← ポートフォリオ</a>
+    <a class="back-link" href="/apps/clicker/" id="about">クリッカーカンパニーとは →</a>
   </div>
 </header>
 
@@ -39,16 +46,18 @@
     <div class="wrap" style="text-align:center">
       <p class="kabu-note" id="lead">クリッカーカンパニーの銘柄コード</p>
       <p class="kabu-code" id="code">････</p>
+      <!-- **ゲームを知らない人にも分かるように。** X から来る人は、たいていまだ遊んでいない -->
+      <p class="kabu-note" id="pitch">会社を育てて上場し、みんなで株を売り買いする放置クリッカーです。</p>
 
       <ol class="kabu-steps" id="steps">
         <li>アプリを入れる</li>
-        <li>株式ボタン → 投資タブ → コード</li>
-        <li>「打つ」にこのコードを入力</li>
+        <li>株式ボタン → 右上の「コード」</li>
+        <li>「相手のコードを打つ」にこのコードを入力</li>
       </ol>
 
-      <p><a class="btn btn-primary" href="https://gekisoba.com/clicker" target="_blank" rel="noopener">App Store で入手</a></p>
+      <p><a class="btn btn-primary" id="get" href="https://gekisoba.com/clicker" target="_blank" rel="noopener">App Store で入手（無料）</a></p>
 
-      <p class="kabu-note">
+      <p class="kabu-note" id="after">
         アプリを入れたあとにこのページを開くと、アプリが直接開いてコードが入ります。
       </p>
     </div>
@@ -56,6 +65,29 @@
 </main>
 
 <script>
+  // **英語・韓国語の人にも読めるように。** 共有の文はその人の言葉で出るので、
+  // 海外の人が投稿すれば、見に来るのも海外の人になる
+  const lang = (navigator.language || "ja").slice(0, 2);
+  const T = {
+    en: {
+      lead: "Clicker Company ticker code", pitch: "An idle clicker where you grow your company, go public, and trade shares with other players.",
+      steps: ["Install the app", "Stocks button → \u201cCode\u201d at the top right", "Enter this code in \u201cEnter their code\u201d"],
+      get: "Get it on the App Store (free)", after: "Open this page again after installing, and the app will open with the code filled in.",
+      about: "About Clicker Company →", bad: "This code couldn\u2019t be read",
+    },
+    ko: {
+      lead: "클리커 컴퍼니 종목 코드", pitch: "회사를 키워 상장하고, 다른 플레이어와 주식을 사고파는 방치형 클리커입니다.",
+      steps: ["앱을 설치합니다", "주식 버튼 → 오른쪽 위 \u201c코드\u201d", "\u201c상대의 코드 입력\u201d에 이 코드를 입력"],
+      get: "App Store에서 받기(무료)", after: "앱을 설치한 뒤 이 페이지를 다시 열면, 앱이 바로 열리고 코드가 입력됩니다.",
+      about: "클리커 컴퍼니란 →", bad: "이 코드는 읽을 수 없습니다",
+    },
+  }[lang];
+  if (T) {
+    document.documentElement.lang = lang;
+    for (const id of ["lead", "pitch", "get", "after", "about"]) document.getElementById(id).textContent = T[id];
+    document.querySelectorAll("#steps li").forEach((li, i) => { li.textContent = T.steps[i]; });
+  }
+
   // コードはパスの最後。/kabu/K7Q2 のように渡ってくる。
   // **使えない文字を捨ててから通してはいけない。** それをやると
   // /kabu/nonsense が「NNSEN」という、もっともらしい偽のコードになる。
@@ -65,11 +97,11 @@
   const el = document.getElementById("code");
   if (/^[23456789ABCDEFGHJKMNPQRSTUVWXYZ]{4,5}$/.test(code)) {
     el.textContent = code;
-    document.title = code + " — クリッカーカンパニー";
+    document.title = code + (lang === "ko" ? " — 클리커 컴퍼니" : lang === "en" ? " — Clicker Company" : " — クリッカーカンパニー");
   } else {
     el.textContent = "？？？？";
     el.style.opacity = "0.35";
-    document.getElementById("lead").textContent = "このコードは読み取れませんでした";
+    document.getElementById("lead").textContent = T ? T.bad : "このコードは読み取れませんでした";
     document.getElementById("steps").hidden = true;
   }
 </script>
