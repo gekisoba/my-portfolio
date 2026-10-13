@@ -474,6 +474,18 @@
       "url": "/play/sweets/",
       "thumb": "play/sweets/thumb.jpg",
       "status": "体験版"
+    },
+    {
+      "name": "ドライブ demo（開発中）",
+      "desc": "今の時刻・季節・天気と同じ空の下を、ただ走りつづけるドライブ。海沿い・峠・竹林から夢の中の道まで、流しっぱなしで眺められる開発中のデモ版。",
+      "tags": [
+        "JavaScript",
+        "Canvas",
+        "Web Audio"
+      ],
+      "url": "/play/drive/",
+      "thumb": "play/drive/thumb.jpg",
+      "status": "開発中"
     }
   ],
   "others": [
