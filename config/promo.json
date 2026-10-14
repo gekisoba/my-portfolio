@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-15",
   "featured": {
     "bundleId": "com.blogspot.gekisoba.UFOClicker",
     "title": "UFOクリッカー",
@@ -73,22 +73,22 @@
   ],
   "notices": [
     {
-      "id": "clicker-2026-10-two-sessions",
+      "id": "clicker-2026-10-ticker-markets",
       "title": {
-        "ja": "株の約定が1日2回になりました",
-        "en": "Stocks now settle twice a day",
-        "ko": "주식 체결이 하루 2번이 되었습니다"
+        "ja": "電光掲示板と市場区分ができました",
+        "en": "News ticker and market tiers are here",
+        "ko": "전광판과 시장 구분이 생겼습니다"
       },
       "message": {
-        "ja": "朝4時に加えて、夕方16時にも約定するようになりました。朝〜昼に出した注文は、その日の夕方に成立します。",
-        "en": "Besides 4 a.m., orders now also settle at 4 p.m. Orders placed in the morning settle that afternoon.",
-        "ko": "아침 4시에 더해 오후 4시에도 체결됩니다. 아침~낮에 낸 주문은 그날 오후에 체결됩니다."
+        "ja": "株の画面の上に、ニュースが流れる電光掲示板ができました。自分の会社のニュースもCRで流せます。また、株主が増えるとグロース → スタンダード → プライムと上がり、売上が増えるようになりました。最初の審査は10月19日（月）の朝です。約定は1日2回（朝4時・夕方16時）になっています。",
+        "en": "A news ticker now runs at the top of the stock screen, and you can run news about your own company with CR. Also, as your shareholders grow, your company moves up from Growth to Standard to Prime and earns more. The first review is the morning of Monday, October 19. Stocks now settle twice a day (4 a.m. and 4 p.m.).",
+        "ko": "주식 화면 위에 뉴스가 흐르는 전광판이 생겼습니다. 내 회사의 뉴스도 CR로 내보낼 수 있습니다. 또한 주주가 늘면 그로스 → 스탠더드 → 프라임으로 올라가고 매출이 늘어나게 되었습니다. 첫 심사는 10월 19일(월) 아침입니다. 체결은 하루 2번(아침 4시・오후 4시)입니다."
       },
       "bundleIds": [
         "com.blogspot.gekisoba.ClickerTest"
       ],
-      "from": "2026-10-13",
-      "until": "2026-10-19"
+      "from": "2026-10-15",
+      "until": "2026-10-21"
     }
   ]
 }
