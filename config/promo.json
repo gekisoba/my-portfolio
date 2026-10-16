@@ -22,7 +22,14 @@
       "bundleId": "com.gekisoba.sweets-factory",
       "title": "ぽちっとスイーツ工場",
       "iconUrl": "https://gekisoba.com/assets/icons/sweets-factory.jpg",
-      "url": "https://gekisoba.com/sweets"
+      "url": "https://gekisoba.com/sweets",
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "titles": {
+        "en": "Pochitto Sweets Factory"
+      }
     },
     {
       "bundleId": "com.blogspot.gekisoba.UFOClicker",
@@ -71,7 +78,15 @@
       "title": "クリッカーカンパニー",
       "iconUrl": "https://gekisoba.com/assets/icons/ClickerTest.jpg",
       "bundledImage": "clickercompany",
-      "url": "https://gekisoba.com/clicker"
+      "url": "https://gekisoba.com/clicker",
+      "languages": [
+        "ja",
+        "en",
+        "ko"
+      ],
+      "titles": {
+        "en": "Clicker Company"
+      }
     }
   ],
   "notices": [
