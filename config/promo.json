@@ -1,26 +1,29 @@
 {
-  "version": 5,
-  "updatedAt": "2026-10-15",
+  "version": 6,
+  "updatedAt": "2026-10-16",
   "featured": {
-    "bundleId": "com.blogspot.gekisoba.UFOClicker",
-    "title": "UFOクリッカー",
-    "iconUrl": "https://gekisoba.com/assets/icons/UFOClicker.jpg",
-    "bundledImage": "ufo",
-    "url": "https://gekisoba.com/ufo",
-    "subtitle": "宇宙人になって、人類を誘拐しつくす放置ゲーム",
-    "headline": "大型アップデート！",
+    "bundleId": "com.gekisoba.sweets-factory",
+    "title": "ぽちっとスイーツ工場",
+    "iconUrl": "https://gekisoba.com/assets/icons/sweets-factory.jpg",
+    "url": "https://gekisoba.com/sweets",
+    "subtitle": "ベルトコンベアでお菓子を作る仕分けパズル",
+    "headline": "新作が出ました！",
     "dialogues": [
-      "UFOクリッカーに、大きなアップデートが来ましたよ。",
-      "覚醒してから先の進み方が、ずっと速くなったそうです。",
-      "時空研究のツリーは、保存して呼び出せるようになりました。",
-      "覚醒チャレンジも、本来の手応えに直したんですって。",
-      "宇宙人になって、人類をひとりずつ連れ去るゲームです。",
-      "牛も、ついでに。",
-      "……最近、夜になると窓の外が明るくないですか？",
-      "ふふ、ただの街灯ですよ。きっと。"
+      "新しいゲーム、『ぽちっとスイーツ工場』が出ましたよ。",
+      "流れてくる材料をスイッチで仕分けて、お菓子を作るパズルです。",
+      "焼いて、クリームを塗って、いちごを載せて、トラックへ。",
+      "最初の5面は、無料で遊べるそうです。",
+      "一日の終わりに、工場長さんがひとこと言ってくれるんですって。",
+      "……私がやったら、全部ぐちゃぐちゃになりそうです。"
     ]
   },
   "apps": [
+    {
+      "bundleId": "com.gekisoba.sweets-factory",
+      "title": "ぽちっとスイーツ工場",
+      "iconUrl": "https://gekisoba.com/assets/icons/sweets-factory.jpg",
+      "url": "https://gekisoba.com/sweets"
+    },
     {
       "bundleId": "com.blogspot.gekisoba.UFOClicker",
       "title": "UFOクリッカー",

@@ -38,6 +38,7 @@ python3 -m http.server 8000
 | クリッカーカンパニー | `/apps/clicker/` | `/privacy/`（共通） |
 | 陰謀論クリッカー | `/apps/conspiracy/` | `/privacy/`（共通） |
 | UFOクリッカー | `/apps/ufo/` | `/privacy/`（共通） |
+| ぽちっとスイーツ工場 | `/apps/sweets/` | `/privacy/`（共通） |
 | 上記以外の11本 | （なし） | `/privacy/`（共通・アプリ別の対応表つき） |
 | あしあとログ | （なし） | `/apps/ashiato/privacy/` |
 
