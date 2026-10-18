@@ -123,44 +123,48 @@
     apply();
   }
 
+  // カード全体が1つのリンク（紹介ページがあればそちら、なければ App Store）。
+  // 名前のリンクを ::after でカード全体に広げている（.app-name a）。App Store・GitHub の小さいリンクはその上に重ねる
   function appCard(a) {
     const li = el('li', 'app-card');
     li.dataset.category = a.category;
+    const primary = a.lp || a.url;
 
     const top = el('div', 'app-top');
     const icon = el('img', 'app-icon');
     icon.src = a.icon;
     icon.alt = '';
     icon.loading = 'lazy';
-    icon.width = 60;
-    icon.height = 60;
+    icon.width = 56;
+    icon.height = 56;
 
     const head = el('div', 'app-head');
-    head.append(el('h3', 'app-name', a.name));
+    const name = el('h3', 'app-name');
+    const nameLink = el('a', null, a.name);
+    nameLink.href = primary;
+    if (!a.lp) { nameLink.target = '_blank'; nameLink.rel = 'noopener'; }
+    name.append(nameLink);
+
     const meta = el('div', 'app-meta');
-    a.platforms.forEach(p => meta.append(el('span', 'badge', p)));
-    meta.append(el('span', null, a.released.replace('-', '/') + ' 公開'));
+    meta.append(el('span', null, a.platforms.join(' / ') + ' · ' + a.released.replace('-', '/') + ' 公開'));
     if (a.ratingCount > 0) {
       const r = el('span', 'rating');
       r.append(el('span', 'star', '★'), document.createTextNode(` ${a.rating.toFixed(1)} (${a.ratingCount})`));
       meta.append(r);
     }
-    head.append(meta);
+    head.append(name, meta);
     top.append(icon, head);
 
-    const tags = el('div', 'tags');
-    a.tags.forEach(t => tags.append(el('span', 'tag', t)));
+    const desc = el('p', 'app-desc', a.desc);
+    desc.title = a.desc;
+    const tags = el('p', 'app-tags', a.tags.join(' · '));
 
-    const links = el('div', 'app-links');
-    if (a.lp) {
-      const l = el('a', 'is-lp', '詳しく見る');
-      l.href = a.lp;
-      links.append(l);
-    }
-    links.append(link('App Store で見る', a.url));
-    if (a.repo && a.repoPublic) links.append(link('GitHub', a.repo));
+    const foot = el('div', 'app-foot');
+    foot.append(el('span', 'app-go', a.lp ? '詳しく見る →' : 'App Store ↗'));
+    if (a.lp) foot.append(link('App Store ↗', a.url));
+    if (a.repo && a.repoPublic) foot.append(link('GitHub ↗', a.repo));
 
-    li.append(top, el('p', 'app-desc', a.desc), tags, links);
+    li.append(top, desc, tags, foot);
     return li;
   }
 
