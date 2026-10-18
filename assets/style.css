@@ -185,28 +185,27 @@ ul { margin: 0; padding: 0; list-style: none; }
 #filters:empty { min-height: 77px; }
 #skill-chips:empty { min-height: 220px; }
 #app-grid:empty { min-height: 4900px; }
-#retired-list:empty { min-height: 950px; }
-#work-list:empty { min-height: 2470px; }
-/* .app-grid は minmax(310px)、.work-list（= #retired-list / #work-list）は
-   minmax(320px) なので、カラムが増える幅が 696px / 1032px と 18〜26px うしろにずれる。
-   まとめて1つの幅で切り替えると、その差の帯でどちらかが必ず大きく外れる。 */
+/* #retired-list / #work-list は1列の .compact-list（最初の5件だけ表示）。幅で折り返しが変わるだけなので、
+   .compact-item の列組みが変わる 641px と、本文の折り返しが落ち着く 900px で切り替える（実測） */
+#retired-list:empty { min-height: 850px; }
+#work-list:empty { min-height: 640px; }
+@media (min-width: 641px) {
+  #retired-list:empty { min-height: 560px; }
+  #work-list:empty { min-height: 490px; }
+}
+@media (min-width: 900px) {
+  #retired-list:empty { min-height: 480px; }
+  #work-list:empty { min-height: 410px; }
+}
 @media (min-width: 678px) {
   #stats:empty { min-height: 108px; }
   #filters:empty { min-height: 35px; }
   #skill-chips:empty { min-height: 230px; }
   #app-grid:empty { min-height: 2600px; }
 }
-@media (min-width: 696px) {
-  #retired-list:empty { min-height: 560px; }
-  #work-list:empty { min-height: 1370px; }
-}
 @media (min-width: 1006px) {
   #skill-chips:empty { min-height: 190px; }
   #app-grid:empty { min-height: 1920px; }
-}
-@media (min-width: 1032px) {
-  #retired-list:empty { min-height: 450px; }
-  #work-list:empty { min-height: 1050px; }
 }
 
 /* ---------- app cards ---------- */
@@ -263,19 +262,34 @@ ul { margin: 0; padding: 0; list-style: none; }
 .play-btn { margin-top: .9rem; }
 @media (max-width: 560px) { .play-item { grid-template-columns: 1fr; } }
 
-/* ---------- other works ---------- */
-.work-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 1rem; }
-.work-item {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 1.1rem 1.2rem;
+/* ---------- compact list（過去のアプリ・その他の制作物） ---------- */
+.compact-list { list-style: none; margin: 0; padding: 0; max-width: 920px; border-top: 1px solid var(--border); }
+.compact-item {
+  display: grid; grid-template-columns: 14rem 1fr auto; gap: .25rem 1.2rem; align-items: baseline;
+  padding: .85rem .15rem; border-bottom: 1px solid var(--border);
 }
+.compact-head { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
+.compact-name { font-size: .95rem; font-weight: 700; margin: 0; }
+.compact-meta { font-size: .76rem; color: var(--text-mute); font-variant-numeric: tabular-nums; }
+.compact-desc { margin: 0; font-size: .86rem; color: var(--text-soft); line-height: 1.65; }
+.compact-tags { display: block; margin-top: .15rem; font-size: .74rem; color: var(--text-mute); }
+.compact-link { font-size: .8rem; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap; }
+.compact-link:hover { text-decoration: underline; }
+.compact-more {
+  margin-top: 1rem; font: inherit; font-size: .86rem; font-weight: 600; color: var(--accent);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: .45rem 1.1rem; cursor: pointer;
+}
+.compact-more:hover { border-color: var(--accent); }
+@media (max-width: 640px) {
+  .compact-item { grid-template-columns: 1fr auto; }
+  .compact-desc { grid-column: 1 / -1; }
+  .compact-link { grid-row: 1; grid-column: 2; }
+}
+
+/* ---------- 作品名の見出し（ブラウザで遊べる で使用） ---------- */
 .work-head { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
 .work-period { font-size: .76rem; color: var(--text-mute); font-variant-numeric: tabular-nums; }
 .work-name { font-size: .97rem; font-weight: 700; margin: 0; }
-.work-item p { color: var(--text-soft); font-size: .88rem; margin: .45rem 0 .7rem; }
-.work-repo { display: inline-block; margin-top: .8rem; font-size: .8rem; font-weight: 600; color: var(--accent); text-decoration: none; }
-.work-repo:hover { text-decoration: underline; }
-.work-private { margin: .8rem 0 0; font-size: .75rem; color: var(--text-mute); }
 
 /* ---------- about ---------- */
 .about-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 3.5rem); align-items: start; }

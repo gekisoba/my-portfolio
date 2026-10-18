@@ -112,7 +112,9 @@ python3 -m http.server 8000
 
 - `apps` … App Store で公開中のアプリ
 - `retired` … 過去に公開していて現在は配信を終了したアプリ
-- `others` … ストアに出していない試作・自作ツール。`public: true` のものだけ GitHub リンクを表示します
+- `others` … ストアに出していない試作・自作ツール。`public: true` のものだけ GitHub リンクを表示します。`status`（例: `"試作で終了"`）を入れると名前の下に小さく出ます
+
+`retired` と `others` は「名前＋一行」の短い一覧で、最初の5件だけ表示し、残りは「もっと見る」で開きます（`main.js` の `renderCompact`）。
 - `profile` … 名前・肩書き・リード文・各種リンク
 
 編集して `git push` すれば、Cloudflare が自動でデプロイします。

@@ -29,7 +29,7 @@
     .then(render)
     .catch(() => {
       document.getElementById('app-grid').append(
-        el('li', 'work-item', 'データを読み込めませんでした。時間をおいて再度お試しください。')
+        el('li', 'app-card', 'データを読み込めませんでした。時間をおいて再度お試しください。')
       );
     });
 
@@ -173,18 +173,38 @@
   }
 
   function renderRetired(items) {
-    const list = document.getElementById('retired-list');
-    items.forEach(w => {
-      const li = el('li', 'work-item');
-      const head = el('div', 'work-head');
-      head.append(el('h3', 'work-name', w.name));
-      if (w.period) head.append(el('span', 'work-period', w.period));
-      li.append(head, el('p', null, w.desc));
-      const tags = el('div', 'tags');
-      w.tags.forEach(t => tags.append(el('span', 'tag', t)));
-      li.append(tags);
+    renderCompact(document.getElementById('retired-list'), items, 5, w => w.period);
+  }
+
+  // 過去のアプリ・その他の制作物は「名前＋一行」の短い一覧にする。
+  // 最初の limit 件だけ見せて、残りは「もっと見る」で開く（タグは小さく1行で残す。About の技術チップにも使う）
+  function renderCompact(list, items, limit, meta) {
+    items.forEach((w, i) => {
+      const li = el('li', 'compact-item');
+      if (i >= limit) li.hidden = true;
+      const head = el('div', 'compact-head');
+      head.append(el('h3', 'compact-name', w.name));
+      const m = meta(w);
+      if (m) head.append(el('span', 'compact-meta', m));
+      const desc = el('p', 'compact-desc', w.desc);
+      if (w.tags && w.tags.length) desc.append(el('span', 'compact-tags', w.tags.join(' · ')));
+      li.append(head, desc);
+      if (w.repo && w.public) {
+        const l = link('GitHub →', w.repo);
+        l.className = 'compact-link';
+        li.append(l);
+      }
       list.append(li);
     });
+    if (items.length > limit) {
+      const btn = el('button', 'compact-more', 'もっと見る（残り' + (items.length - limit) + '件）');
+      btn.type = 'button';
+      btn.addEventListener('click', () => {
+        list.querySelectorAll('li[hidden]').forEach(li => { li.hidden = false; });
+        btn.remove();
+      });
+      list.after(btn);
+    }
   }
 
   function renderWeb(games) {
@@ -214,24 +234,7 @@
   }
 
   function renderOthers(others) {
-    const list = document.getElementById('work-list');
-    others.forEach(w => {
-      const li = el('li', 'work-item');
-      const head = el('div', 'work-head');
-      head.append(el('h3', 'work-name', w.name));
-      li.append(head, el('p', null, w.desc));
-      const tags = el('div', 'tags');
-      w.tags.forEach(t => tags.append(el('span', 'tag', t)));
-      li.append(tags);
-      if (w.repo && w.public) {
-        const l = link('GitHub で見る →', w.repo);
-        l.className = 'work-repo';
-        li.append(l);
-      } else {
-        li.append(el('p', 'work-private', 'リポジトリは非公開'));
-      }
-      list.append(li);
-    });
+    renderCompact(document.getElementById('work-list'), others, 5, w => w.status);
   }
 
   function renderSkills(apps, others, retired) {
