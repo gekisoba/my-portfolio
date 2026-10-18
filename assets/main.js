@@ -205,7 +205,7 @@
       body.append(head, el('p', null, g.desc));
       const tags = el('div', 'tags');
       g.tags.forEach(t => tags.append(el('span', 'tag', t)));
-      const btn = el('a', 'btn btn-primary play-btn', '遊ぶ ▶');
+      const btn = el('a', 'btn btn-primary play-btn', g.button || '遊ぶ ▶');
       btn.href = g.url;
       body.append(tags, btn);
       li.append(a, body);

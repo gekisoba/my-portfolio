@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>利益ちゃん Web版｜利益率・販売価格の計算ツール</title>
+<meta name="description" content="原価・送料・手数料から、利益率や利益額を確保できる販売価格を計算。販売価格から実際に残る利益も逆算できます。フリマ・ハンドメイド・個人物販の値付けに。">
+<link rel="canonical" href="https://gekisoba.com/play/rieki/">
+<meta name="theme-color" content="#ff9500">
+<meta property="og:type" content="website">
+<meta property="og:title" content="利益ちゃん Web版｜利益率・販売価格の計算ツール">
+<meta property="og:description" content="原価・送料・手数料から、利益率や利益額を確保できる販売価格を計算。販売価格から実際に残る利益も逆算できます。フリマ・ハンドメイド・個人物販の値付けに。">
+<meta property="og:url" content="https://gekisoba.com/play/rieki/">
+<meta property="og:image" content="https://gekisoba.com/play/rieki/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gekisoba">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23ff9500'/><text x='50' y='72' font-size='62' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>利</text></svg>">
+<style>
+:root{
+  --bg:#f2f2f7; --card:#ffffff; --text:#1c1c1e; --sub:#6e6e73; --line:#e5e5ea;
+  --accent:#ff9500; --seg:#e3e3e8; --segOn:#ffffff; --danger:#d70015;
+  --gray:#8e8e93; --yellow:#f5b400; --green:#30a14e; --blue:#0a84ff;
+  --font: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#000000; --card:#1c1c1e; --text:#f2f2f7; --sub:#98989f; --line:#38383a;
+    --seg:#2c2c2e; --segOn:#636366; --danger:#ff6961;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#000000; --card:#1c1c1e; --text:#f2f2f7; --sub:#98989f; --line:#38383a;
+  --seg:#2c2c2e; --segOn:#636366; --danger:#ff6961;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);-webkit-text-size-adjust:100%}
+.wrap{max-width:520px;margin:0 auto;padding:20px 16px 40px}
+header{display:flex;align-items:center;gap:12px;margin:4px 4px 18px}
+.logo{width:44px;height:44px;border-radius:11px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;font-size:22px;flex:none}
+h1{font-size:20px;margin:0;line-height:1.3}
+header p{margin:2px 0 0;color:var(--sub);font-size:13px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);background:var(--seg);border-radius:9px;padding:2px;margin-bottom:22px}
+.seg button{font:inherit;font-size:14px;border:0;background:transparent;color:var(--text);padding:8px 4px;border-radius:7px;cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--segOn);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.label{font-size:13px;color:var(--sub);margin:0 16px 6px}
+.group{background:var(--card);border-radius:12px;margin-bottom:22px;overflow:hidden}
+.row{display:flex;align-items:center;gap:12px;padding:0 16px;min-height:48px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.ic{width:28px;height:28px;border-radius:7px;color:#fff;display:grid;place-items:center;font-size:14px;font-weight:700;flex:none}
+.ic.gray{background:var(--gray)}.ic.yellow{background:var(--yellow)}.ic.green{background:var(--green)}.ic.blue{background:var(--blue)}
+.row label,.row .name{flex:1;font-size:16px}
+.row input[type=text]{flex:1;font:inherit;font-size:16px;border:0;background:transparent;color:var(--text);padding:12px 0;outline:none}
+.num{display:flex;align-items:center;gap:4px}
+.num input{width:9em;text-align:right;font:inherit;font-size:16px;border:0;background:transparent;color:var(--text);padding:12px 0;outline:none}
+.num input::placeholder{color:var(--sub)}
+.unit{color:var(--sub);font-size:15px;min-width:1.2em}
+.val{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+.big .val{font-size:22px}
+.note{font-size:13px;color:var(--sub);padding:10px 16px 12px;border-top:1px solid var(--line);line-height:1.6}
+.err{font-size:14px;color:var(--danger);padding:12px 16px;border-top:1px solid var(--line)}
+.toggle{position:relative;width:51px;height:31px;flex:none}
+.toggle input{opacity:0;width:100%;height:100%;margin:0;cursor:pointer;position:absolute;z-index:1}
+.toggle span{position:absolute;inset:0;background:var(--seg);border-radius:31px;transition:.2s}
+.toggle span::after{content:"";position:absolute;width:27px;height:27px;left:2px;top:2px;background:#fff;border-radius:50%;box-shadow:0 2px 4px rgba(0,0,0,.2);transition:.2s}
+.toggle input:checked+span{background:#34c759}
+.toggle input:checked+span::after{transform:translateX(20px)}
+.toggle input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.btn{font:inherit;font-size:16px;color:var(--blue);background:none;border:0;padding:0;cursor:pointer;width:100%;text-align:left;min-height:48px}
+.app{display:flex;align-items:center;gap:12px;padding:14px 16px;text-decoration:none;color:var(--text)}
+.app strong{display:block;font-size:15px}
+.app small{color:var(--sub);font-size:13px}
+.app .go{margin-left:auto;color:var(--blue);font-size:14px;white-space:nowrap}
+footer{font-size:12px;color:var(--sub);text-align:center;line-height:1.7;margin-top:8px}
+footer a{color:var(--sub)}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo" aria-hidden="true">利</div>
+    <div>
+      <h1>利益ちゃん Web版</h1>
+      <p>利益率・利益額・販売価格をすぐ計算</p>
+    </div>
+  </header>
+
+  <div class="seg" role="tablist" aria-label="計算方法">
+    <button role="tab" data-mode="rate" aria-selected="true">利益率から</button>
+    <button role="tab" data-mode="profit" aria-selected="false">利益額から</button>
+    <button role="tab" data-mode="price" aria-selected="false">販売価格から</button>
+  </div>
+
+  <div class="group">
+    <div class="row"><input type="text" id="memo" placeholder="品名（メモ）" aria-label="品名"></div>
+  </div>
+
+  <div class="label">入力1</div>
+  <div class="group">
+    <div class="row"><span class="ic gray" aria-hidden="true">¥</span><label for="cost">原価</label><span class="num"><input id="cost" inputmode="numeric" placeholder="0"><span class="unit">円</span></span></div>
+    <div class="row"><span class="ic gray" aria-hidden="true">送</span><label for="postage">送料</label><span class="num"><input id="postage" inputmode="numeric" placeholder="0"><span class="unit">円</span></span></div>
+    <div class="row"><span class="ic gray" aria-hidden="true">手</span><label for="fee">手数料</label><span class="num"><input id="fee" inputmode="decimal" placeholder="0.0"><span class="unit">%</span></span></div>
+  </div>
+
+  <div class="label">入力2</div>
+  <div class="group">
+    <div class="row" data-show="rate"><span class="ic blue" aria-hidden="true">%</span><label for="rate">利益率</label><span class="num"><input id="rate" inputmode="decimal" placeholder="0.0"><span class="unit">%</span></span></div>
+    <div class="row" data-show="profit"><span class="ic yellow" aria-hidden="true">¥</span><label for="profit">利益額</label><span class="num"><input id="profit" inputmode="numeric" placeholder="0"><span class="unit">円</span></span></div>
+    <div class="row" data-show="price"><span class="ic green" aria-hidden="true">円</span><label for="price">販売価格</label><span class="num"><input id="price" inputmode="numeric" placeholder="0"><span class="unit">円</span></span></div>
+  </div>
+
+  <div class="label">結果</div>
+  <div class="group" aria-live="polite">
+    <div class="row big" data-res="price"><span class="ic green" aria-hidden="true">円</span><span class="name">販売価格</span><span class="val" id="rPrice">0円</span></div>
+    <div class="row big" data-res="profit"><span class="ic yellow" aria-hidden="true">¥</span><span class="name">利益額</span><span class="val" id="rProfit">0円</span></div>
+    <div class="row big" data-res="rate"><span class="ic blue" aria-hidden="true">%</span><span class="name">利益率</span><span class="val" id="rRate">0.00%</span></div>
+    <div class="note" id="breakdown">原価・送料・手数料を入力してください</div>
+    <div class="err hide" id="err"></div>
+  </div>
+
+  <div class="group">
+    <div class="row"><label for="keep">手数料の保持</label><span class="toggle"><input type="checkbox" id="keep" role="switch"><span></span></span></div>
+    <div class="row"><button class="btn" id="clear" type="button">値のクリア</button></div>
+  </div>
+
+  <div class="group">
+    <a class="app" href="https://gekisoba.com/rieki" target="_blank" rel="noopener">
+      <span class="logo" aria-hidden="true" style="width:36px;height:36px;font-size:18px;border-radius:9px">利</span>
+      <span><strong>iPhone版 利益ちゃん</strong><small>アプリでも同じ計算ができます</small></span>
+      <span class="go">App Store ›</span>
+    </a>
+  </div>
+
+  <footer>
+    販売価格は1円単位で切り上げ、手数料は1円未満切り捨てで計算しています。<br>
+    計算結果は目安です。各サービスの手数料は最新の規定をご確認ください。<br>
+    <a href="/">gekisoba のほかのアプリ・制作物</a>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var EPS = 1e-9;
+  function feeOf(P, pct){ return Math.floor(Math.round(P * pct * 100) / 10000 + EPS); }
+  function netOf(P, c){ return P - feeOf(P, c.fee) - c.postage - c.cost; }
+  function rateOf(P, c){ return P > 0 ? netOf(P, c) / P * 100 : 0; }
+  function fromRate(c, r){
+    if (c.fee + r >= 100) return { error: '手数料と利益率の合計は100%未満にしてください' };
+    var base = c.cost + c.postage;
+    if (base <= 0) return { price: 0 };
+    var P = Math.max(1, Math.ceil(base / (1 - (c.fee + r) / 100) - EPS));
+    var ok = function(p){ return netOf(p, c) * 100 >= r * p - EPS; };
+    while (!ok(P)) P++;
+    while (P > 1 && ok(P - 1)) P--;
+    return { price: P };
+  }
+  function fromProfit(c, profit){
+    if (c.fee >= 100) return { error: '手数料は100%未満にしてください' };
+    var t = c.cost + c.postage + profit;
+    if (t <= 0) return { price: 0 };
+    var P = Math.max(1, Math.ceil(t / (1 - c.fee / 100) - EPS));
+    while (netOf(P, c) < profit) P++;
+    while (P > 1 && netOf(P - 1, c) >= profit) P--;
+    return { price: P };
+  }
+
+  var $ = function(id){ return document.getElementById(id); };
+  var mode = 'rate';
+  var intIds = ['cost', 'postage', 'profit', 'price'];
+  var decIds = ['fee', 'rate'];
+  var yen = function(n){ return n.toLocaleString('ja-JP') + '円'; };
+
+  function read(id){
+    var s = $(id).value.replace(/[０-９．]/g, function(ch){ return String.fromCharCode(ch.charCodeAt(0) - 0xFEE0); }).replace(/[,，\s円%％]/g, '');
+    var v = parseFloat(s);
+    if (!isFinite(v) || v < 0) return 0;
+    return decIds.indexOf(id) >= 0 ? Math.round(v * 100) / 100 : Math.floor(v);
+  }
+
+  function store(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
+  function load(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+
+  function update(){
+    var c = { cost: read('cost'), postage: read('postage'), fee: read('fee') };
+    var err = '', P = 0;
+    if (mode === 'rate'){ var a = fromRate(c, read('rate')); err = a.error || ''; P = a.price || 0; }
+    else if (mode === 'profit'){ var b = fromProfit(c, read('profit')); err = b.error || ''; P = b.price || 0; }
+    else { P = read('price'); }
+
+    $('err').textContent = err;
+    $('err').classList.toggle('hide', !err);
+    if (err){ P = 0; }
+
+    var net = P > 0 ? netOf(P, c) : 0;
+    $('rPrice').textContent = yen(P);
+    $('rProfit').textContent = yen(net);
+    $('rRate').textContent = rateOf(P, c).toFixed(2) + '%';
+    $('rProfit').style.color = net < 0 ? 'var(--danger)' : '';
+
+    $('breakdown').textContent = P > 0
+      ? '販売価格 ' + yen(P) + ' − 手数料 ' + yen(feeOf(P, c.fee)) + ' − 送料 ' + yen(c.postage) + ' − 原価 ' + yen(c.cost) + ' ＝ 利益 ' + yen(net)
+      : '原価・送料・手数料を入力してください';
+
+    if ($('keep').checked) store('rieki_fee', $('fee').value);
+  }
+
+  function setMode(m){
+    mode = m;
+    document.querySelectorAll('.seg button').forEach(function(b){ b.setAttribute('aria-selected', b.dataset.mode === m ? 'true' : 'false'); });
+    document.querySelectorAll('[data-show]').forEach(function(r){ r.classList.toggle('hide', r.dataset.show !== m); });
+    document.querySelectorAll('[data-res]').forEach(function(r){ r.classList.toggle('hide', r.dataset.res === m); });
+    update();
+  }
+
+  document.querySelectorAll('.seg button').forEach(function(b){ b.addEventListener('click', function(){ setMode(b.dataset.mode); }); });
+  intIds.concat(decIds).forEach(function(id){
+    var el = $(id);
+    el.addEventListener('input', update);
+    el.addEventListener('focus', function(){ setTimeout(function(){ el.select(); }, 0); });
+    el.addEventListener('blur', function(){
+      if (el.value === '') return;
+      var v = read(id);
+      el.value = v === 0 ? '' : (decIds.indexOf(id) >= 0 ? String(v) : v.toLocaleString('ja-JP'));
+    });
+  });
+  $('keep').addEventListener('change', function(){
+    store('rieki_keep', $('keep').checked ? '1' : '0');
+    if ($('keep').checked) store('rieki_fee', $('fee').value);
+  });
+  $('clear').addEventListener('click', function(){
+    ['memo', 'cost', 'postage', 'rate', 'profit', 'price'].forEach(function(id){ $(id).value = ''; });
+    if (!$('keep').checked) $('fee').value = '';
+    update();
+  });
+
+  if (load('rieki_keep') === '1'){
+    $('keep').checked = true;
+    var f = load('rieki_fee');
+    if (f) $('fee').value = f;
+  }
+  setMode('rate');
+})();
+</script>
+</body>
+</html>
