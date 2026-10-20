@@ -551,17 +551,6 @@
       "status": "開発休止中"
     },
     {
-      "name": "Kiko",
-      "desc": "radiko のタイムフリー番組を GUI で高速ダウンロードする macOS アプリ。HLS セグメントを並列取得して録音時間を短縮。",
-      "tags": [
-        "Swift 6",
-        "macOS",
-        "HLS"
-      ],
-      "repo": "https://github.com/gekisoba/Kiko",
-      "public": true
-    },
-    {
       "name": "DailyGood",
       "desc": "その日の小さな善行をミッション形式で記録するアプリ。天気・位置情報と実績システムを組み合わせた試作。",
       "tags": [
