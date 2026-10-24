@@ -41,7 +41,7 @@ python3 -m http.server 8000
 | ぽちっとスイーツ工場 | `/apps/sweets/` | `/privacy/`（共通） |
 | 上記以外の11本 | （なし） | `/privacy/`（共通・アプリ別の対応表つき） |
 | あしあとログ | （なし） | `/apps/ashiato/privacy/` |
-| Roadbook | （なし） | `/apps/roadbook/privacy/` |
+| Roadbook | `/apps/roadbook/` | `/apps/roadbook/privacy/` |
 
 各ページは素の HTML で、`assets/style.css`（配色・ベース）と `assets/lp.css`
 （LP 専用）を読み込んでいます。スクリーンショットは App Store のものを
