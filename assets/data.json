@@ -57,8 +57,8 @@
       "price": "無料",
       "released": "2026-09",
       "updated": "2026-10-12",
-      "rating": 4.59,
-      "ratingCount": 32
+      "rating": 4.63,
+      "ratingCount": 41
     },
     {
       "id": 6806528986,
@@ -137,8 +137,8 @@
       "price": "無料",
       "released": "2026-07",
       "updated": "2026-09-28",
-      "rating": 3.94,
-      "ratingCount": 18
+      "rating": 3.95,
+      "ratingCount": 19
     },
     {
       "id": 6794784495,
@@ -195,8 +195,8 @@
       "price": "無料（App内課金あり）",
       "released": "2026-05",
       "updated": "2026-10-05",
-      "rating": 5,
-      "ratingCount": 2
+      "rating": 4.33,
+      "ratingCount": 3
     },
     {
       "id": 6762073469,
@@ -220,9 +220,9 @@
       ],
       "price": "無料",
       "released": "2026-04",
-      "updated": "2026-10-16",
-      "rating": 4.25,
-      "ratingCount": 71
+      "updated": "2026-10-19",
+      "rating": 4.27,
+      "ratingCount": 73
     },
     {
       "id": 6757972770,
@@ -300,8 +300,8 @@
       "price": "無料",
       "released": "2026-01",
       "updated": "2026-08-26",
-      "rating": 4.24,
-      "ratingCount": 131
+      "rating": 4.21,
+      "ratingCount": 132
     },
     {
       "id": 6757092809,
@@ -433,9 +433,9 @@
       ],
       "price": "無料",
       "released": "2025-05",
-      "updated": "2026-10-18",
+      "updated": "2026-10-21",
       "rating": 4.56,
-      "ratingCount": 396
+      "ratingCount": 398
     },
     {
       "id": 6743646623,
@@ -483,7 +483,7 @@
       ],
       "price": "無料",
       "released": "2022-04",
-      "updated": "2025-12-14",
+      "updated": "2026-10-19",
       "rating": 4,
       "ratingCount": 4
     }
