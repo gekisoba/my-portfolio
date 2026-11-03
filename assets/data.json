@@ -39,13 +39,19 @@
       "bundleId": "com.gekisoba.roadbook",
       "name": "Roadbook",
       "fullName": "Roadbook - 燃費・電費・維持費の記録",
-      "desc": "",
-      "tags": [],
+      "desc": "給油・充電・整備・お出かけを、納車の日から1本のタイムラインに残す燃費・電費・維持費の記録アプリ。走行距離や給油量の節目を自動で残し、記録し忘れらしい回は平均燃費から外す。データは端末と自分の iCloud だけに置く。",
+      "tags": [
+        "SwiftUI",
+        "SwiftData",
+        "CloudKit",
+        "MapKit",
+        "StoreKit 2"
+      ],
       "icon": "assets/icons/roadbook.jpg",
       "url": "https://apps.apple.com/jp/app/id6826477692",
       "repo": null,
       "repoPublic": false,
-      "lp": null,
+      "lp": "/apps/roadbook/",
       "category": "ツール",
       "platforms": [
         "iOS"
