@@ -234,7 +234,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .rating .star { color: var(--star); }
 .app-desc {
   color: var(--text-soft); font-size: .88rem; line-height: 1.65; margin: 0; flex: 1;
-  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
 .app-tags { margin: 0; font-size: .74rem; color: var(--text-mute); }
 .app-foot { display: flex; align-items: center; gap: .9rem; font-size: .8rem; font-weight: 600; padding-top: .55rem; border-top: 1px solid var(--border); }
@@ -261,7 +260,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .app-card { padding: .9rem 1rem .8rem; gap: .5rem; }
   .app-card:hover { transform: none; }
   .app-icon { width: 48px; height: 48px; border-radius: 11px; }
-  .app-desc { -webkit-line-clamp: 2; font-size: .85rem; }
+  .app-desc { font-size: .85rem; }
   .app-tags { display: none; }
   .app-foot { padding-top: .45rem; }
 }
