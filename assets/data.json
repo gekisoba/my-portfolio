@@ -13,7 +13,7 @@
       "bundleId": "com.gekisoba.sweets-factory",
       "name": "ぽちっとスイーツ工場",
       "fullName": "ぽちっとスイーツ工場 - お菓子の仕分けパズル",
-      "desc": "スイッチで材料を仕分け、機械で焼いてトッピングして、トラックに積むお菓子工場のパズル。ブラウザ版を Swift に1行ずつ移植し、記録した90回のプレイで動きが同じことを確かめている。",
+      "desc": "材料を仕分けてお菓子を作る工場パズル。ブラウザ版を Swift に移植し、90回分のプレイ記録で動きの一致を確かめた。",
       "tags": [
         "SwiftUI",
         "StoreKit 2",
@@ -39,7 +39,7 @@
       "bundleId": "com.gekisoba.roadbook",
       "name": "Roadbook",
       "fullName": "Roadbook - 燃費・電費・維持費の記録",
-      "desc": "給油・充電・整備・お出かけを、納車の日から1本のタイムラインに残す燃費・電費・維持費の記録アプリ。走行距離や給油量の節目を自動で残し、記録し忘れらしい回は平均燃費から外す。データは端末と自分の iCloud だけに置く。",
+      "desc": "給油・充電・整備・お出かけを、納車の日から1本のタイムラインに残す燃費・電費・維持費の記録アプリ。",
       "tags": [
         "SwiftUI",
         "SwiftData",
@@ -93,11 +93,10 @@
       "bundleId": "com.blogspot.gekisoba.ashiato",
       "name": "あしあとログ",
       "fullName": "あしあとログ - 位置情報つきライフログ",
-      "desc": "その場でワンタップ、一言と現在地だけを残すライフログ。Obsidian のデイリーノートに1行だけ追記する方式なので、同じノートを開いていても壊れない。",
+      "desc": "ワンタップで一言と現在地を残すライフログ。Obsidian のデイリーノートへ、開いていても壊さず1行だけ追記する。",
       "tags": [
         "SwiftUI",
         "SwiftData",
-        "位置情報",
         "Obsidian連携",
         "Webhook"
       ],
@@ -200,10 +199,8 @@
       "bundleId": "com.blogspot.gekisoba.AppRadar",
       "name": "AppRank",
       "fullName": "AppRank - ASOツール 順位追跡",
-      "desc": "App Store のキーワード順位を追跡する ASO ツール。iPhone と Mac に対応し、人気度・難易度スコアでの狙い目判定、競合との順位比較、レビュー取得までを一本で扱える。データは Apple の公開 API のみで取得している。",
+      "desc": "App Store のキーワード順位を追う ASO ツール。狙い目の判定、競合との順位比較、レビューの取得までを iPhone と Mac で。",
       "tags": [
-        "iOS",
-        "macOS",
         "SwiftUI",
         "ASO",
         "StoreKit 2",
@@ -387,7 +384,7 @@
       "bundleId": "com.blogspot.gekisoba.homon-log",
       "name": "訪問ログ",
       "fullName": "訪問ログ - 営業・顧客管理のシンプルな記録アプリ",
-      "desc": "顧客への訪問記録を管理する営業向けアプリ。訪問先の場所を1タップで「大体この辺」として記録してマップで見渡せる。SwiftData + CloudKit 同期、年間ヒートマップ、Obsidian 連携、担当交代のためのデータ受け渡しを実装。",
+      "desc": "営業向けの訪問記録アプリ。訪問先を1タップで「大体この辺」として残し、マップと年間ヒートマップで見渡せる。",
       "tags": [
         "SwiftUI",
         "SwiftData",
@@ -444,9 +441,7 @@
       "desc": "会社を大きくしていく放置クリッカー。会社を上場すると銘柄コードが付き、コードを交換した友達とおたがいの株を売り買いできる。",
       "tags": [
         "SwiftUI",
-        "放置ゲーム",
         "StoreKit",
-        "AdMob",
         "Cloudflare Workers",
         "D1"
       ],

@@ -210,7 +210,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- app cards ---------- */
 /* 枠付きの部品（タグ・ボタン）をなくし、説明は3行で切って高さを揃える。カード全体がリンク */
-.app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(310px, 100%), 1fr)); gap: 1.1rem; }
+.app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(310px, 100%), 1fr)); grid-auto-rows: 1fr; gap: 1.1rem; }
 .app-card {
   position: relative; display: flex; flex-direction: column; gap: .7rem;
   background: var(--surface); border: 1px solid var(--border);
