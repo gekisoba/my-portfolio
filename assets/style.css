@@ -101,14 +101,29 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 640px) { .nav { display: none; } }
 
 /* ---------- hero ---------- */
-/* お知らせの帯（トップページのいちばん上。帯全体がリンク。募集などがあるときだけ） */
-.notice-bar { display: block; background: var(--accent-soft); border-bottom: 1px solid var(--border); text-decoration: none; }
-.notice-inner { display: flex; align-items: center; gap: .6rem; padding-block: .7rem; font-size: .92rem; }
-.notice-tag { flex: none; background: var(--accent); color: var(--bg); font-weight: 700; font-size: .75rem; padding: .15rem .55rem; border-radius: 999px; }
-.notice-text { color: var(--text); font-weight: 600; min-width: 0; }
-.notice-link { flex: none; color: var(--accent); font-weight: 700; margin-left: auto; transition: transform .15s; }
-.notice-bar:hover .notice-text { text-decoration: underline; }
-.notice-bar:hover .notice-link { transform: translateX(3px); }
+/* お知らせ（トップページのいちばん上。募集などがあるときだけ。カード全体がリンク） */
+.notice-card {
+  display: flex; align-items: center; gap: 1.1rem 1.4rem; flex-wrap: wrap;
+  padding: 1.2rem 1.4rem; border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent-soft), transparent 70%), var(--surface);
+  border: 1px solid var(--accent); box-shadow: var(--shadow);
+  text-decoration: none; color: inherit; transition: box-shadow .2s, transform .2s;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+.hero:has(.notice-card) { padding-top: 1.4rem; }
+.notice-card:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
+.notice-icon { flex: none; width: 72px; height: 72px; border-radius: 18px; }
+.notice-body { flex: 1 1 280px; display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
+.notice-tag { align-self: flex-start; background: var(--accent); color: var(--bg); font-weight: 700; font-size: .75rem; padding: .15rem .6rem; border-radius: 999px; }
+.notice-title { font-size: clamp(1.1rem, 2.6vw, 1.35rem); font-weight: 700; color: var(--text); line-height: 1.4; }
+.notice-text { font-size: .92rem; color: var(--text-soft); }
+.notice-cta {
+  flex: none; margin-left: auto; padding: .6rem 1.1rem; border-radius: 999px;
+  background: var(--accent); color: var(--bg); font-weight: 700; font-size: .92rem; white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .notice-cta { margin-left: 0; width: 100%; text-align: center; }
+}
 
 .hero {
   padding: clamp(3.5rem, 9vw, 6.5rem) 0 clamp(2.5rem, 6vw, 4rem);
