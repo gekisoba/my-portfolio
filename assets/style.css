@@ -108,9 +108,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: linear-gradient(135deg, var(--accent-soft), transparent 70%), var(--surface);
   border: 1px solid var(--accent); box-shadow: var(--shadow);
   text-decoration: none; color: inherit; transition: box-shadow .2s, transform .2s;
-  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  margin-top: 2rem;
 }
-.hero:has(.notice-card) { padding-top: 1.4rem; }
 .notice-card:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
 .notice-icon { flex: none; width: 72px; height: 72px; border-radius: 18px; }
 .notice-body { flex: 1 1 280px; display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
