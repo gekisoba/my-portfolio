@@ -9,6 +9,34 @@
   },
   "apps": [
     {
+      "id": 6828408685,
+      "bundleId": "com.gekisoba.ippai-log",
+      "name": "いっぱいログ",
+      "fullName": "いっぱいログ - ラーメン記録・食べ歩き日記",
+      "desc": "食べたラーメンを写真と一緒に記録するアプリ。近くのラーメン屋から10秒で記録し、店ごとの回数や前回からの日数、今月の一杯の画像、足あとマップで振り返れる。SwiftData + CloudKit 同期、StoreKit 2 のサブスクと買い切り、AdMob、共有シートからの行きたいリスト追加を実装。",
+      "tags": [
+        "SwiftUI",
+        "SwiftData",
+        "CloudKit",
+        "MapKit",
+        "StoreKit 2"
+      ],
+      "icon": "assets/icons/ippai_log.jpg",
+      "url": "https://apps.apple.com/jp/app/id6828408685",
+      "repo": "https://github.com/gekisoba/ippai-log",
+      "repoPublic": false,
+      "lp": "apps/ippai-log/",
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2026-11",
+      "updated": "2026-11-06",
+      "rating": 0,
+      "ratingCount": 0
+    },
+    {
       "id": 6821617368,
       "bundleId": "com.gekisoba.sweets-factory",
       "name": "ぽちっとスイーツ工場",
