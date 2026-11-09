@@ -33,8 +33,8 @@
       "price": "無料",
       "released": "2026-11",
       "updated": "2026-11-06",
-      "rating": 0,
-      "ratingCount": 0
+      "rating": 5,
+      "ratingCount": 1
     },
     {
       "id": 6821617368,
@@ -86,7 +86,7 @@
       ],
       "price": "無料",
       "released": "2026-10",
-      "updated": "2026-10-29",
+      "updated": "2026-11-08",
       "rating": 0,
       "ratingCount": 0
     },
@@ -113,8 +113,8 @@
       "price": "無料",
       "released": "2026-09",
       "updated": "2026-11-01",
-      "rating": 4.67,
-      "ratingCount": 45
+      "rating": 4.63,
+      "ratingCount": 51
     },
     {
       "id": 6806528986,
@@ -273,9 +273,9 @@
       ],
       "price": "無料",
       "released": "2026-04",
-      "updated": "2026-10-31",
-      "rating": 4.28,
-      "ratingCount": 74
+      "updated": "2026-11-07",
+      "rating": 4.27,
+      "ratingCount": 75
     },
     {
       "id": 6757972770,
@@ -300,8 +300,8 @@
       "price": "無料",
       "released": "2026-02",
       "updated": "2026-08-25",
-      "rating": 4.52,
-      "ratingCount": 88
+      "rating": 4.49,
+      "ratingCount": 91
     },
     {
       "id": 6758904067,
@@ -383,31 +383,6 @@
       "ratingCount": 6
     },
     {
-      "id": 6755621157,
-      "bundleId": "com.blogspot.gekisoba.days-since",
-      "name": "アレから",
-      "fullName": "アレから - 前回から何日？経過日数メモ",
-      "desc": "「前回からの経過日数」を記録するカウンターアプリ。美容院やフィルター交換などの周期管理向け。",
-      "tags": [
-        "SwiftUI",
-        "ウィジェット的用途"
-      ],
-      "icon": "assets/icons/days_since.jpg",
-      "url": "https://apps.apple.com/jp/app/id6755621157",
-      "repo": "https://github.com/gekisoba/days_since",
-      "repoPublic": false,
-      "lp": null,
-      "category": "ツール",
-      "platforms": [
-        "iOS"
-      ],
-      "price": "無料",
-      "released": "2025-11",
-      "updated": "2026-03-31",
-      "rating": 4.06,
-      "ratingCount": 16
-    },
-    {
       "id": 6755641312,
       "bundleId": "com.blogspot.gekisoba.homon-log",
       "name": "訪問ログ",
@@ -435,6 +410,31 @@
       "updated": "2026-10-06",
       "rating": 4.09,
       "ratingCount": 11
+    },
+    {
+      "id": 6755621157,
+      "bundleId": "com.blogspot.gekisoba.days-since",
+      "name": "アレから",
+      "fullName": "アレから - 前回から何日？経過日数メモ",
+      "desc": "「前回からの経過日数」を記録するカウンターアプリ。美容院やフィルター交換などの周期管理向け。",
+      "tags": [
+        "SwiftUI",
+        "ウィジェット的用途"
+      ],
+      "icon": "assets/icons/days_since.jpg",
+      "url": "https://apps.apple.com/jp/app/id6755621157",
+      "repo": "https://github.com/gekisoba/days_since",
+      "repoPublic": false,
+      "lp": null,
+      "category": "ツール",
+      "platforms": [
+        "iOS"
+      ],
+      "price": "無料",
+      "released": "2025-11",
+      "updated": "2026-03-31",
+      "rating": 4.06,
+      "ratingCount": 16
     },
     {
       "id": 6755532776,
@@ -484,9 +484,9 @@
       ],
       "price": "無料",
       "released": "2025-05",
-      "updated": "2026-10-21",
+      "updated": "2026-11-05",
       "rating": 4.56,
-      "ratingCount": 401
+      "ratingCount": 403
     },
     {
       "id": 6743646623,
