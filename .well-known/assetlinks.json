@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.gekisoba.clickercompany",
+      "sha256_cert_fingerprints": ["C7:CA:BB:56:BF:CD:D8:DA:49:90:87:03:D8:2C:AF:8D:F3:17:4E:10:76:53:91:D0:00:B7:14:F3:55:32:5E:57"]
+    }
+  }
+]

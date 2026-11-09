@@ -50,3 +50,10 @@
 /.well-known/apple-app-site-association
   Content-Type: application/json
   Cache-Control: public, max-age=3600
+
+# Android App Links の紐付けファイル（クリッカーカンパニーの株のリンク /kabu/<コード> をアプリで開く）。
+# Google は application/json で、リダイレクトなしで返ることを求める。中身は Play Console の
+# 「アプリの署名」に出る Digital Asset Links JSON（Play が配る版の署名鍵の SHA-256）
+/.well-known/assetlinks.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
