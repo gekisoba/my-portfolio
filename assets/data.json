@@ -32,7 +32,7 @@
       ],
       "price": "無料",
       "released": "2026-11",
-      "updated": "2026-11-06",
+      "updated": "2026-11-12",
       "rating": 5,
       "ratingCount": 1
     },
@@ -113,8 +113,8 @@
       "price": "無料",
       "released": "2026-09",
       "updated": "2026-11-01",
-      "rating": 4.63,
-      "ratingCount": 51
+      "rating": 4.71,
+      "ratingCount": 65
     },
     {
       "id": 6806528986,
@@ -301,7 +301,7 @@
       "released": "2026-02",
       "updated": "2026-08-25",
       "rating": 4.49,
-      "ratingCount": 91
+      "ratingCount": 92
     },
     {
       "id": 6758904067,
@@ -484,9 +484,9 @@
       ],
       "price": "無料",
       "released": "2025-05",
-      "updated": "2026-11-05",
+      "updated": "2026-11-10",
       "rating": 4.56,
-      "ratingCount": 403
+      "ratingCount": 405
     },
     {
       "id": 6743646623,
@@ -510,8 +510,8 @@
       "price": "無料",
       "released": "2025-03",
       "updated": "2025-12-24",
-      "rating": 3.93,
-      "ratingCount": 14
+      "rating": 4,
+      "ratingCount": 15
     },
     {
       "id": 1616494889,
