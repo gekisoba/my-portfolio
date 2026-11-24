@@ -79,6 +79,7 @@
       "iconUrl": "https://gekisoba.com/assets/icons/ClickerTest.jpg",
       "bundledImage": "clickercompany",
       "url": "https://gekisoba.com/clicker",
+      "androidPackage": "com.gekisoba.clickercompany",
       "languages": [
         "ja",
         "en",
