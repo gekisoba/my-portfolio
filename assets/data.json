@@ -269,13 +269,15 @@
       "lp": "apps/ufo/",
       "category": "ゲーム",
       "platforms": [
-        "iOS"
+        "iOS",
+        "Android"
       ],
       "price": "無料",
       "released": "2026-04",
       "updated": "2026-11-07",
       "rating": 4.27,
-      "ratingCount": 75
+      "ratingCount": 75,
+      "android": "https://play.google.com/store/apps/details?id=com.gekisoba.ufoclicker"
     },
     {
       "id": 6757972770,
@@ -480,13 +482,15 @@
       "lp": "apps/clicker/",
       "category": "ゲーム",
       "platforms": [
-        "iOS"
+        "iOS",
+        "Android"
       ],
       "price": "無料",
       "released": "2025-05",
       "updated": "2026-11-20",
       "rating": 4.56,
-      "ratingCount": 406
+      "ratingCount": 406,
+      "android": "https://play.google.com/store/apps/details?id=com.gekisoba.clickercompany"
     },
     {
       "id": 6743646623,

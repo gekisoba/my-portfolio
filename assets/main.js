@@ -24,7 +24,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- render ---------- */
-  fetch('assets/data.json?v=7')
+  fetch('assets/data.json?v=15')
     .then(r => r.json())
     .then(render)
     .catch(() => {
@@ -162,6 +162,7 @@
     const foot = el('div', 'app-foot');
     foot.append(el('span', 'app-go', a.lp ? '詳しく見る →' : 'App Store ↗'));
     if (a.lp) foot.append(link('App Store ↗', a.url));
+    if (a.android) foot.append(link('Google Play ↗', a.android));
     if (a.repo && a.repoPublic) foot.append(link('GitHub ↗', a.repo));
 
     li.append(top, desc, tags, foot);

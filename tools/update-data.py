@@ -142,8 +142,10 @@ def main():
             "repoPublic": entry.get("repoPublic", False) if entry else False,
             # 紹介ページ（LP）へのパス。手で紐付けたものなので引き継ぐ
             "lp": entry.get("lp") if entry else None,
+            # Google Play のページ。App Store からは取れないので手で書いたものを引き継ぐ
+            "android": entry.get("android") if entry else None,
             "category": CATEGORY.get(app.get("primaryGenreName"), "ツール"),
-            "platforms": platforms_of(app),
+            "platforms": platforms_of(app) + (["Android"] if entry and entry.get("android") else []),
             "price": price_of(entry, app),
             "released": app["releaseDate"][:7],
             "updated": (app.get("currentVersionReleaseDate") or "")[:10],
