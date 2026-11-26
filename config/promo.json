@@ -17,6 +17,25 @@
       "……私がやったら、全部ぐちゃぐちゃになりそうです。"
     ]
   },
+  "androidFeatured": {
+    "bundleId": "com.blogspot.gekisoba.UFOClicker",
+    "title": "UFOクリッカー",
+    "iconUrl": "https://gekisoba.com/assets/icons/UFOClicker.jpg",
+    "bundledImage": "ufo",
+    "url": "https://gekisoba.com/apps/ufo/",
+    "androidPackage": "com.gekisoba.ufoclicker",
+    "subtitle": "宇宙人になって、人類を誘拐しつくす放置ゲーム",
+    "headline": "Android版が出ました！",
+    "dialogues": [
+      "UFOクリッカーが、Android でも遊べるようになりましたよ。",
+      "宇宙人になって、人類をひとりずつ連れ去るゲームです。",
+      "牛も、ついでに。",
+      "連れ去った人数は、放っておいても増えていくんです。",
+      "実績は、本当にあったUFO事件がもとになっているそうですよ。",
+      "……最近、夜になると窓の外が明るくないですか？",
+      "ふふ、ただの街灯ですよ。きっと。"
+    ]
+  },
   "apps": [
     {
       "bundleId": "com.gekisoba.sweets-factory",
