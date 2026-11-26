@@ -36,7 +36,8 @@
       "title": "UFOクリッカー",
       "iconUrl": "https://gekisoba.com/assets/icons/UFOClicker.jpg",
       "bundledImage": "ufo",
-      "url": "https://gekisoba.com/ufo"
+      "url": "https://gekisoba.com/ufo",
+      "androidPackage": "com.gekisoba.ufoclicker"
     },
     {
       "bundleId": "com.blogspot.gekisoba.ConspiracyClicker",
