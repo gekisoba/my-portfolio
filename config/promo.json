@@ -70,7 +70,8 @@
       "title": "素晴らしい穴",
       "iconUrl": "https://gekisoba.com/assets/icons/subarashii-ana.jpg",
       "bundledImage": "ana",
-      "url": "https://gekisoba.com/ana"
+      "url": "https://gekisoba.com/ana",
+      "androidPackage": "com.gekisoba.subarashiiana"
     },
     {
       "bundleId": "com.blogspot.gekisoba.pinball",

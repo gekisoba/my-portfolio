@@ -108,13 +108,15 @@
       "lp": "/apps/subarashii-ana/",
       "category": "ゲーム",
       "platforms": [
-        "iOS"
+        "iOS",
+        "Android"
       ],
       "price": "無料",
       "released": "2026-09",
       "updated": "2026-11-18",
       "rating": 4.72,
-      "ratingCount": 82
+      "ratingCount": 82,
+      "android": "https://play.google.com/store/apps/details?id=com.gekisoba.subarashiiana"
     },
     {
       "id": 6806528986,
