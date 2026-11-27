@@ -34,3 +34,11 @@
 #    307 で正規化してしまい、URL に載せたコードが落ちる。
 # 正規化後の形（/kabu）をそのまま指すと、どちらにも当たらない。
 /kabu/*  /kabu  200
+
+# Android 版のテスター募集のページ（公開したので片付けた）。X などの古いリンクはアプリの紹介ページへ
+/apps/clicker/android-test  /apps/clicker/  301
+/apps/clicker/android-test/*  /apps/clicker/  301
+/apps/ufo/android-test  /apps/ufo/  301
+/apps/ufo/android-test/*  /apps/ufo/  301
+/apps/subarashii-ana/android-test  /apps/subarashii-ana/  301
+/apps/subarashii-ana/android-test/*  /apps/subarashii-ana/  301
